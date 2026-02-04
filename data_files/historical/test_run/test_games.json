@@ -1,0 +1,2946 @@
+[
+  {
+    "game_id": 2023020672,
+    "date": "2024-01-15",
+    "home": "BUF",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020671,
+    "date": "2024-01-15",
+    "home": "BOS",
+    "away": "NJD",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020673,
+    "date": "2024-01-15",
+    "home": "CBJ",
+    "away": "VAN",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020674,
+    "date": "2024-01-15",
+    "home": "FLA",
+    "away": "ANA",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020677,
+    "date": "2024-01-15",
+    "home": "PIT",
+    "away": "SEA",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020675,
+    "date": "2024-01-15",
+    "home": "CAR",
+    "away": "LAK",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020676,
+    "date": "2024-01-15",
+    "home": "MIN",
+    "away": "NYI",
+    "home_score": 5,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020680,
+    "date": "2024-01-15",
+    "home": "VGK",
+    "away": "NSH",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020678,
+    "date": "2024-01-15",
+    "home": "MTL",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020679,
+    "date": "2024-01-15",
+    "home": "STL",
+    "away": "PHI",
+    "home_score": 2,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020681,
+    "date": "2024-01-15",
+    "home": "NYR",
+    "away": "SEA",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020682,
+    "date": "2024-01-15",
+    "home": "OTT",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020683,
+    "date": "2024-01-15",
+    "home": "WSH",
+    "away": "ANA",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020684,
+    "date": "2024-01-15",
+    "home": "DAL",
+    "away": "LAK",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020685,
+    "date": "2024-01-15",
+    "home": "WPG",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020686,
+    "date": "2024-01-15",
+    "home": "CHI",
+    "away": "SJS",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020687,
+    "date": "2024-01-15",
+    "home": "CGY",
+    "away": "ARI",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020688,
+    "date": "2024-01-15",
+    "home": "EDM",
+    "away": "TOR",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020689,
+    "date": "2024-01-15",
+    "home": "FLA",
+    "away": "DET",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020690,
+    "date": "2024-01-15",
+    "home": "NJD",
+    "away": "MTL",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020691,
+    "date": "2024-01-15",
+    "home": "BUF",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020692,
+    "date": "2024-01-15",
+    "home": "BOS",
+    "away": "COL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020693,
+    "date": "2024-01-15",
+    "home": "OTT",
+    "away": "MTL",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020694,
+    "date": "2024-01-15",
+    "home": "PHI",
+    "away": "DAL",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020695,
+    "date": "2024-01-15",
+    "home": "TBL",
+    "away": "MIN",
+    "home_score": 7,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020696,
+    "date": "2024-01-15",
+    "home": "WSH",
+    "away": "STL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020697,
+    "date": "2024-01-15",
+    "home": "CGY",
+    "away": "TOR",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020698,
+    "date": "2024-01-15",
+    "home": "EDM",
+    "away": "SEA",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020699,
+    "date": "2024-01-15",
+    "home": "LAK",
+    "away": "NSH",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020700,
+    "date": "2024-01-15",
+    "home": "VAN",
+    "away": "ARI",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020701,
+    "date": "2024-01-15",
+    "home": "VGK",
+    "away": "NYR",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020702,
+    "date": "2024-01-15",
+    "home": "CAR",
+    "away": "DET",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020703,
+    "date": "2024-01-15",
+    "home": "CBJ",
+    "away": "NJD",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020704,
+    "date": "2024-01-15",
+    "home": "FLA",
+    "away": "MIN",
+    "home_score": 4,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020705,
+    "date": "2024-01-15",
+    "home": "CHI",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-15",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-15",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-15",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-15",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-15",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-15",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-15",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-15",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-15",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-15",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-15",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-15",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-15",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-15",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-15",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-15",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-15",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-15",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020681,
+    "date": "2024-01-16",
+    "home": "NYR",
+    "away": "SEA",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020682,
+    "date": "2024-01-16",
+    "home": "OTT",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020683,
+    "date": "2024-01-16",
+    "home": "WSH",
+    "away": "ANA",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020684,
+    "date": "2024-01-16",
+    "home": "DAL",
+    "away": "LAK",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020685,
+    "date": "2024-01-16",
+    "home": "WPG",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020686,
+    "date": "2024-01-16",
+    "home": "CHI",
+    "away": "SJS",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020687,
+    "date": "2024-01-16",
+    "home": "CGY",
+    "away": "ARI",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020688,
+    "date": "2024-01-16",
+    "home": "EDM",
+    "away": "TOR",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020689,
+    "date": "2024-01-16",
+    "home": "FLA",
+    "away": "DET",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020690,
+    "date": "2024-01-16",
+    "home": "NJD",
+    "away": "MTL",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020691,
+    "date": "2024-01-16",
+    "home": "BUF",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020692,
+    "date": "2024-01-16",
+    "home": "BOS",
+    "away": "COL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020693,
+    "date": "2024-01-16",
+    "home": "OTT",
+    "away": "MTL",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020694,
+    "date": "2024-01-16",
+    "home": "PHI",
+    "away": "DAL",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020695,
+    "date": "2024-01-16",
+    "home": "TBL",
+    "away": "MIN",
+    "home_score": 7,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020696,
+    "date": "2024-01-16",
+    "home": "WSH",
+    "away": "STL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020697,
+    "date": "2024-01-16",
+    "home": "CGY",
+    "away": "TOR",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020698,
+    "date": "2024-01-16",
+    "home": "EDM",
+    "away": "SEA",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020699,
+    "date": "2024-01-16",
+    "home": "LAK",
+    "away": "NSH",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020700,
+    "date": "2024-01-16",
+    "home": "VAN",
+    "away": "ARI",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020701,
+    "date": "2024-01-16",
+    "home": "VGK",
+    "away": "NYR",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020702,
+    "date": "2024-01-16",
+    "home": "CAR",
+    "away": "DET",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020703,
+    "date": "2024-01-16",
+    "home": "CBJ",
+    "away": "NJD",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020704,
+    "date": "2024-01-16",
+    "home": "FLA",
+    "away": "MIN",
+    "home_score": 4,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020705,
+    "date": "2024-01-16",
+    "home": "CHI",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-16",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-16",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-16",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-16",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-16",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-16",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-16",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-16",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-16",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-16",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-16",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-16",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-16",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-16",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-16",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-16",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-16",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-16",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-16",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-16",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-16",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-16",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-16",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-16",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020689,
+    "date": "2024-01-17",
+    "home": "FLA",
+    "away": "DET",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020690,
+    "date": "2024-01-17",
+    "home": "NJD",
+    "away": "MTL",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020691,
+    "date": "2024-01-17",
+    "home": "BUF",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020692,
+    "date": "2024-01-17",
+    "home": "BOS",
+    "away": "COL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020693,
+    "date": "2024-01-17",
+    "home": "OTT",
+    "away": "MTL",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020694,
+    "date": "2024-01-17",
+    "home": "PHI",
+    "away": "DAL",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020695,
+    "date": "2024-01-17",
+    "home": "TBL",
+    "away": "MIN",
+    "home_score": 7,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020696,
+    "date": "2024-01-17",
+    "home": "WSH",
+    "away": "STL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020697,
+    "date": "2024-01-17",
+    "home": "CGY",
+    "away": "TOR",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020698,
+    "date": "2024-01-17",
+    "home": "EDM",
+    "away": "SEA",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020699,
+    "date": "2024-01-17",
+    "home": "LAK",
+    "away": "NSH",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020700,
+    "date": "2024-01-17",
+    "home": "VAN",
+    "away": "ARI",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020701,
+    "date": "2024-01-17",
+    "home": "VGK",
+    "away": "NYR",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020702,
+    "date": "2024-01-17",
+    "home": "CAR",
+    "away": "DET",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020703,
+    "date": "2024-01-17",
+    "home": "CBJ",
+    "away": "NJD",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020704,
+    "date": "2024-01-17",
+    "home": "FLA",
+    "away": "MIN",
+    "home_score": 4,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020705,
+    "date": "2024-01-17",
+    "home": "CHI",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-17",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-17",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-17",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-17",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-17",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-17",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-17",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-17",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-17",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-17",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-17",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-17",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-17",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-17",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-17",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-17",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-17",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-17",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-17",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-17",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-17",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-17",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-17",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-17",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020730,
+    "date": "2024-01-17",
+    "home": "DET",
+    "away": "DAL",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020731,
+    "date": "2024-01-17",
+    "home": "MTL",
+    "away": "OTT",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020732,
+    "date": "2024-01-17",
+    "home": "PHI",
+    "away": "TBL",
+    "home_score": 3,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020733,
+    "date": "2024-01-17",
+    "home": "NYI",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020734,
+    "date": "2024-01-17",
+    "home": "MIN",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020735,
+    "date": "2024-01-17",
+    "home": "CGY",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020736,
+    "date": "2024-01-17",
+    "home": "EDM",
+    "away": "CBJ",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020737,
+    "date": "2024-01-17",
+    "home": "ANA",
+    "away": "BUF",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020738,
+    "date": "2024-01-17",
+    "home": "SJS",
+    "away": "NYR",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020691,
+    "date": "2024-01-18",
+    "home": "BUF",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020692,
+    "date": "2024-01-18",
+    "home": "BOS",
+    "away": "COL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020693,
+    "date": "2024-01-18",
+    "home": "OTT",
+    "away": "MTL",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020694,
+    "date": "2024-01-18",
+    "home": "PHI",
+    "away": "DAL",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020695,
+    "date": "2024-01-18",
+    "home": "TBL",
+    "away": "MIN",
+    "home_score": 7,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020696,
+    "date": "2024-01-18",
+    "home": "WSH",
+    "away": "STL",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020697,
+    "date": "2024-01-18",
+    "home": "CGY",
+    "away": "TOR",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020698,
+    "date": "2024-01-18",
+    "home": "EDM",
+    "away": "SEA",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020699,
+    "date": "2024-01-18",
+    "home": "LAK",
+    "away": "NSH",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020700,
+    "date": "2024-01-18",
+    "home": "VAN",
+    "away": "ARI",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020701,
+    "date": "2024-01-18",
+    "home": "VGK",
+    "away": "NYR",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020702,
+    "date": "2024-01-18",
+    "home": "CAR",
+    "away": "DET",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020703,
+    "date": "2024-01-18",
+    "home": "CBJ",
+    "away": "NJD",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020704,
+    "date": "2024-01-18",
+    "home": "FLA",
+    "away": "MIN",
+    "home_score": 4,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020705,
+    "date": "2024-01-18",
+    "home": "CHI",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-18",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-18",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-18",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-18",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-18",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-18",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-18",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-18",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-18",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-18",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-18",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-18",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-18",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-18",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-18",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-18",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-18",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-18",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-18",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-18",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-18",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-18",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-18",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-18",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020730,
+    "date": "2024-01-18",
+    "home": "DET",
+    "away": "DAL",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020731,
+    "date": "2024-01-18",
+    "home": "MTL",
+    "away": "OTT",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020732,
+    "date": "2024-01-18",
+    "home": "PHI",
+    "away": "TBL",
+    "home_score": 3,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020733,
+    "date": "2024-01-18",
+    "home": "NYI",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020734,
+    "date": "2024-01-18",
+    "home": "MIN",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020735,
+    "date": "2024-01-18",
+    "home": "CGY",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020736,
+    "date": "2024-01-18",
+    "home": "EDM",
+    "away": "CBJ",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020737,
+    "date": "2024-01-18",
+    "home": "ANA",
+    "away": "BUF",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020738,
+    "date": "2024-01-18",
+    "home": "SJS",
+    "away": "NYR",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020739,
+    "date": "2024-01-18",
+    "home": "FLA",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020740,
+    "date": "2024-01-18",
+    "home": "TOR",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020741,
+    "date": "2024-01-18",
+    "home": "BOS",
+    "away": "CAR",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020742,
+    "date": "2024-01-18",
+    "home": "COL",
+    "away": "WSH",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020743,
+    "date": "2024-01-18",
+    "home": "SEA",
+    "away": "CHI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020744,
+    "date": "2024-01-18",
+    "home": "VAN",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020745,
+    "date": "2024-01-18",
+    "home": "LAK",
+    "away": "BUF",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020702,
+    "date": "2024-01-19",
+    "home": "CAR",
+    "away": "DET",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020703,
+    "date": "2024-01-19",
+    "home": "CBJ",
+    "away": "NJD",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020704,
+    "date": "2024-01-19",
+    "home": "FLA",
+    "away": "MIN",
+    "home_score": 4,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020705,
+    "date": "2024-01-19",
+    "home": "CHI",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-19",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-19",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-19",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-19",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-19",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-19",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-19",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-19",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-19",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-19",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-19",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-19",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-19",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-19",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-19",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-19",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-19",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-19",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-19",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-19",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-19",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-19",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-19",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-19",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020730,
+    "date": "2024-01-19",
+    "home": "DET",
+    "away": "DAL",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020731,
+    "date": "2024-01-19",
+    "home": "MTL",
+    "away": "OTT",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020732,
+    "date": "2024-01-19",
+    "home": "PHI",
+    "away": "TBL",
+    "home_score": 3,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020733,
+    "date": "2024-01-19",
+    "home": "NYI",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020734,
+    "date": "2024-01-19",
+    "home": "MIN",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020735,
+    "date": "2024-01-19",
+    "home": "CGY",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020736,
+    "date": "2024-01-19",
+    "home": "EDM",
+    "away": "CBJ",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020737,
+    "date": "2024-01-19",
+    "home": "ANA",
+    "away": "BUF",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020738,
+    "date": "2024-01-19",
+    "home": "SJS",
+    "away": "NYR",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020739,
+    "date": "2024-01-19",
+    "home": "FLA",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020740,
+    "date": "2024-01-19",
+    "home": "TOR",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020741,
+    "date": "2024-01-19",
+    "home": "BOS",
+    "away": "CAR",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020742,
+    "date": "2024-01-19",
+    "home": "COL",
+    "away": "WSH",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020743,
+    "date": "2024-01-19",
+    "home": "SEA",
+    "away": "CHI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020744,
+    "date": "2024-01-19",
+    "home": "VAN",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020745,
+    "date": "2024-01-19",
+    "home": "LAK",
+    "away": "BUF",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020747,
+    "date": "2024-01-19",
+    "home": "DET",
+    "away": "PHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020748,
+    "date": "2024-01-19",
+    "home": "MTL",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020749,
+    "date": "2024-01-19",
+    "home": "OTT",
+    "away": "BOS",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020750,
+    "date": "2024-01-19",
+    "home": "TBL",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020746,
+    "date": "2024-01-19",
+    "home": "CAR",
+    "away": "NJD",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020751,
+    "date": "2024-01-19",
+    "home": "DAL",
+    "away": "ANA",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020752,
+    "date": "2024-01-19",
+    "home": "MIN",
+    "away": "NSH",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020753,
+    "date": "2024-01-19",
+    "home": "CGY",
+    "away": "CBJ",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020754,
+    "date": "2024-01-19",
+    "home": "EDM",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020706,
+    "date": "2024-01-20",
+    "home": "BUF",
+    "away": "TBL",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020707,
+    "date": "2024-01-20",
+    "home": "PHI",
+    "away": "COL",
+    "home_score": 4,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020708,
+    "date": "2024-01-20",
+    "home": "ARI",
+    "away": "NSH",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020709,
+    "date": "2024-01-20",
+    "home": "OTT",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020710,
+    "date": "2024-01-20",
+    "home": "BOS",
+    "away": "MTL",
+    "home_score": 9,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020711,
+    "date": "2024-01-20",
+    "home": "NJD",
+    "away": "DAL",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020712,
+    "date": "2024-01-20",
+    "home": "VAN",
+    "away": "TOR",
+    "home_score": 6,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020713,
+    "date": "2024-01-20",
+    "home": "STL",
+    "away": "WSH",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020714,
+    "date": "2024-01-20",
+    "home": "CGY",
+    "away": "EDM",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020715,
+    "date": "2024-01-20",
+    "home": "SJS",
+    "away": "ANA",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020716,
+    "date": "2024-01-20",
+    "home": "VGK",
+    "away": "PIT",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020717,
+    "date": "2024-01-20",
+    "home": "LAK",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-20",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-20",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-20",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-20",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-20",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-20",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-20",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-20",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-20",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-20",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-20",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-20",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020730,
+    "date": "2024-01-20",
+    "home": "DET",
+    "away": "DAL",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020731,
+    "date": "2024-01-20",
+    "home": "MTL",
+    "away": "OTT",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020732,
+    "date": "2024-01-20",
+    "home": "PHI",
+    "away": "TBL",
+    "home_score": 3,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020733,
+    "date": "2024-01-20",
+    "home": "NYI",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020734,
+    "date": "2024-01-20",
+    "home": "MIN",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020735,
+    "date": "2024-01-20",
+    "home": "CGY",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020736,
+    "date": "2024-01-20",
+    "home": "EDM",
+    "away": "CBJ",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020737,
+    "date": "2024-01-20",
+    "home": "ANA",
+    "away": "BUF",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020738,
+    "date": "2024-01-20",
+    "home": "SJS",
+    "away": "NYR",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020739,
+    "date": "2024-01-20",
+    "home": "FLA",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020740,
+    "date": "2024-01-20",
+    "home": "TOR",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020741,
+    "date": "2024-01-20",
+    "home": "BOS",
+    "away": "CAR",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020742,
+    "date": "2024-01-20",
+    "home": "COL",
+    "away": "WSH",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020743,
+    "date": "2024-01-20",
+    "home": "SEA",
+    "away": "CHI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020744,
+    "date": "2024-01-20",
+    "home": "VAN",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020745,
+    "date": "2024-01-20",
+    "home": "LAK",
+    "away": "BUF",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020747,
+    "date": "2024-01-20",
+    "home": "DET",
+    "away": "PHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020748,
+    "date": "2024-01-20",
+    "home": "MTL",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020749,
+    "date": "2024-01-20",
+    "home": "OTT",
+    "away": "BOS",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020750,
+    "date": "2024-01-20",
+    "home": "TBL",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020746,
+    "date": "2024-01-20",
+    "home": "CAR",
+    "away": "NJD",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020751,
+    "date": "2024-01-20",
+    "home": "DAL",
+    "away": "ANA",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020752,
+    "date": "2024-01-20",
+    "home": "MIN",
+    "away": "NSH",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020753,
+    "date": "2024-01-20",
+    "home": "CGY",
+    "away": "CBJ",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020754,
+    "date": "2024-01-20",
+    "home": "EDM",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020755,
+    "date": "2024-01-20",
+    "home": "NYR",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020756,
+    "date": "2024-01-20",
+    "home": "PIT",
+    "away": "FLA",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020757,
+    "date": "2024-01-20",
+    "home": "COL",
+    "away": "LAK",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020758,
+    "date": "2024-01-20",
+    "home": "SEA",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020718,
+    "date": "2024-01-21",
+    "home": "PHI",
+    "away": "OTT",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020719,
+    "date": "2024-01-21",
+    "home": "CAR",
+    "away": "MIN",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020720,
+    "date": "2024-01-21",
+    "home": "DET",
+    "away": "TBL",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020721,
+    "date": "2024-01-21",
+    "home": "NYI",
+    "away": "DAL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020722,
+    "date": "2024-01-21",
+    "home": "ANA",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020723,
+    "date": "2024-01-21",
+    "home": "SEA",
+    "away": "TOR",
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020724,
+    "date": "2024-01-21",
+    "home": "BOS",
+    "away": "WPG",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020725,
+    "date": "2024-01-21",
+    "home": "NJD",
+    "away": "VGK",
+    "home_score": 6,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020726,
+    "date": "2024-01-21",
+    "home": "NSH",
+    "away": "FLA",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020727,
+    "date": "2024-01-21",
+    "home": "ARI",
+    "away": "PIT",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020728,
+    "date": "2024-01-21",
+    "home": "VAN",
+    "away": "CHI",
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020729,
+    "date": "2024-01-21",
+    "home": "LAK",
+    "away": "SJS",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020730,
+    "date": "2024-01-21",
+    "home": "DET",
+    "away": "DAL",
+    "home_score": 4,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020731,
+    "date": "2024-01-21",
+    "home": "MTL",
+    "away": "OTT",
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020732,
+    "date": "2024-01-21",
+    "home": "PHI",
+    "away": "TBL",
+    "home_score": 3,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020733,
+    "date": "2024-01-21",
+    "home": "NYI",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020734,
+    "date": "2024-01-21",
+    "home": "MIN",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020735,
+    "date": "2024-01-21",
+    "home": "CGY",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020736,
+    "date": "2024-01-21",
+    "home": "EDM",
+    "away": "CBJ",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020737,
+    "date": "2024-01-21",
+    "home": "ANA",
+    "away": "BUF",
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020738,
+    "date": "2024-01-21",
+    "home": "SJS",
+    "away": "NYR",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020739,
+    "date": "2024-01-21",
+    "home": "FLA",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020740,
+    "date": "2024-01-21",
+    "home": "TOR",
+    "away": "WPG",
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020741,
+    "date": "2024-01-21",
+    "home": "BOS",
+    "away": "CAR",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020742,
+    "date": "2024-01-21",
+    "home": "COL",
+    "away": "WSH",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020743,
+    "date": "2024-01-21",
+    "home": "SEA",
+    "away": "CHI",
+    "home_score": 6,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020744,
+    "date": "2024-01-21",
+    "home": "VAN",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020745,
+    "date": "2024-01-21",
+    "home": "LAK",
+    "away": "BUF",
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020747,
+    "date": "2024-01-21",
+    "home": "DET",
+    "away": "PHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020748,
+    "date": "2024-01-21",
+    "home": "MTL",
+    "away": "NYI",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020749,
+    "date": "2024-01-21",
+    "home": "OTT",
+    "away": "BOS",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020750,
+    "date": "2024-01-21",
+    "home": "TBL",
+    "away": "ARI",
+    "home_score": 6,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020746,
+    "date": "2024-01-21",
+    "home": "CAR",
+    "away": "NJD",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020751,
+    "date": "2024-01-21",
+    "home": "DAL",
+    "away": "ANA",
+    "home_score": 4,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020752,
+    "date": "2024-01-21",
+    "home": "MIN",
+    "away": "NSH",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020753,
+    "date": "2024-01-21",
+    "home": "CGY",
+    "away": "CBJ",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020754,
+    "date": "2024-01-21",
+    "home": "EDM",
+    "away": "CHI",
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020755,
+    "date": "2024-01-21",
+    "home": "NYR",
+    "away": "VGK",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020756,
+    "date": "2024-01-21",
+    "home": "PIT",
+    "away": "FLA",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020757,
+    "date": "2024-01-21",
+    "home": "COL",
+    "away": "LAK",
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020758,
+    "date": "2024-01-21",
+    "home": "SEA",
+    "away": "STL",
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020759,
+    "date": "2024-01-21",
+    "home": "PHI",
+    "away": "BOS",
+    "home_score": 2,
+    "away_score": 6
+  },
+  {
+    "game_id": 2023020760,
+    "date": "2024-01-21",
+    "home": "DAL",
+    "away": "WSH",
+    "home_score": 5,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020761,
+    "date": "2024-01-21",
+    "home": "EDM",
+    "away": "NSH",
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020762,
+    "date": "2024-01-21",
+    "home": "SJS",
+    "away": "BUF",
+    "home_score": 2,
+    "away_score": 5
+  },
+  {
+    "game_id": 2023020763,
+    "date": "2024-01-21",
+    "home": "CAR",
+    "away": "ARI",
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "game_id": 2023020765,
+    "date": "2024-01-21",
+    "home": "OTT",
+    "away": "NYR",
+    "home_score": 2,
+    "away_score": 7
+  },
+  {
+    "game_id": 2023020766,
+    "date": "2024-01-21",
+    "home": "PIT",
+    "away": "MTL",
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020767,
+    "date": "2024-01-21",
+    "home": "TBL",
+    "away": "NJD",
+    "home_score": 6,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020768,
+    "date": "2024-01-21",
+    "home": "WPG",
+    "away": "TOR",
+    "home_score": 2,
+    "away_score": 4
+  },
+  {
+    "game_id": 2023020769,
+    "date": "2024-01-21",
+    "home": "NYI",
+    "away": "FLA",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020764,
+    "date": "2024-01-21",
+    "home": "DET",
+    "away": "VGK",
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "game_id": 2023020770,
+    "date": "2024-01-21",
+    "home": "MIN",
+    "away": "ANA",
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "game_id": 2023020771,
+    "date": "2024-01-21",
+    "home": "CGY",
+    "away": "CHI",
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "game_id": 2023020772,
+    "date": "2024-01-21",
+    "home": "VAN",
+    "away": "CBJ",
+    "home_score": 5,
+    "away_score": 4
+  }
+]

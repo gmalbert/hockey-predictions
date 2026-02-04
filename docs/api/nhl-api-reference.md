@@ -5,6 +5,18 @@ Unofficial NHL API endpoints used in this project. These APIs are not officially
 
 ---
 
+## Resources
+
+### Additional Documentation
+- **[NHL API Documentation](https://gitlab.com/dword4/nhlapi/-/blob/master/new-api.md)** - Comprehensive API reference by dword4
+- **[Stats API Config](https://api.nhle.com/stats/rest/en/config)** - Stats API configuration endpoint
+
+### Community Resources
+- [NHL API GitLab Repository](https://gitlab.com/dword4/nhlapi) - Community-maintained API documentation
+- [Unofficial NHL API](https://github.com/dword4/nhlapi) - GitHub mirror of API docs
+
+---
+
 ## Base URLs
 
 | API | Base URL | Purpose |
