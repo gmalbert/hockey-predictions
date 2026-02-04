@@ -11,6 +11,7 @@ class NHLClient:
     
     BASE_WEB_API = "https://api-web.nhle.com/v1"
     BASE_STATS_API = "https://api.nhle.com/stats/rest/en"
+    ESPN_SCORES_API = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
     CACHE_DIR = Path("data_files/cache")
     
     def __init__(self, cache_ttl_minutes: int = 5):
@@ -266,6 +267,125 @@ class NHLClient:
             }
             for g in data.get("data", [])
         ]
+    
+    # ------------------------------------------------------------------------- 
+    # ESPN Odds Endpoints
+    # -------------------------------------------------------------------------
+    
+    def get_espn_odds(self, days_ahead: int = 7) -> list[dict]:
+        """
+        Get betting odds from ESPN for upcoming NHL games.
+        
+        Args:
+            days_ahead: Number of days to look ahead for games (default 7)
+            
+        Returns:
+            List of games with odds data
+        """
+        from datetime import datetime, timedelta, timezone
+        
+        games_with_odds = []
+        
+        # Get games for the next N days
+        for i in range(days_ahead + 1):  # Include today
+            game_date = datetime.now() + timedelta(days=i)
+            date_str = game_date.strftime("%Y%m%d")
+            
+            url = f"{self.ESPN_SCORES_API}?dates={date_str}"
+            data = self._fetch_sync(url)
+            
+            for event in data.get("events", []):
+                # Only include games that haven't started yet or are today
+                game_datetime = datetime.fromisoformat(event.get("date", "").replace("Z", "+00:00"))
+                current_time = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+                if game_datetime >= current_time:
+                    games_with_odds.append(self._parse_espn_game(event))
+        
+        # Remove duplicates (games might appear in multiple date queries)
+        seen_ids = set()
+        unique_games = []
+        for game in games_with_odds:
+            if game["game_id"] not in seen_ids:
+                seen_ids.add(game["game_id"])
+                unique_games.append(game)
+        
+        return unique_games
+    
+    def _parse_espn_game(self, event: dict) -> dict:
+        """
+        Parse a single ESPN game event into our game format.
+        
+        Args:
+            event: ESPN API event data
+            
+        Returns:
+            Parsed game dictionary
+        """
+        competitors = event.get("competitions", [{}])[0].get("competitors", [])
+        home_team = None
+        away_team = None
+        
+        for competitor in competitors:
+            team_abbrev = competitor.get("team", {}).get("abbreviation")
+            home_away = competitor.get("homeAway")
+            if home_away == "home":
+                home_team = team_abbrev
+            elif home_away == "away":
+                away_team = team_abbrev
+        
+        # Fallback to array positions if homeAway field is missing
+        if home_team is None or away_team is None:
+            if len(competitors) >= 2:
+                home_team = competitors[0].get("team", {}).get("abbreviation")
+                away_team = competitors[1].get("team", {}).get("abbreviation")
+            else:
+                home_team = "Unknown"
+                away_team = "Unknown"
+        
+        game = {
+            "game_id": event.get("id"),
+            "name": event.get("name"),
+            "date": event.get("date"),
+            "status": event.get("status", {}).get("type", {}).get("description", "Unknown"),
+            "home_team": home_team,
+            "away_team": away_team,
+            "odds": []
+        }
+        
+        # Parse odds if available
+        odds_data = event.get("competitions", [{}])[0].get("odds", [])
+        for odds_provider in odds_data:
+            provider_name = odds_provider.get("provider", {}).get("name", "Unknown")
+            odds_info = {
+                "provider": provider_name,
+                "moneyline": {
+                    "home": odds_provider.get("moneyline", {}).get("home", {}).get("close", {}).get("odds"),
+                    "away": odds_provider.get("moneyline", {}).get("away", {}).get("close", {}).get("odds")
+                },
+                "spread": {
+                    "home": {
+                        "line": odds_provider.get("pointSpread", {}).get("home", {}).get("close", {}).get("line"),
+                        "odds": odds_provider.get("pointSpread", {}).get("home", {}).get("close", {}).get("odds")
+                    },
+                    "away": {
+                        "line": odds_provider.get("pointSpread", {}).get("away", {}).get("close", {}).get("line"),
+                        "odds": odds_provider.get("pointSpread", {}).get("away", {}).get("close", {}).get("odds")
+                    }
+                },
+                "total": {
+                    "over": {
+                        "line": odds_provider.get("total", {}).get("over", {}).get("close", {}).get("line"),
+                        "odds": odds_provider.get("total", {}).get("over", {}).get("close", {}).get("odds")
+                    },
+                    "under": {
+                        "line": odds_provider.get("total", {}).get("under", {}).get("close", {}).get("line"),
+                        "odds": odds_provider.get("total", {}).get("under", {}).get("close", {}).get("odds")
+                    }
+                }
+            }
+            game["odds"].append(odds_info)
+        
+        return game
     
     # -------------------------------------------------------------------------
     # Cache Management

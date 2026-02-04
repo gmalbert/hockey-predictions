@@ -28,6 +28,7 @@ hockey-predictions/
 - Use `httpx` for async HTTP requests
 - Cache responses in `data_files/cache/` to avoid rate limits
 - Handle API failures gracefully - NHL APIs are unofficial
+- ESPN odds API provides betting data for upcoming games
 
 ```python
 # Example pattern for API calls
@@ -37,6 +38,11 @@ async def fetch_schedule(date: str) -> dict:
         response = await client.get(url)
         return response.json()
 ```
+
+### ESPN Odds Integration
+- Use `NHLClient.get_espn_odds()` for betting odds
+- Returns moneyline, spread, and total (over/under) from DraftKings
+- Cached for 5 minutes like other API calls
 
 ### Streamlit Components
 - One page per file in `src/pages/`
