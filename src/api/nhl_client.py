@@ -14,6 +14,16 @@ class NHLClient:
     ESPN_SCORES_API = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
     CACHE_DIR = Path("data_files/cache")
     
+    # Team ID to abbreviation mapping
+    TEAM_ID_MAP = {
+        1: 'NJD', 2: 'NYI', 3: 'NYR', 4: 'PHI', 5: 'PIT', 6: 'BOS',
+        7: 'BUF', 8: 'MTL', 9: 'OTT', 10: 'TOR', 12: 'CAR', 13: 'FLA',
+        14: 'TBL', 15: 'WSH', 16: 'CHI', 17: 'DET', 18: 'NSH', 19: 'STL',
+        20: 'CGY', 21: 'COL', 22: 'EDM', 23: 'VAN', 24: 'ANA', 25: 'DAL',
+        26: 'LAK', 28: 'SJS', 29: 'CBJ', 30: 'MIN', 52: 'WPG', 53: 'ARI',
+        54: 'VGK', 55: 'SEA'
+    }
+    
     def __init__(self, cache_ttl_minutes: int = 5):
         """
         Initialize NHL API client.
@@ -57,7 +67,7 @@ class NHLClient:
         
         # Fetch fresh data
         try:
-            response = httpx.get(url, timeout=30.0)
+            response = httpx.get(url, timeout=30.0, follow_redirects=True)
             response.raise_for_status()
             data = response.json()
             
@@ -145,6 +155,38 @@ class NHLClient:
         url = f"{self.BASE_WEB_API}/club-schedule-season/{team}/{season}"
         return self._fetch_sync(url)
     
+    def get_season_games(self, team_abbrev: str, season: str = "20252026") -> list[dict]:
+        """
+        Get completed games for a team in a season.
+        
+        Args:
+            team_abbrev: Team abbreviation (e.g., "TOR")
+            season: Season ID (e.g., "20252026")
+            
+        Returns:
+            List of completed game dictionaries
+        """
+        schedule = self.get_team_schedule(team_abbrev, season)
+        
+        completed = []
+        for game in schedule.get("games", []):
+            if game.get("gameState") in ["OFF", "FINAL"]:  # Completed games
+                home_abbrev = game.get("homeTeam", {}).get("abbrev", "")
+                away_abbrev = game.get("awayTeam", {}).get("abbrev", "")
+                is_home = home_abbrev == team_abbrev
+                
+                completed.append({
+                    "game_id": game.get("id"),
+                    "date": game.get("gameDate"),
+                    "opponent": away_abbrev if is_home else home_abbrev,
+                    "home_away": "home" if is_home else "away",
+                    "team_score": game.get("homeTeam", {}).get("score", 0) if is_home else game.get("awayTeam", {}).get("score", 0),
+                    "opponent_score": game.get("awayTeam", {}).get("score", 0) if is_home else game.get("homeTeam", {}).get("score", 0),
+                    "result": "W" if (is_home and game.get("homeTeam", {}).get("score", 0) > game.get("awayTeam", {}).get("score", 0)) or 
+                                     (not is_home and game.get("awayTeam", {}).get("score", 0) > game.get("homeTeam", {}).get("score", 0)) else "L",
+                })
+        return completed
+    
     def get_team_stats(self, season: str = "20252026") -> dict:
         """
         Get team statistics for a season.
@@ -163,18 +205,29 @@ class NHLClient:
         Get stats for a specific team.
         
         Args:
-            team_abbrev: Team abbreviation
+            team_abbrev: Team abbreviation (e.g., 'TOR')
             season: Season ID
             
         Returns:
             Team stats dictionary or None
         """
+        # Convert team abbreviation to team ID
+        team_id = None
+        for tid, abbrev in self.TEAM_ID_MAP.items():
+            if abbrev == team_abbrev:
+                team_id = tid
+                break
+        
+        if team_id is None:
+            return None
+        
         stats = self.get_team_stats(season)
         
         for team in stats.get("data", []):
-            if team.get("teamAbbrev") == team_abbrev:
+            if team.get("teamId") == team_id:
                 return {
                     "team": team_abbrev,
+                    "team_full_name": team.get("teamFullName", ""),
                     "games_played": team.get("gamesPlayed", 0),
                     "wins": team.get("wins", 0),
                     "losses": team.get("losses", 0),
