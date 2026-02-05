@@ -21,18 +21,44 @@ This application aims to:
 |--------|-------------|
 | `api-web.nhle.com` | Game schedules, scores, player stats |
 | `api.nhle.com/stats/rest` | Advanced team and player statistics |
+| `site.api.espn.com` | Live betting odds and lines |
 
-## 📊 Key Features (Planned)
+## 📊 Key Features
 
-- **Daily Game Dashboard**: Today's matchups with betting-relevant stats
-- **Team Trends**: Recent form, home/away splits, rest days analysis
-- **Player Props Support**: Individual player performance tracking
-- **Line Movement Tracker**: Compare current lines vs model predictions
-- **Backtesting**: Validate strategies against historical data
+- **📅 Today's Games**: Daily NHL matchups with real-time odds and betting insights
+- **📊 Team Stats**: Detailed team performance, recent form, and season statistics
+- **🏆 Standings**: League standings by division with rankings and key metrics
+- **💰 Value Finder**: Identify betting opportunities with implied probabilities
+- **🎯 Player Props**: Player performance tracking and prop betting analysis
+- **📈 Performance**: Bet tracking and ROI analysis (framework ready)
+
+## 🚀 Quick Start
+
+### Local Development
+
+```bash
+# Activate virtual environment
+.\venv\Scripts\Activate.ps1  # Windows
+# or
+source venv/bin/activate   # macOS/Linux
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run src/app.py
+```
+
+### Deployment
+
+For Streamlit Cloud or other remote deployments, set the main file to:
+```
+src/app.py
+```
 
 ## 📖 Documentation
 
-See the [docs/roadmap/](docs/roadmap/) folder for detailed development plans.
+See the [docs/roadmap/](docs/roadmap/) folder for detailed development plans and implementation status.
 
 ---
 

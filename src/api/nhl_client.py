@@ -14,6 +14,34 @@ class NHLClient:
     ESPN_SCORES_API = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
     CACHE_DIR = Path("data_files/cache")
     
+    # Team abbreviation to ID mapping
+    TEAM_ID_MAP = {
+        "ANA": 24, "ARI": 53, "BOS": 6, "BUF": 7, "CAR": 12, "CBJ": 29,
+        "CGY": 20, "CHI": 16, "COL": 21, "DAL": 25, "DET": 17, "EDM": 22,
+        "FLA": 13, "LAK": 26, "MIN": 30, "MTL": 8, "NJD": 1, "NSH": 18,
+        "NYI": 2, "NYR": 3, "OTT": 9, "PHI": 4, "PIT": 5, "SEA": 55,
+        "SJS": 28, "STL": 19, "TBL": 14, "TOR": 10, "VAN": 23, "VGK": 54,
+        "WPG": 52, "WSH": 15, "UTA": 53  # Utah uses same ID as former ARI
+    }
+    
+    # Reverse mapping: ID to abbreviation
+    ID_TO_TEAM_MAP = {v: k for k, v in TEAM_ID_MAP.items() if k != "UTA"}  # Exclude duplicate
+    
+    # Full team names
+    TEAM_NAMES = {
+        "ANA": "Anaheim Ducks", "ARI": "Arizona Coyotes", "BOS": "Boston Bruins",
+        "BUF": "Buffalo Sabres", "CAR": "Carolina Hurricanes", "CBJ": "Columbus Blue Jackets",
+        "CGY": "Calgary Flames", "CHI": "Chicago Blackhawks", "COL": "Colorado Avalanche",
+        "DAL": "Dallas Stars", "DET": "Detroit Red Wings", "EDM": "Edmonton Oilers",
+        "FLA": "Florida Panthers", "LAK": "Los Angeles Kings", "MIN": "Minnesota Wild",
+        "MTL": "Montreal Canadiens", "NJD": "New Jersey Devils", "NSH": "Nashville Predators",
+        "NYI": "New York Islanders", "NYR": "New York Rangers", "OTT": "Ottawa Senators",
+        "PHI": "Philadelphia Flyers", "PIT": "Pittsburgh Penguins", "SEA": "Seattle Kraken",
+        "SJS": "San Jose Sharks", "STL": "St. Louis Blues", "TBL": "Tampa Bay Lightning",
+        "TOR": "Toronto Maple Leafs", "VAN": "Vancouver Canucks", "VGK": "Vegas Golden Knights",
+        "WPG": "Winnipeg Jets", "WSH": "Washington Capitals", "UTA": "Utah Hockey Club"
+    }
+    
     def __init__(self, cache_ttl_minutes: int = 5):
         """
         Initialize NHL API client.
@@ -57,7 +85,7 @@ class NHLClient:
         
         # Fetch fresh data
         try:
-            response = httpx.get(url, timeout=30.0)
+            response = httpx.get(url, timeout=30.0, follow_redirects=True)
             response.raise_for_status()
             data = response.json()
             
@@ -145,6 +173,57 @@ class NHLClient:
         url = f"{self.BASE_WEB_API}/club-schedule-season/{team}/{season}"
         return self._fetch_sync(url)
     
+    def get_season_games(self, team: str, season: str = "20252026") -> list[dict]:
+        """
+        Get processed list of games for a team.
+        
+        Args:
+            team: Team abbreviation
+            season: Season ID
+            
+        Returns:
+            List of game dictionaries with simplified data
+        """
+        schedule_data = self.get_team_schedule(team, season)
+        games = []
+        
+        for game in schedule_data.get("games", []):
+            # Determine if team is home or away
+            home_abbrev = game.get("homeTeam", {}).get("abbrev", "")
+            away_abbrev = game.get("awayTeam", {}).get("abbrev", "")
+            is_home = home_abbrev == team
+            
+            # Get scores
+            home_score = game.get("homeTeam", {}).get("score")
+            away_score = game.get("awayTeam", {}).get("score")
+            
+            # Skip games not yet played
+            if home_score is None or away_score is None:
+                continue
+            
+            # Determine result
+            if is_home:
+                team_score = home_score
+                opponent_score = away_score
+                opponent = away_abbrev
+                result = "W" if home_score > away_score else "L"
+            else:
+                team_score = away_score
+                opponent_score = home_score
+                opponent = home_abbrev
+                result = "W" if away_score > home_score else "L"
+            
+            games.append({
+                "date": game.get("gameDate", ""),
+                "opponent": opponent,
+                "home_away": "home" if is_home else "away",
+                "result": result,
+                "team_score": team_score,
+                "opponent_score": opponent_score
+            })
+        
+        return games
+    
     def get_team_stats(self, season: str = "20252026") -> dict:
         """
         Get team statistics for a season.
@@ -163,18 +242,24 @@ class NHLClient:
         Get stats for a specific team.
         
         Args:
-            team_abbrev: Team abbreviation
+            team_abbrev: Team abbreviation (e.g., "TOR")
             season: Season ID
             
         Returns:
             Team stats dictionary or None
         """
+        # Get team ID from abbreviation
+        team_id = self.TEAM_ID_MAP.get(team_abbrev)
+        if not team_id:
+            return None
+        
         stats = self.get_team_stats(season)
         
         for team in stats.get("data", []):
-            if team.get("teamAbbrev") == team_abbrev:
+            if team.get("teamId") == team_id:
                 return {
                     "team": team_abbrev,
+                    "team_full_name": team.get("teamFullName", ""),
                     "games_played": team.get("gamesPlayed", 0),
                     "wins": team.get("wins", 0),
                     "losses": team.get("losses", 0),
