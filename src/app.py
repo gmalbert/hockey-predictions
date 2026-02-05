@@ -1,6 +1,13 @@
 """Hockey Predictions - Streamlit Entry Point."""
 import streamlit as st
 from pathlib import Path
+import sys
+
+# Add src to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.api.nhl_client import NHLClient
+from src.utils.styles import apply_custom_css
+from footer import add_betting_oracle_footer
 
 # Page configuration
 st.set_page_config(
@@ -10,6 +17,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Apply custom styling
+apply_custom_css()
+
+# Initialize client
+@st.cache_resource
+def get_client():
+    return NHLClient()
+
+client = get_client()
+
 # Load logo
 logo_path = Path("data_files/logo.png")
 if logo_path.exists():
@@ -18,63 +35,150 @@ if logo_path.exists():
 st.sidebar.title("Hockey Predictions")
 st.sidebar.markdown("NHL Betting Analytics")
 st.sidebar.divider()
-st.sidebar.markdown("""
-**Navigation**
-- 📅 Today's Games
-- 🏆 Standings
-- 📊 Team Stats
-- 💰 Value Finder
-- 🥅 Goalies
-- 🏥 Injuries
-- 📉 Line Movement
-- 📈 Performance
-""")
 
-# Main content
+# Main content - Landing Page
 st.title("🏒 Hockey Predictions")
-st.markdown("### NHL Betting Analytics Platform")
+st.markdown("### Your Data-Driven Guide to NHL Betting")
 
 st.markdown("""
-Welcome to Hockey Predictions! This platform provides data-driven insights 
-for NHL sports betting, focusing on **moneyline** and **puck line** analysis.
-
----
-
-#### Quick Start
-1. Check **Today's Games** for current matchups and predictions
-2. Review **Value Finder** for bets with positive expected value
-3. Monitor **Line Movement** for sharp action signals
-4. Track **Performance** to validate model accuracy
-
----
+Welcome to **Hockey Predictions** - the most comprehensive NHL betting analytics platform. 
+We combine real-time data, advanced statistics, and betting insights to help you make smarter wagers.
 """)
 
-# Quick stats placeholder
-st.subheader("Today's Overview")
-col1, col2, col3, col4 = st.columns(4)
+# Hero section with key stats
+st.divider()
 
-with col1:
-    st.metric("Games Today", "0", help="Number of NHL games scheduled")
-with col2:
-    st.metric("Value Bets", "0", help="Bets with positive expected value")
-with col3:
-    st.metric("Model Accuracy", "—", help="Last 30 days")
-with col4:
-    st.metric("MAE (Goals)", "—", help="Mean Absolute Error")
+try:
+    # Get today's games for quick overview
+    games = client.get_todays_games()
+    games_count = len(games)
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.metric("Games Today", games_count)
+        if games_count > 0:
+            st.caption("NHL matchups scheduled")
+    
+    with col2:
+        st.metric("Live Data", "Active")
+        st.caption("Real-time NHL stats")
+    
+    with col3:
+        st.metric("Teams", "32")
+        st.caption("NHL franchises")
+
+except Exception as e:
+    st.warning("Unable to load live data - check your connection")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Games Today", "—")
+    with col2:
+        st.metric("Live Data", "—")
+    with col3:
+        st.metric("Teams", "32")
 
 st.divider()
 
-# System status
-st.subheader("System Status")
-col1, col2 = st.columns(2)
+# Feature cards
+st.subheader("🎯 What We Offer")
+
+col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("**Data Sources**")
-    st.markdown("- 🟢 NHL Web API")
-    st.markdown("- 🟢 NHL Stats API")
+    st.markdown("### 📅 Today's Games")
+    st.markdown("""
+    Complete schedule with live scores, 
+    betting odds, and game analysis.
+    """)
+    if st.button("View Games", key="games_btn"):
+        st.switch_page("pages/1_📅_Todays_Games.py")
 
 with col2:
-    st.markdown("**Last Updated**")
-    st.markdown("- Schedule: —")
-    st.markdown("- Standings: —")
-    st.markdown("- Odds: —")
+    st.markdown("### 📊 Team Analytics")
+    st.markdown("""
+    Deep dive into team performance,
+    recent form, and head-to-head matchups.
+    """)
+    if st.button("Explore Teams", key="teams_btn"):
+        st.switch_page("pages/2_📊_Team_Stats.py")
+
+with col3:
+    st.markdown("### 🏆 League Standings")
+    st.markdown("""
+    Current NHL standings by division
+    with key performance metrics.
+    """)
+    if st.button("View Standings", key="standings_btn"):
+        st.switch_page("pages/3_🏆_Standings.py")
+
+# Second row of features
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("### 💰 Value Finder")
+    st.markdown("""
+    Identify betting opportunities with
+    statistical edge analysis.
+    """)
+    if st.button("Find Value", key="value_btn"):
+        st.switch_page("pages/4_💰_Value_Finder.py")
+
+with col2:
+    st.markdown("### 🎯 Player Props")
+    st.markdown("""
+    Player performance tracking and
+    prop betting insights.
+    """)
+    if st.button("Player Stats", key="props_btn"):
+        st.switch_page("pages/5_🎯_Player_Props.py")
+
+with col3:
+    st.markdown("### 📈 Performance")
+    st.markdown("""
+    Track your betting results and
+    monitor ROI over time.
+    """)
+    if st.button("View Performance", key="perf_btn"):
+        st.switch_page("pages/6_📈_Performance.py")
+
+st.divider()
+
+# Today's featured games (if available)
+if 'games' in locals() and games:
+    st.subheader("🔥 Today's Matchups")
+    
+    # Show first 3 games as preview
+    for i, game in enumerate(games[:3]):
+        try:
+            away_team = client.TEAM_NAMES.get(game.get("away_team", ""), game.get("away_team", ""))
+            home_team = client.TEAM_NAMES.get(game.get("home_team", ""), game.get("home_team", ""))
+
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.markdown(f"**{away_team} @ {home_team}**")
+                if game.get("venue"):
+                    st.caption(f"📍 {game.get('venue', '')}")
+
+            with col2:
+                game_state = game.get("game_state", "")
+                if game_state == "LIVE":
+                    st.markdown("🔴 **LIVE**")
+                elif game_state == "FINAL":
+                    home_score = game.get("home_score", 0)
+                    away_score = game.get("away_score", 0)
+                    st.markdown(f"**{away_score}-{home_score}**")
+                else:
+                    st.caption("Scheduled")
+
+        except Exception as e:
+            st.caption(f"Error loading game {i+1}")
+
+    if len(games) > 3:
+        st.caption(f"Plus {len(games) - 3} more games today")
+
+    if st.button("See All Today's Games", key="all_games_btn"):
+        st.switch_page("pages/1_📅_Todays_Games.py")
+
+# Add footer to all pages
+add_betting_oracle_footer()
