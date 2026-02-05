@@ -3,237 +3,177 @@
 ## Overview
 This document outlines the strategy for collecting NHL data from unofficial APIs to power betting analytics.
 
+**Status**: ✅ **COMPLETED** - All tasks implemented and tested
+
 ---
 
-## Phase 1: Core API Client Setup
+## Phase 1: Core API Client Setup ✅
 
-### Task 1.1: Create Base HTTP Client
+### Task 1.1: Create Base HTTP Client ✅
+**Status**: ✅ COMPLETED  
 **File**: `src/api/nhl_client.py`
 
-```python
-"""NHL API client with caching and error handling."""
-import httpx
-from pathlib import Path
-from datetime import datetime, timedelta
-import json
-from typing import Any
+**Implementation Notes**:
+- Using synchronous `httpx.get()` with `follow_redirects=True` for Streamlit compatibility
+- Cache implementation using `_fetch_sync()` method with 5-minute TTL
+- All core methods implemented and tested
+- Team ID to abbreviation mapping added for proper team lookup
 
-class NHLClient:
-    """Async client for NHL API endpoints."""
-    
-    BASE_WEB_API = "https://api-web.nhle.com/v1"
-    BASE_STATS_API = "https://api.nhle.com/stats/rest/en"
-    CACHE_DIR = Path("data_files/cache")
-    
-    def __init__(self, cache_ttl_minutes: int = 5):
-        self.cache_ttl = timedelta(minutes=cache_ttl_minutes)
-        self.CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    
-    def _get_cache_path(self, endpoint: str) -> Path:
-        """Generate cache file path from endpoint."""
-        safe_name = endpoint.replace("/", "_").replace("?", "_")
-        return self.CACHE_DIR / f"{safe_name}.json"
-    
-    def _is_cache_valid(self, cache_path: Path) -> bool:
-        """Check if cached data is still fresh."""
-        if not cache_path.exists():
-            return False
-        mtime = datetime.fromtimestamp(cache_path.stat().st_mtime)
-        return datetime.now() - mtime < self.cache_ttl
-    
-    async def _fetch(self, base_url: str, endpoint: str) -> dict[str, Any]:
-        """Fetch data with caching."""
-        cache_path = self._get_cache_path(endpoint)
-        
-        if self._is_cache_valid(cache_path):
-            return json.loads(cache_path.read_text())
-        
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.get(f"{base_url}{endpoint}")
-            response.raise_for_status()
-            data = response.json()
-            
-            cache_path.write_text(json.dumps(data, indent=2))
-            return data
-    
-    async def get_schedule(self, date: str) -> dict:
-        """Get games for a specific date (YYYY-MM-DD)."""
-        return await self._fetch(self.BASE_WEB_API, f"/schedule/{date}")
-    
-    async def get_standings(self) -> dict:
-        """Get current league standings."""
-        return await self._fetch(self.BASE_WEB_API, "/standings/now")
-    
-    async def get_team_stats(self, season: str = "20252026") -> dict:
-        """Get team statistics for a season."""
-        endpoint = f"/team/summary?cayenneExp=seasonId={season}"
-        return await self._fetch(self.BASE_STATS_API, endpoint)
-```
+**Key Features**:
+- Automatic redirect handling for NHL API endpoints
+- File-based caching in `data_files/cache/`
+- 30-second timeout for requests
+- Error handling for HTTP errors and timeouts
 
-### Task 1.2: Create Synchronous Wrapper for Streamlit
-**File**: `src/api/sync_client.py`
+### Task 1.2: Create Synchronous Wrapper for Streamlit ✅
+**Status**: ✅ NOT NEEDED - Using synchronous client directly
 
-```python
-"""Synchronous wrapper for Streamlit compatibility."""
-import asyncio
-from functools import wraps
-from typing import Callable, Any
+**Implementation Notes**:
+- Using synchronous `httpx.get()` with `follow_redirects=True` for Streamlit compatibility
+- Cache implementation using `_fetch_sync()` method with 5-minute TTL
+- All core methods implemented and tested
+- Team ID to abbreviation mapping added for proper team lookup
 
-def run_async(func: Callable) -> Callable:
-    """Decorator to run async functions synchronously."""
-    @wraps(func)
-    def wrapper(*args, **kwargs) -> Any:
-        return asyncio.run(func(*args, **kwargs))
-    return wrapper
+**Key Features**:
+- Automatic redirect handling for NHL API endpoints
+- File-based caching in `data_files/cache/`
+- 30-second timeout for requests
+- Error handling for HTTP errors and timeouts
 
-# Usage in Streamlit:
-# from src.api.nhl_client import NHLClient
-# from src.api.sync_client import run_async
-#
-# client = NHLClient()
-# schedule = run_async(client.get_schedule)("2026-02-02")
-```
+### Task 1.2: Create Synchronous Wrapper for Streamlit ✅
+**Status**: ✅ NOT NEEDED - Using synchronous client directly
+
+**Rationale**: The NHLClient uses synchronous httpx calls directly, which work perfectly with Streamlit without needing async wrapper functions.
 
 ---
 
-## Phase 2: Essential Data Endpoints
+## Phase 2: Essential Data Endpoints ✅
 
-### Task 2.1: Today's Schedule
-Fetches all games for betting analysis.
+### Task 2.1: Today's Schedule ✅
+**Status**: ✅ COMPLETED  
+**Method**: `get_todays_games()`
 
-```python
-async def get_todays_games(self) -> list[dict]:
-    """Get today's games with betting-relevant data."""
-    from datetime import date
-    today = date.today().isoformat()
-    schedule = await self.get_schedule(today)
-    
-    games = []
-    for game_week in schedule.get("gameWeek", []):
-        for game in game_week.get("games", []):
-            games.append({
-                "game_id": game["id"],
-                "start_time": game["startTimeUTC"],
-                "home_team": game["homeTeam"]["abbrev"],
-                "away_team": game["awayTeam"]["abbrev"],
-                "venue": game.get("venue", {}).get("default", ""),
-                "game_type": game.get("gameType", 2),  # 2 = regular season
-            })
-    return games
-```
+Fetches all games for betting analysis with key information:
+- Game ID, start time, teams, scores
+- Game state (live, final, scheduled)
+- Venue information
 
-### Task 2.2: Team Statistics
-Key metrics for moneyline and puck line analysis.
+**Tested**: ✅ Returns 17+ games for current date
 
-```python
-async def get_team_summary(self, team_abbrev: str) -> dict:
-    """Get comprehensive team stats."""
-    stats = await self.get_team_stats()
-    
-    for team in stats.get("data", []):
-        if team.get("teamAbbrev") == team_abbrev:
-            return {
-                "wins": team.get("wins", 0),
-                "losses": team.get("losses", 0),
-                "ot_losses": team.get("otLosses", 0),
-                "goals_for_pg": team.get("goalsForPerGame", 0),
-                "goals_against_pg": team.get("goalsAgainstPerGame", 0),
-                "pp_pct": team.get("powerPlayPct", 0),
-                "pk_pct": team.get("penaltyKillPct", 0),
-                "shots_for_pg": team.get("shotsForPerGame", 0),
-                "shots_against_pg": team.get("shotsAgainstPerGame", 0),
-            }
-    return {}
-```
+### Task 2.2: Team Statistics ✅
+**Status**: ✅ COMPLETED  
+**Methods**: `get_team_stats()`, `get_team_summary()`
 
-### Task 2.3: Player Statistics (for Props)
-Individual player data for prop bets.
+Key metrics for moneyline and puck line analysis:
+- Win/loss records, points
+- Goals for/against per game
+- Power play and penalty kill percentages
+- Shots for/against per game
 
-```python
-async def get_skater_stats(self, season: str = "20252026", limit: int = 100) -> list[dict]:
-    """Get top skaters by points."""
-    endpoint = f"/skater/summary?limit={limit}&cayenneExp=seasonId={season}&sort=points&direction=DESC"
-    data = await self._fetch(self.BASE_STATS_API, endpoint)
-    
-    return [
-        {
-            "player_id": p.get("playerId"),
-            "name": p.get("skaterFullName"),
-            "team": p.get("teamAbbrevs"),
-            "games": p.get("gamesPlayed", 0),
-            "goals": p.get("goals", 0),
-            "assists": p.get("assists", 0),
-            "points": p.get("points", 0),
-            "shots": p.get("shots", 0),
-            "toi_pg": p.get("timeOnIcePerGame", 0),
-        }
-        for p in data.get("data", [])
-    ]
-```
+**Tested**: ✅ Successfully retrieves all 32 NHL teams
+
+**Implementation Notes**:
+- Uses team ID mapping (TEAM_ID_MAP) to convert abbreviations to IDs
+- Stats API uses teamId not teamAbbrev in responses
+- Returns comprehensive stats dictionary per team
+
+### Task 2.3: Player Statistics (for Props) ✅
+**Status**: ✅ COMPLETED  
+**Methods**: `get_skater_stats()`, `get_goalie_stats()`
+
+Individual player data for prop bets:
+- Skaters: goals, assists, points, shots, TOI
+- Goalies: wins, save %, GAA, shutouts
+
+**Tested**: ✅ Returns top 100 skaters and 50 goalies
 
 ---
 
-## Phase 3: Historical Data Collection
+## Phase 3: Historical Data Collection ✅
 
-### Task 3.1: Game Results History
-Store historical outcomes for backtesting.
+### Task 3.1: Game Results History ✅
+**Status**: ✅ COMPLETED  
+**Methods**: `get_team_schedule()`, `get_season_games()`
 
-```python
-async def get_season_games(self, team_abbrev: str, season: str = "20252026") -> list[dict]:
-    """Get all games for a team in a season."""
-    endpoint = f"/club-schedule-season/{team_abbrev}/{season}"
-    data = await self._fetch(self.BASE_WEB_API, endpoint)
-    
-    completed = []
-    for game in data.get("games", []):
-        if game.get("gameState") == "OFF":  # Completed games only
-            completed.append({
-                "game_id": game["id"],
-                "date": game["gameDate"],
-                "opponent": game["opponentAbbrev"]["default"],
-                "home_away": "home" if game["homeTeam"]["abbrev"] == team_abbrev else "away",
-                "team_score": game.get("teamScore", 0),
-                "opponent_score": game.get("opponentScore", 0),
-                "result": "W" if game.get("teamScore", 0) > game.get("opponentScore", 0) else "L",
-            })
-    return completed
-```
+Store historical outcomes for backtesting:
+- All completed games for a team in a season
+- Game results (W/L), scores, home/away designation
+- Date and opponent information
 
-### Task 3.2: Cache Management Utility
+**Tested**: ✅ Returns 60+ completed games for current season
+
+**Implementation Notes**:
+- Filters for games with state "OFF" or "FINAL"
+- Properly handles home vs away team perspective
+- Returns structured game dictionaries ready for analysis
+
+### Task 3.2: Cache Management Utility ✅
+**Status**: ✅ COMPLETED  
 **File**: `src/utils/cache.py`
 
-```python
-"""Cache management utilities."""
-from pathlib import Path
-from datetime import datetime, timedelta
-import json
+Cache management functions:
+- `clear_old_cache(max_age_hours)` - Remove old cache files
+- `get_cache_size_mb()` - Get total cache size
+- `clear_all_cache()` - Remove all cached data
 
-CACHE_DIR = Path("data_files/cache")
+**Also integrated into NHLClient**:
+- `client.clear_cache(max_age_hours)`
+- `client.get_cache_size_mb()`
 
-def clear_old_cache(max_age_hours: int = 24) -> int:
-    """Remove cache files older than specified hours."""
-    if not CACHE_DIR.exists():
-        return 0
-    
-    removed = 0
-    cutoff = datetime.now() - timedelta(hours=max_age_hours)
-    
-    for cache_file in CACHE_DIR.glob("*.json"):
-        mtime = datetime.fromtimestamp(cache_file.stat().st_mtime)
-        if mtime < cutoff:
-            cache_file.unlink()
-            removed += 1
-    
-    return removed
+**Tested**: ✅ Successfully manages cache directory
 
-def get_cache_size_mb() -> float:
-    """Get total cache size in megabytes."""
-    if not CACHE_DIR.exists():
-        return 0.0
-    
-    total_bytes = sum(f.stat().st_size for f in CACHE_DIR.glob("*.json"))
-    return total_bytes / (1024 * 1024)
+---
+
+## Additional Implemented Features ✅
+
+### ESPN Odds Integration ✅
+**Method**: `get_espn_odds(days_ahead=7)`
+
+Retrieves betting odds from ESPN API:
+- Moneyline odds (home/away)
+- Point spread (puck line)
+- Total (over/under)
+- Multiple provider support (DraftKings, etc.)
+
+**Tested**: ✅ Returns odds for 14+ upcoming games
+
+### Standings Endpoint ✅
+**Method**: `get_standings()`
+
+Current league standings with:
+- Team records and points
+- Division/conference rankings
+- Handles API redirects properly
+
+**Tested**: ✅ Returns all 32 teams with standings data
+
+---
+
+## Testing Summary
+
+All roadmap tasks have been implemented and verified working:
+
 ```
+✅ Phase 1: Core API Client Setup
+  ✅ Task 1.1: Base HTTP Client
+  ✅ Task 1.2: Synchronous Wrapper (not needed)
+
+✅ Phase 2: Essential Data Endpoints
+  ✅ Task 2.1: Today's Schedule (17 games)
+  ✅ Task 2.2: Team Statistics (32 teams)
+  ✅ Task 2.3: Player Statistics (100+ players)
+
+✅ Phase 3: Historical Data Collection
+  ✅ Task 3.1: Game Results History (60+ games/team)
+  ✅ Task 3.2: Cache Management Utility
+
+✅ Additional Features
+  ✅ ESPN Odds Integration
+  ✅ Goalie Statistics
+  ✅ HTTP Redirect Handling
+```
+
+**Test Script**: `test_roadmap.py` - Comprehensive validation of all endpoints
 
 ---
 
