@@ -7,7 +7,7 @@ import sys
 import random
 
 # Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
 from footer import add_betting_oracle_footer
 
