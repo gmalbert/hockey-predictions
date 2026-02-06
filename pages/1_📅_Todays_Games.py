@@ -8,6 +8,10 @@ import sys
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
+from src.models.expected_goals import TeamMetrics, calculate_expected_goals
+from src.models.win_probability import calculate_win_probability
+from src.models.totals import predict_total
+from src.utils.odds import calculate_edge, american_to_implied
 from footer import add_betting_oracle_footer
 
 st.set_page_config(page_title="Today's Games", page_icon="📅", layout="wide")
@@ -36,7 +40,7 @@ try:
                 games_list.append(game)
     
     if games_list:
-        # Build games table
+        # Build games table with predictions
         games_data = []
         for game in games_list:
             try:
@@ -50,13 +54,69 @@ try:
                 away_abbrev = game.get("awayTeam", {}).get("abbrev", "")
                 home_abbrev = game.get("homeTeam", {}).get("abbrev", "")
                 
+                # Get team stats for predictions
+                home_stats = client.get_team_summary(home_abbrev)
+                away_stats = client.get_team_summary(away_abbrev)
+                
+                # Calculate predictions if stats available
+                xg_str = "—"
+                win_prob_str = "—"
+                total_str = "—"
+                
+                if home_stats and away_stats:
+                    try:
+                        # Create TeamMetrics
+                        home_metrics = TeamMetrics(
+                            team=home_abbrev,
+                            goals_for_pg=home_stats['goals_for_pg'],
+                            goals_against_pg=home_stats['goals_against_pg'],
+                            shots_for_pg=home_stats.get('shots_for_pg', 30),
+                            shots_against_pg=home_stats.get('shots_against_pg', 30),
+                            pp_pct=home_stats['pp_pct'],
+                            pk_pct=home_stats['pk_pct']
+                        )
+                        
+                        away_metrics = TeamMetrics(
+                            team=away_abbrev,
+                            goals_for_pg=away_stats['goals_for_pg'],
+                            goals_against_pg=away_stats['goals_against_pg'],
+                            shots_for_pg=away_stats.get('shots_for_pg', 30),
+                            shots_against_pg=away_stats.get('shots_against_pg', 30),
+                            pp_pct=away_stats['pp_pct'],
+                            pk_pct=away_stats['pk_pct']
+                        )
+                        
+                        # Calculate predictions
+                        home_xg, away_xg = calculate_expected_goals(home_metrics, away_metrics)
+                        probs = calculate_win_probability(home_xg, away_xg)
+                        totals = predict_total(home_xg, away_xg, 6.5)
+                        
+                        xg_str = f"{away_xg} - {home_xg}"
+                        win_prob_str = f"{home_abbrev} {probs.home_win:.0%} | {away_abbrev} {probs.away_win:.0%}"
+                        total_str = f"{totals.expected_total:.1f} (O{totals.over_prob:.0%}/U{totals.under_prob:.0%})"
+                    except:
+                        pass
+                
+                # Format status to be more readable
+                game_state = game.get("gameState", "")
+                if game_state == "FUT":
+                    status_str = "Scheduled"
+                elif game_state == "LIVE":
+                    status_str = "Live"
+                elif game_state == "FINAL":
+                    status_str = "Final"
+                else:
+                    status_str = game_state
+                
                 games_data.append({
                     "Time": time_str,
                     "Away": client.TEAM_NAMES.get(away_abbrev, away_abbrev),
                     "Home": client.TEAM_NAMES.get(home_abbrev, home_abbrev),
+                    "xG": xg_str,
+                    "Win Prob": win_prob_str,
+                    "Total": total_str,
                     "Score": f"{game.get('awayTeam', {}).get('score', '—')} - {game.get('homeTeam', {}).get('score', '—')}",
-                    "Status": game.get("gameState", ""),
-                    "Venue": game.get("venue", {}).get("default", "")
+                    "Status": status_str,
                 })
             except Exception as e:
                 st.warning(f"Error processing game: {e}")
@@ -72,11 +132,13 @@ try:
                 hide_index=True,
                 column_config={
                     "Time": st.column_config.TextColumn("Time", width="small"),
-                    "Away": st.column_config.TextColumn("Away Team", width="medium"),
-                    "Home": st.column_config.TextColumn("Home Team", width="medium"),
+                    "Away": st.column_config.TextColumn("Away", width="medium"),
+                    "Home": st.column_config.TextColumn("Home", width="medium"),
+                    "xG": st.column_config.TextColumn("Expected Goals", width="small", help="Away - Home expected goals"),
+                    "Win Prob": st.column_config.TextColumn("Win Probability", width="medium"),
+                    "Total": st.column_config.TextColumn("Total Goals", width="small", help="Expected total (Over %/Under %)"),
                     "Score": st.column_config.TextColumn("Score", width="small"),
                     "Status": st.column_config.TextColumn("Status", width="small"),
-                    "Venue": st.column_config.TextColumn("Venue", width="medium"),
                 }
             )
             
@@ -118,6 +180,58 @@ try:
                             st.write(f"**PK%:** {home_stats['pk_pct']:.1%}")
                         else:
                             st.info("Stats not available")
+                    
+                    # MODEL PREDICTIONS
+                    if away_stats and home_stats:
+                        st.divider()
+                        st.markdown("### 🎯 Model Predictions")
+                        
+                        # Create TeamMetrics for calculations
+                        home_metrics = TeamMetrics(
+                            team=home_abbrev,
+                            goals_for_pg=home_stats['goals_for_pg'],
+                            goals_against_pg=home_stats['goals_against_pg'],
+                            shots_for_pg=home_stats.get('shots_for_pg', 30),
+                            shots_against_pg=home_stats.get('shots_against_pg', 30),
+                            pp_pct=home_stats['pp_pct'],
+                            pk_pct=home_stats['pk_pct']
+                        )
+                        
+                        away_metrics = TeamMetrics(
+                            team=away_abbrev,
+                            goals_for_pg=away_stats['goals_for_pg'],
+                            goals_against_pg=away_stats['goals_against_pg'],
+                            shots_for_pg=away_stats.get('shots_for_pg', 30),
+                            shots_against_pg=away_stats.get('shots_against_pg', 30),
+                            pp_pct=away_stats['pp_pct'],
+                            pk_pct=away_stats['pk_pct']
+                        )
+                        
+                        # Calculate expected goals
+                        home_xg, away_xg = calculate_expected_goals(home_metrics, away_metrics)
+                        
+                        # Calculate win probabilities
+                        probs = calculate_win_probability(home_xg, away_xg)
+                        
+                        # Calculate totals
+                        totals = predict_total(home_xg, away_xg, 6.5)
+                        
+                        # Display predictions in columns
+                        pred_col1, pred_col2, pred_col3 = st.columns(3)
+                        
+                        with pred_col1:
+                            st.metric("Expected Goals", f"{away_xg} - {home_xg}")
+                            st.caption(f"{away_abbrev}: {away_xg} | {home_abbrev}: {home_xg}")
+                        
+                        with pred_col2:
+                            st.metric("Win Probability", f"{probs.home_win:.1%}")
+                            st.caption(f"{home_abbrev} Win: {probs.home_win:.1%}")
+                            st.caption(f"{away_abbrev} Win: {probs.away_win:.1%}")
+                        
+                        with pred_col3:
+                            st.metric("Total Goals", f"{totals.expected_total:.1f}")
+                            st.caption(f"Over 6.5: {totals.over_prob:.1%}")
+                            st.caption(f"Under 6.5: {totals.under_prob:.1%}")
         else:
             st.info("No games data available for processing.")
     else:

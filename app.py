@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 # Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent))
 from src.api.nhl_client import NHLClient
 from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
