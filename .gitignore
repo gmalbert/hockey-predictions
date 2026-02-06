@@ -170,3 +170,4 @@ logs/
 secrets.json
 api_keys.json
 config/local_config.py
+hockey-predictions.code-workspace
