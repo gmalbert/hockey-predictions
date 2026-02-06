@@ -13,7 +13,7 @@ All tasks from the UI Layout Roadmap have been successfully implemented and test
 ### Files Created
 
 #### Core Application
-- ✅ `src/app.py` - Main Streamlit entry point with real data integration
+- ✅ `predictions.py` - Main Streamlit entry point with real data integration
 
 #### Streamlit Pages (src/pages/)
 - ✅ `1_📅_Todays_Games.py` - Daily games dashboard with odds and expandable details
@@ -162,7 +162,7 @@ All pages use the `NHLClient` class from `src/api/nhl_client.py`:
 .\venv\Scripts\Activate.ps1
 
 # Run Streamlit app
-streamlit run src/app.py
+streamlit run predictions.py
 
 # Access at http://localhost:8501
 ```

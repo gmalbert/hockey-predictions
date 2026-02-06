@@ -12,7 +12,7 @@ A Streamlit-based NHL analytics platform for sports betting insights. Uses Pytho
 ```
 hockey-predictions/
 ├── src/
-│   ├── app.py              # Streamlit entry point
+├── predictions.py              # Streamlit entry point
 │   ├── api/                # NHL API client modules
 │   │   └── nhl_client.py   # API wrapper with caching
 │   ├── models/             # Prediction/ML models
@@ -56,7 +56,7 @@ async def fetch_schedule(date: str) -> dict:
 ```powershell
 .\venv\Scripts\Activate.ps1          # Activate venv
 pip install -r requirements.txt       # Install deps
-streamlit run src/app.py              # Run app
+streamlit run predictions.py              # Run app
 pytest tests/ -v                      # Run tests
 ```
 

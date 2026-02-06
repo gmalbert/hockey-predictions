@@ -11,7 +11,7 @@ Streamlit application structure and component design for the betting analytics p
 ## App Structure
 
 ### Main Entry Point
-**File**: `src/app.py`
+**File**: `predictions.py`
 
 ```python
 """Hockey Predictions - Streamlit Entry Point."""
