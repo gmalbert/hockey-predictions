@@ -363,6 +363,19 @@ class BacktestResults:
 
 ---
 
+## Completed Tasks
+
+The following tasks from this roadmap have been implemented in the codebase:
+
+- **Task 1.1: Expected Goals (xG) Calculator** — ✅ Completed (`src/models/expected_goals.py`)
+- **Task 1.2: Win Probability Model** — ✅ Completed (`src/models/win_probability.py`)
+- **Task 2.1: Odds Converter** — ✅ Completed (`src/utils/odds.py`)
+- **Task 2.2: Total Goals Model (Over/Under)** — ✅ Completed (`src/models/totals.py`)
+- **Task 3.2: Machine Learning Pipeline (skeleton)** — ✅ Partially completed (skeleton + save/load at `src/models/ml_predictor.py`)
+- **Backtesting Framework** — ✅ Completed (`src/models/backtest.py`)
+
+Model outputs are displayed in the Streamlit app pages under the `pages/` directory (e.g. `pages/1_📅_Todays_Games.py`, `pages/4_💰_Value_Finder.py`, `pages/6_📈_Performance.py`). Cached API inputs live in `data_files/cache/` and ML artifacts (if present) under `data_files/models/`.
+
 ## Next Steps
 - See [03-layout.md](03-layout.md) for Streamlit UI implementation
 - See [betting-metrics.md](../features/betting-metrics.md) for key statistics
