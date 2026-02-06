@@ -40,7 +40,7 @@ mkdir src/pages
 ```
 
 **Files to create**:
-- `src/app.py` - Main entry point
+- `predictions.py` - Main entry point
 - `src/__init__.py` - Package marker
 - `src/api/__init__.py`
 - `src/models/__init__.py`
@@ -329,7 +329,7 @@ pytest tests/ -v
 
 ## Launch Command
 ```powershell
-streamlit run src/app.py
+streamlit run predictions.py
 ```
 
 ---

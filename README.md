@@ -46,14 +46,14 @@ source venv/bin/activate   # macOS/Linux
 pip install -r requirements.txt
 
 # Run the application
-streamlit run src/app.py
+streamlit run predictions.py
 ```
 
 ### Deployment
 
 For Streamlit Cloud or other remote deployments, set the main file to:
 ```
-src/app.py
+predictions.py
 ```
 
 ## 📖 Documentation

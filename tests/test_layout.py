@@ -189,7 +189,7 @@ def main():
         print("✅ ALL TESTS PASSED - UI LAYOUT FULLY IMPLEMENTED")
         print("="*60)
         print("\nYou can now run the app with:")
-        print("  streamlit run src/app.py")
+        print("  streamlit run predictions.py")
         print("\nOr navigate to specific pages from the sidebar.")
     else:
         print("\n" + "="*60)
