@@ -26,6 +26,11 @@ POSITION_NAMES = {
 st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="🏥", layout="wide")
 apply_custom_css()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 st.title("🏥 Injury Report")
 st.markdown("Track injuries and their impact on betting predictions.")
 

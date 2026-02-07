@@ -1,0 +1,50 @@
+name: Daily Game Schedule Fetch
+
+on:
+  schedule:
+    # Run daily at 7 AM UTC (2 AM ET)
+    - cron: '0 7 * * *'
+  
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  fetch-schedules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install httpx
+
+      - name: Fetch game schedules
+        run: |
+          python auto_fetch_games.py --days 10
+
+      - name: Commit schedule cache updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Add cache directory
+          git add data_files/cache/api-web.nhle.com_v1_schedule_*.json
+          
+          # Check if there are changes
+          if git diff --staged --quiet; then
+            echo "No schedule changes to commit"
+          else
+            GAME_COUNT=$(git diff --staged --numstat | wc -l)
+            git commit -m "chore: update game schedules (${GAME_COUNT} files updated)"
+            git push
+            echo "Committed ${GAME_COUNT} schedule updates"
+          fi

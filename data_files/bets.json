@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "date": "2026-02-07",
+    "game": "TOR @ MTL",
+    "bet_type": "TOR ML",
+    "odds": "-150",
+    "stake": 1.0,
+    "result": "Won",
+    "profit": 0.6666666666666666,
+    "added_at": "2026-02-07T17:49:44.782581"
+  },
+  {
+    "id": 2,
+    "date": "2026-02-06",
+    "game": "BOS @ NYR",
+    "bet_type": "Over 6.0",
+    "odds": "-110",
+    "stake": 1.0,
+    "result": "Won",
+    "profit": 0.9090909090909091,
+    "added_at": "2026-02-07T17:49:44.800903"
+  },
+  {
+    "id": 3,
+    "date": "2026-02-05",
+    "game": "COL @ VGK",
+    "bet_type": "COL -1.5",
+    "odds": "+140",
+    "stake": 1.5,
+    "result": "Lost",
+    "profit": -1.5,
+    "added_at": "2026-02-07T17:49:44.818758"
+  }
+]

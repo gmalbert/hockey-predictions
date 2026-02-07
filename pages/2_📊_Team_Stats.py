@@ -19,6 +19,11 @@ def get_client():
 
 client = get_client()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Team selector - create list of (full name, abbreviation) tuples
 team_options = [(client.TEAM_NAMES.get(abbr, abbr), abbr) for abbr in sorted(client.TEAM_NAMES.keys())]
 team_names = [name for name, _ in team_options]

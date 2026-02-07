@@ -17,6 +17,11 @@ from footer import add_betting_oracle_footer
 st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="🔬", layout="wide")
 apply_custom_css()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 st.title("🔬 Backtesting Simulator")
 st.markdown("Validate model predictions against historical performance.")
 

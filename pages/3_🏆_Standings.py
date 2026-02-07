@@ -19,6 +19,11 @@ def get_client():
 
 client = get_client()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Get standings
 try:
     standings_data = client.get_standings()
