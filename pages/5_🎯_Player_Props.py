@@ -25,6 +25,11 @@ def get_client():
 
 client = get_client()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Tabs for different views
 tab1, tab2, tab3 = st.tabs(["🎲 Props Analysis", "📊 Player Stats", "🔍 Player Search"])
 

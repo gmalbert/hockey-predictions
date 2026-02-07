@@ -28,6 +28,11 @@ def get_client():
 
 client = get_client()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Filters
 col1, col2, col3 = st.columns(3)
 with col1:

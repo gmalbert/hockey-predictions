@@ -23,6 +23,11 @@ st.markdown("Analyze goalie matchups and their impact on betting value.")
 # Initialize client for team names
 client = NHLClient()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Fetch goalie stats first
 try:
     import httpx

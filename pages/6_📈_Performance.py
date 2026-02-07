@@ -23,6 +23,11 @@ def get_client():
 
 client = get_client()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Summary metrics
 st.subheader("Betting Performance Summary")
 col1, col2, col3, col4 = st.columns(4)

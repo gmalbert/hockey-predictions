@@ -31,6 +31,11 @@ from footer import add_betting_oracle_footer
 st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="📊", layout="wide")
 apply_custom_css()
 
+# Load logo
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+
 # Header with refresh button
 header_col1, header_col2 = st.columns([4, 1])
 with header_col1:

@@ -32,25 +32,23 @@ logo_path = Path("data_files/logo.png")
 if logo_path.exists():
     st.sidebar.image(str(logo_path), width=150)
 
-st.sidebar.title("Hockey Predictions")
+st.sidebar.title("Oracle on Ice - Hockey Predictions")
 st.sidebar.markdown("NHL Betting Analytics")
 st.sidebar.divider()
 
 # Main content - Landing Page
-st.title("🏒 Hockey Predictions")
+st.title("🏒 Oracle on Ice - Hockey Predictions")
 st.markdown("### Your Data-Driven Guide to NHL Betting")
 
-st.markdown("""
-Welcome to **Hockey Predictions** - the most comprehensive NHL betting analytics platform.
-We combine real-time data, advanced statistics, and betting insights to help you make smarter wagers.
-""")
 
 # Hero section with key stats
 st.divider()
 
 try:
     # Get today's games for quick overview
-    games = client.get_todays_games()
+    all_games = client.get_todays_games()
+    # Filter for NHL regular season games only (game_type == 2)
+    games = [game for game in all_games if game.get("game_type") == 2]
     games_count = len(games)
 
     col1, col2, col3 = st.columns(3)
@@ -83,6 +81,7 @@ st.divider()
 # Feature cards
 st.subheader("🎯 What We Offer")
 
+# First row of features
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -142,10 +141,62 @@ with col3:
     if st.button("View Performance", key="perf_btn"):
         st.switch_page("pages/6_📈_Performance.py")
 
-st.divider()
+# Third row of features
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("### 🥅 Goalies")
+    st.markdown("""
+    Goalie performance analysis and
+    matchup insights for betting.
+    """)
+    if st.button("Goalie Stats", key="goalies_btn"):
+        st.switch_page("pages/7_🥅_Goalies.py")
+
+with col2:
+    st.markdown("### 🏥 Injuries")
+    st.markdown("""
+    Track player injuries and their
+    impact on team performance.
+    """)
+    if st.button("Injury Report", key="injuries_btn"):
+        st.switch_page("pages/8_🏥_Injuries.py")
+
+with col3:
+    st.markdown("### 📉 Line Movement")
+    st.markdown("""
+    Monitor odds changes and line
+    movement throughout the day.
+    """)
+    if st.button("Line Movement", key="line_movement_btn"):
+        st.switch_page("pages/9_📉_Line_Movement.py")
+
+# Fourth row of features
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("### 📊 Model Performance")
+    st.markdown("""
+    Detailed analysis of prediction
+    model accuracy and metrics.
+    """)
+    if st.button("Model Stats", key="model_perf_btn"):
+        st.switch_page("pages/10_📊_Model_Performance.py")
+
+with col2:
+    st.markdown("### 🔬 Backtesting")
+    st.markdown("""
+    Historical backtesting of betting
+    strategies and performance.
+    """)
+    if st.button("Backtest", key="backtesting_btn"):
+        st.switch_page("pages/11_🔬_Backtesting.py")
+
+
 
 # Today's featured games (if available)
 if 'games' in locals() and games:
+    st.divider()
     st.subheader("🔥 Today's Matchups")
 
     # Show first 3 games as preview
