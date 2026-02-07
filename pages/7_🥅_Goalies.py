@@ -227,7 +227,7 @@ for name, stats in goalie_stats.items():
     })
 
 df = pd.DataFrame(display_goalies[:30])  # Top 30
-st.dataframe(df, hide_index=True, use_container_width=True)
+st.dataframe(df, hide_index=True, width='stretch')
 
 # Interpretation Guide
 with st.expander("📚 Goalie Analysis Guide"):

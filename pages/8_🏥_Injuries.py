@@ -32,7 +32,7 @@ st.markdown("Track injuries and their impact on betting predictions.")
 # CBS Sports scraper button
 col1, col2 = st.columns([3, 1])
 with col2:
-    if st.button("🔄 Refresh from CBS Sports", use_container_width=True):
+    if st.button("🔄 Refresh from CBS Sports", width='stretch'):
         with st.spinner("Scraping CBS Sports for latest injuries..."):
             injuries = scrape_cbs_injuries()
             if injuries:
@@ -137,7 +137,7 @@ if team_injuries:
         })
     
     injuries_df = pd.DataFrame(injury_rows)
-    st.dataframe(injuries_df, use_container_width=True, hide_index=True)
+    st.dataframe(injuries_df, width='stretch', hide_index=True)
 
 else:
     st.info(f"No injuries currently tracked for {selected_team_name}")
@@ -198,7 +198,7 @@ if all_injuries:
     if summary_rows:
         summary_df = pd.DataFrame(summary_rows)
         summary_df = summary_df.sort_values("Net Impact")
-        st.dataframe(summary_df, use_container_width=True, hide_index=True)
+        st.dataframe(summary_df, width='stretch', hide_index=True)
 else:
     st.info("No injuries tracked yet. Click 'Refresh from CBS Sports' above to load the latest injury data.")
 
