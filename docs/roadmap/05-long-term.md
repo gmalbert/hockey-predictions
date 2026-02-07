@@ -10,194 +10,199 @@ Advanced features and scaling improvements for months 2-6 and beyond.
 ### Situational Modeling
 Adjust predictions based on context.
 
-**File**: `src/models/situational.py`
-```python
-"""Situational adjustments for predictions."""
-from dataclasses import dataclass
-from datetime import date, timedelta
-from typing import Optional
-
-@dataclass
-class GameContext:
-    """Contextual factors for a game."""
-    home_team: str
-    away_team: str
-    game_date: date
-    home_last_game: Optional[date] = None
-    away_last_game: Optional[date] = None
-    home_travel_miles: float = 0
-    away_travel_miles: float = 0
-
-def calculate_rest_adjustment(last_game: Optional[date], game_date: date) -> float:
-    """
-    Calculate goal adjustment based on rest days.
-    
-    Returns:
-        Adjustment factor (positive = more goals expected)
-    """
-    if last_game is None:
-        return 0.0
-    
-    rest_days = (game_date - last_game).days - 1  # -1 because day before counts
-    
-    if rest_days == 0:  # Back-to-back
-        return -0.20  # Expect 0.2 fewer goals
-    elif rest_days == 1:  # Normal rest
-        return 0.0
-    elif rest_days == 2:  # Extra rest
-        return 0.05
-    else:  # Extended rest (3+)
-        return 0.08
-
-def calculate_travel_adjustment(miles: float) -> float:
-    """
-    Calculate goal adjustment based on travel distance.
-    
-    Cross-country travel (2500+ miles) has fatigue impact.
-    """
-    if miles < 500:
-        return 0.0
-    elif miles < 1500:
-        return -0.05
-    elif miles < 2500:
-        return -0.10
-    else:  # Cross-country
-        return -0.15
-
-def apply_situational_adjustments(
-    base_xg: float,
-    context: GameContext,
-    is_home_team: bool
-) -> float:
-    """Apply all situational adjustments to expected goals."""
-    if is_home_team:
-        rest_adj = calculate_rest_adjustment(context.home_last_game, context.game_date)
-        travel_adj = calculate_travel_adjustment(context.home_travel_miles)
-    else:
-        rest_adj = calculate_rest_adjustment(context.away_last_game, context.game_date)
-        travel_adj = calculate_travel_adjustment(context.away_travel_miles)
-    
-    return base_xg + rest_adj + travel_adj
-```
+**Status**: ❌ Not implemented - File `src/models/situational.py` does not exist
 
 ### Goalie Impact Model
-**File**: `src/models/goalie.py`
-```python
-"""Goalie-based adjustments."""
-from dataclasses import dataclass
-from typing import Optional
-
-@dataclass
-class GoalieStats:
-    """Goalie performance metrics."""
-    player_id: int
-    name: str
-    games_started: int
-    save_pct: float
-    goals_against_avg: float
-    quality_starts: int
-    
-    @property
-    def quality_start_pct(self) -> float:
-        if self.games_started == 0:
-            return 0.0
-        return self.quality_starts / self.games_started
-
-def goalie_adjustment(
-    goalie: Optional[GoalieStats],
-    league_avg_save_pct: float = 0.905
-) -> float:
-    """
-    Calculate goals adjustment based on goalie vs league average.
-    
-    Returns:
-        Adjustment to opponent's expected goals
-    """
-    if goalie is None:
-        return 0.0
-    
-    save_pct_diff = goalie.save_pct - league_avg_save_pct
-    
-    # Each 1% better save pct = ~0.3 fewer goals allowed per game
-    return -save_pct_diff * 30
-```
+**Status**: ✅ COMPLETED - Implemented as `src/models/goalie_adjustment.py` and `src/models/goalie_matchup.py`
+- Goalie performance adjustments integrated into predictions
+- Goalie matchup analysis available
 
 ---
 
 ## Phase 2: Advanced Analytics (Month 3)
 
 ### Head-to-Head Analysis
-**File**: `src/models/head_to_head.py`
-```python
-"""Head-to-head matchup analysis."""
-import pandas as pd
-from typing import Optional
-
-def analyze_h2h(
-    games_df: pd.DataFrame,
-    team1: str,
-    team2: str,
-    last_n_games: int = 10
-) -> dict:
-    """
-    Analyze recent head-to-head matchups.
-    
-    Args:
-        games_df: DataFrame with historical game data
-        team1: First team abbreviation
-        team2: Second team abbreviation
-        last_n_games: Number of recent games to analyze
-    
-    Returns:
-        Dictionary with H2H statistics
-    """
-    # Filter for matchups between these teams
-    h2h = games_df[
-        ((games_df["home_team"] == team1) & (games_df["away_team"] == team2)) |
-        ((games_df["home_team"] == team2) & (games_df["away_team"] == team1))
-    ].tail(last_n_games)
-    
-    if h2h.empty:
-        return {"games": 0, "team1_wins": 0, "team2_wins": 0}
-    
-    team1_wins = 0
-    team2_wins = 0
-    total_goals = 0
-    
-    for _, game in h2h.iterrows():
-        home_score = game.get("home_score", 0)
-        away_score = game.get("away_score", 0)
-        total_goals += home_score + away_score
-        
-        if game["home_team"] == team1:
-            if home_score > away_score:
-                team1_wins += 1
-            else:
-                team2_wins += 1
-        else:
-            if away_score > home_score:
-                team1_wins += 1
-            else:
-                team2_wins += 1
-    
-    return {
-        "games": len(h2h),
-        "team1_wins": team1_wins,
-        "team2_wins": team2_wins,
-        "avg_total_goals": round(total_goals / len(h2h), 2) if len(h2h) > 0 else 0,
-        "team1_win_pct": round(team1_wins / len(h2h), 3) if len(h2h) > 0 else 0.5
-    }
-```
+**Status**: ❌ Not implemented - File `src/models/head_to_head.py` does not exist
 
 ### Player Props Engine
-**File**: `src/models/player_props.py`
-```python
-"""Player prop betting analysis."""
-import pandas as pd
-from dataclasses import dataclass
-from typing import List
+**Status**: ✅ COMPLETED - Full player props analysis implemented in Page 5
+- Poisson distribution-based predictions
+- Over/under line analysis with edge calculations
+- Player search and filtering
+- Integration with injury data and team stats
 
-@dataclass
+---
+
+## Phase 3: Machine Learning (Month 4-5)
+
+### Feature Engineering
+**Status**: ❌ Not implemented - File `src/models/features.py` does not exist
+
+### Model Training Pipeline
+**Status**: ❌ Not implemented - File `src/models/training.py` does not exist
+
+**However**: ✅ Basic ML prediction exists in `src/models/ml_predictor.py`
+
+---
+
+## Phase 4: Production Features (Month 6+)
+
+### Line Movement Tracking
+**Status**: ✅ COMPLETED - Implemented in `src/models/line_movement.py`
+- Historical odds tracking with GitHub Actions
+- Line movement analysis and alerts
+- Odds snapshots stored in `data_files/odds/`
+
+### Real-Time Updates
+**Status**: ❌ Not implemented - No WebSocket or real-time features
+
+### Notification System
+**Status**: ❌ Not implemented - File `src/utils/notifications.py` does not exist
+
+---
+
+## Infrastructure Improvements
+
+### Caching Strategy
+**Status**: ✅ COMPLETED - File-based caching implemented
+- TTL-based caching for API responses
+- Cache stored in `data_files/cache/`
+- 5-minute TTL for live data
+
+### Database
+**Status**: ✅ COMPLETED - JSON-based storage implemented
+- Historical games in `data_files/historical/`
+- Team stats and predictions cached
+- No SQL database needed for current scale
+
+### Deployment
+**Status**: ✅ COMPLETED - GitHub Actions CI/CD implemented
+- Automated odds capture workflow
+- Fixed workflow issues for missing directories
+- Ready for cloud deployment
+
+---
+
+## Infrastructure Improvements
+
+### API Rate Limiting
+**Status**: ❌ Not implemented - File `src/api/rate_limiter.py` does not exist
+
+---
+
+## Feature Wishlist
+
+| Feature | Priority | Effort | Impact | Status |
+|---------|----------|--------|--------|--------|
+| Goalie-adjusted predictions | High | Medium | High | ✅ COMPLETED |
+| Player props engine | High | High | High | ✅ COMPLETED |
+| Historical backtesting UI | Medium | Medium | Medium | ✅ COMPLETED (Page 11) |
+| Line movement alerts | Medium | Low | Medium | ✅ COMPLETED |
+| ML-based predictions | Medium | High | High | ✅ PARTIALLY (Basic ML exists) |
+| Mobile-responsive UI | Low | Medium | Low | ❌ Not implemented |
+| Discord/email alerts | Low | Low | Medium | ❌ Not implemented |
+| Multiple sportsbook odds | Low | High | High | ❌ Not implemented |
+
+---
+
+## Success Metrics
+
+- **Model accuracy**: Target 55%+ on moneyline picks
+- **ROI**: Target positive ROI over 100+ bets
+- **User engagement**: Track page views, feature usage
+- **Prediction calibration**: Predicted probabilities match actual outcomes
+## Phase 2: Advanced Analytics (Month 3)
+
+### Head-to-Head Analysis
+**Status**: ❌ Not implemented - File `src/models/head_to_head.py` does not exist
+
+### Player Props Engine
+**Status**: ✅ COMPLETED - Full player props analysis implemented in Page 5
+- Poisson distribution-based predictions
+- Over/under line analysis with edge calculations
+- Player search and filtering
+- Integration with injury data and team stats
+
+---
+
+## Phase 3: Machine Learning (Month 4-5)
+
+### Feature Engineering
+**Status**: ❌ Not implemented - File `src/models/features.py` does not exist
+
+### Model Training Pipeline
+**Status**: ❌ Not implemented - File `src/models/training.py` does not exist
+
+**However**: ✅ Basic ML prediction exists in `src/models/ml_predictor.py`
+
+---
+
+## Phase 4: Production Features (Month 6+)
+
+### Line Movement Tracking
+**Status**: ✅ COMPLETED - Implemented in `src/models/line_movement.py`
+- Historical odds tracking with GitHub Actions
+- Line movement analysis and alerts
+- Odds snapshots stored in `data_files/odds/`
+
+### Real-Time Updates
+**Status**: ❌ Not implemented - No WebSocket or real-time features
+
+### Notification System
+**Status**: ❌ Not implemented - File `src/utils/notifications.py` does not exist
+
+---
+
+## Infrastructure Improvements
+
+### Caching Strategy
+**Status**: ✅ COMPLETED - File-based caching implemented
+- TTL-based caching for API responses
+- Cache stored in `data_files/cache/`
+- 5-minute TTL for live data
+
+### Database
+**Status**: ✅ COMPLETED - JSON-based storage implemented
+- Historical games in `data_files/historical/`
+- Team stats and predictions cached
+- No SQL database needed for current scale
+
+### Deployment
+**Status**: ✅ COMPLETED - GitHub Actions CI/CD implemented
+- Automated odds capture workflow
+- Fixed workflow issues for missing directories
+- Ready for cloud deployment
+
+---
+
+## Infrastructure Improvements
+
+### API Rate Limiting
+**Status**: ❌ Not implemented - File `src/api/rate_limiter.py` does not exist
+
+---
+
+## Feature Wishlist
+
+| Feature | Priority | Effort | Impact | Status |
+|---------|----------|--------|--------|--------|
+| Goalie-adjusted predictions | High | Medium | High | ✅ COMPLETED |
+| Player props engine | High | High | High | ✅ COMPLETED |
+| Historical backtesting UI | Medium | Medium | Medium | ✅ COMPLETED (Page 11) |
+| Line movement alerts | Medium | Low | Medium | ✅ COMPLETED |
+| ML-based predictions | Medium | High | High | ✅ PARTIALLY (Basic ML exists) |
+| Mobile-responsive UI | Low | Medium | Low | ❌ Not implemented |
+| Discord/email alerts | Low | Low | Medium | ❌ Not implemented |
+| Multiple sportsbook odds | Low | High | High | ❌ Not implemented |
+
+---
+
+## Success Metrics
+
+- **Model accuracy**: Target 55%+ on moneyline picks
+- **ROI**: Target positive ROI over 100+ bets
+- **User engagement**: Track page views, feature usage
+- **Prediction calibration**: Predicted probabilities match actual outcomes
 class PropPrediction:
     """Player prop prediction."""
     player_id: int
@@ -253,151 +258,155 @@ def predict_player_goals(
 ## Phase 3: Machine Learning (Month 4-5)
 
 ### Feature Engineering
-**File**: `src/models/features.py`
-```python
-"""Feature engineering for ML models."""
-import pandas as pd
-from typing import List
-
-def create_game_features(
-    game: dict,
-    home_stats: dict,
-    away_stats: dict,
-    home_recent: pd.DataFrame,
-    away_recent: pd.DataFrame
-) -> dict:
-    """
-    Create feature vector for a game prediction.
-    
-    Returns:
-        Dictionary of features for ML model
-    """
-    features = {
-        # Team strength indicators
-        "home_goal_diff": home_stats.get("goals_for_pg", 0) - home_stats.get("goals_against_pg", 0),
-        "away_goal_diff": away_stats.get("goals_for_pg", 0) - away_stats.get("goals_against_pg", 0),
-        "home_pp_pct": home_stats.get("pp_pct", 0),
-        "away_pp_pct": away_stats.get("pp_pct", 0),
-        "home_pk_pct": home_stats.get("pk_pct", 0),
-        "away_pk_pct": away_stats.get("pk_pct", 0),
-        
-        # Recent form (last 10 games)
-        "home_l10_win_pct": _calculate_win_pct(home_recent),
-        "away_l10_win_pct": _calculate_win_pct(away_recent),
-        "home_l10_goals_avg": home_recent["team_score"].mean() if not home_recent.empty else 0,
-        "away_l10_goals_avg": away_recent["team_score"].mean() if not away_recent.empty else 0,
-        
-        # Situational
-        "home_rest_days": game.get("home_rest_days", 1),
-        "away_rest_days": game.get("away_rest_days", 1),
-        "is_back_to_back_home": game.get("home_rest_days", 1) == 0,
-        "is_back_to_back_away": game.get("away_rest_days", 1) == 0,
-    }
-    
-    return features
-
-def _calculate_win_pct(recent_games: pd.DataFrame) -> float:
-    if recent_games.empty:
-        return 0.5
-    wins = (recent_games["result"] == "W").sum()
-    return wins / len(recent_games)
-```
+**Status**: ❌ Not implemented - File `src/models/features.py` does not exist
 
 ### Model Training Pipeline
-**File**: `src/models/training.py`
-```python
-"""Model training and evaluation."""
-import pandas as pd
-from pathlib import Path
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import accuracy_score, log_loss
-import pickle
-
-MODEL_PATH = Path("data_files/models")
-
-def train_game_outcome_model(
-    features_df: pd.DataFrame,
-    target: str = "home_win"
-) -> dict:
-    """
-    Train a model to predict game outcomes.
-    
-    Args:
-        features_df: DataFrame with features and target
-        target: Target column name
-    
-    Returns:
-        Dictionary with model and metrics
-    """
-    MODEL_PATH.mkdir(parents=True, exist_ok=True)
-    
-    # Prepare data
-    X = features_df.drop(columns=[target, "game_id"], errors="ignore")
-    y = features_df[target]
-    
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
-    
-    # Train model
-    model = GradientBoostingClassifier(
-        n_estimators=100,
-        max_depth=4,
-        learning_rate=0.1,
-        random_state=42
-    )
-    
-    model.fit(X_train, y_train)
-    
-    # Evaluate
-    train_pred = model.predict(X_train)
-    test_pred = model.predict(X_test)
-    test_proba = model.predict_proba(X_test)
-    
-    metrics = {
-        "train_accuracy": accuracy_score(y_train, train_pred),
-        "test_accuracy": accuracy_score(y_test, test_pred),
-        "log_loss": log_loss(y_test, test_proba),
-        "cv_scores": cross_val_score(model, X, y, cv=5).tolist()
-    }
-    
-    # Save model
-    with open(MODEL_PATH / "game_outcome.pkl", "wb") as f:
-        pickle.dump({"model": model, "features": list(X.columns)}, f)
-    
-    return {"model": model, "metrics": metrics}
-```
+**Status**: ❌ Not implemented - File `src/models/training.py` does not exist
 
 ---
 
 ## Phase 4: Production Features (Month 6+)
 
 ### Line Movement Tracking
-- Store historical odds from external source
-- Track line movement patterns
-- Identify sharp money indicators
+**Status**: ✅ COMPLETED - Implemented in `src/models/line_movement.py`
+- Historical odds tracking with GitHub Actions
+- Line movement analysis and alerts
+- Odds snapshots stored in `data_files/odds/`
 
 ### Real-Time Updates
-- WebSocket connection for live scores
-- In-play betting insights
-- Live probability updates
+**Status**: ❌ Not implemented - No WebSocket or real-time features
 
 ### Notification System
-**File**: `src/utils/notifications.py`
-```python
-"""Notification system for alerts."""
-from dataclasses import dataclass
-from typing import Optional
-from datetime import datetime
+**Status**: ❌ Not implemented - File `src/utils/notifications.py` does not exist
 
-@dataclass
-class BetAlert:
-    """Alert for betting opportunity."""
-    game_id: str
-    alert_type: str  # "value_bet", "line_movement", "injury"
-    message: str
-    edge: Optional[float] = None
+---
+
+## Infrastructure Improvements
+
+### Caching Strategy
+**Status**: ✅ COMPLETED - File-based caching implemented
+- TTL-based caching for API responses
+- Cache stored in `data_files/cache/`
+- 5-minute TTL for live data
+
+### Database
+**Status**: ✅ COMPLETED - JSON-based storage implemented
+- Historical games in `data_files/historical/`
+- Team stats and predictions cached
+- No SQL database needed for current scale
+
+### Deployment
+**Status**: ✅ COMPLETED - GitHub Actions CI/CD implemented
+- Automated odds capture workflow
+- Fixed workflow issues for missing directories
+- Ready for cloud deployment
+
+---
+
+## Infrastructure Improvements
+
+### API Rate Limiting
+**Status**: ❌ Not implemented - File `src/api/rate_limiter.py` does not exist
+
+---
+
+## Feature Wishlist
+
+| Feature | Priority | Effort | Impact | Status |
+|---------|----------|--------|--------|--------|
+| Goalie-adjusted predictions | High | Medium | High | ✅ COMPLETED |
+| Player props engine | High | High | High | ✅ COMPLETED |
+| Historical backtesting UI | Medium | Medium | Medium | ✅ COMPLETED (Page 11) |
+| Line movement alerts | Medium | Low | Medium | ✅ COMPLETED |
+| ML-based predictions | Medium | High | High | ✅ PARTIALLY (Basic ML exists) |
+| Mobile-responsive UI | Low | Medium | Low | ❌ Not implemented |
+| Discord/email alerts | Low | Low | Medium | ❌ Not implemented |
+| Multiple sportsbook odds | Low | High | High | ❌ Not implemented |
+
+---
+
+## Success Metrics
+
+- **Model accuracy**: Target 55%+ on moneyline picks
+- **ROI**: Target positive ROI over 100+ bets
+- **User engagement**: Track page views, feature usage
+- **Prediction calibration**: Predicted probabilities match actual outcomes
+        return 0.5
+    wins = (recent_games["result"] == "W").sum()
+    return wins / len(recent_games)
+```
+
+### Model Training Pipeline
+**Status**: ❌ Not implemented - File `src/models/training.py` does not exist
+
+---
+
+## Phase 4: Production Features (Month 6+)
+
+### Line Movement Tracking
+**Status**: ✅ COMPLETED - Implemented in `src/models/line_movement.py`
+- Historical odds tracking with GitHub Actions
+- Line movement analysis and alerts
+- Odds snapshots stored in `data_files/odds/`
+
+### Real-Time Updates
+**Status**: ❌ Not implemented - No WebSocket or real-time features
+
+### Notification System
+**Status**: ❌ Not implemented - File `src/utils/notifications.py` does not exist
+
+---
+
+## Infrastructure Improvements
+
+### Caching Strategy
+**Status**: ✅ COMPLETED - File-based caching implemented
+- TTL-based caching for API responses
+- Cache stored in `data_files/cache/`
+- 5-minute TTL for live data
+
+### Database
+**Status**: ✅ COMPLETED - JSON-based storage implemented
+- Historical games in `data_files/historical/`
+- Team stats and predictions cached
+- No SQL database needed for current scale
+
+### Deployment
+**Status**: ✅ COMPLETED - GitHub Actions CI/CD implemented
+- Automated odds capture workflow
+- Fixed workflow issues for missing directories
+- Ready for cloud deployment
+
+---
+
+## Infrastructure Improvements
+
+### API Rate Limiting
+**Status**: ❌ Not implemented - File `src/api/rate_limiter.py` does not exist
+
+---
+
+## Feature Wishlist
+
+| Feature | Priority | Effort | Impact | Status |
+|---------|----------|--------|--------|--------|
+| Goalie-adjusted predictions | High | Medium | High | ✅ COMPLETED |
+| Player props engine | High | High | High | ✅ COMPLETED |
+| Historical backtesting UI | Medium | Medium | Medium | ✅ COMPLETED (Page 11) |
+| Line movement alerts | Medium | Low | Medium | ✅ COMPLETED |
+| ML-based predictions | Medium | High | High | ✅ PARTIALLY (Basic ML exists) |
+| Mobile-responsive UI | Low | Medium | Low | ❌ Not implemented |
+| Discord/email alerts | Low | Low | Medium | ❌ Not implemented |
+| Multiple sportsbook odds | Low | High | High | ❌ Not implemented |
+
+---
+
+## Success Metrics
+
+- **Model accuracy**: Target 55%+ on moneyline picks
+- **ROI**: Target positive ROI over 100+ bets
+- **User engagement**: Track page views, feature usage
+- **Prediction calibration**: Predicted probabilities match actual outcomes
     timestamp: datetime = None
     
     def __post_init__(self):
@@ -424,71 +433,44 @@ def create_value_alert(
 ```
 
 ### API Rate Limiting
-**File**: `src/api/rate_limiter.py`
-```python
-"""Rate limiting for API calls."""
-import time
-from collections import deque
-from threading import Lock
-
-class RateLimiter:
-    """Token bucket rate limiter."""
-    
-    def __init__(self, requests_per_minute: int = 30):
-        self.rate = requests_per_minute
-        self.window = 60  # seconds
-        self.requests = deque()
-        self.lock = Lock()
-    
-    def acquire(self) -> None:
-        """Wait until request is allowed."""
-        with self.lock:
-            now = time.time()
-            
-            # Remove old requests outside window
-            while self.requests and self.requests[0] < now - self.window:
-                self.requests.popleft()
-            
-            # Wait if at limit
-            if len(self.requests) >= self.rate:
-                sleep_time = self.requests[0] + self.window - now
-                time.sleep(max(0, sleep_time))
-            
-            self.requests.append(time.time())
-```
+**Status**: ❌ Not implemented - File `src/api/rate_limiter.py` does not exist
 
 ---
 
 ## Infrastructure Improvements
 
 ### Caching Strategy
-- Redis for shared cache (multi-user)
-- TTL policies: live data (1 min), stats (1 hour), historical (24 hours)
+**Status**: ✅ COMPLETED - File-based caching implemented
+- TTL-based caching for API responses
+- Cache stored in `data_files/cache/`
+- 5-minute TTL for live data
 
 ### Database
-- SQLite for MVP
-- PostgreSQL for production
-- Store: games, predictions, bet results
+**Status**: ✅ COMPLETED - JSON-based storage implemented
+- Historical games in `data_files/historical/`
+- Team stats and predictions cached
+- No SQL database needed for current scale
 
 ### Deployment
-- Docker containerization
-- Cloud hosting (Streamlit Cloud or Railway)
-- CI/CD with GitHub Actions
+**Status**: ✅ COMPLETED - GitHub Actions CI/CD implemented
+- Automated odds capture workflow
+- Fixed workflow issues for missing directories
+- Ready for cloud deployment
 
 ---
 
 ## Feature Wishlist
 
-| Feature | Priority | Effort | Impact |
-|---------|----------|--------|--------|
-| Goalie-adjusted predictions | High | Medium | High |
-| Player props engine | High | High | High |
-| Historical backtesting UI | Medium | Medium | Medium |
-| Line movement alerts | Medium | Low | Medium |
-| ML-based predictions | Medium | High | High |
-| Mobile-responsive UI | Low | Medium | Low |
-| Discord/email alerts | Low | Low | Medium |
-| Multiple sportsbook odds | Low | High | High |
+| Feature | Priority | Effort | Impact | Status |
+|---------|----------|--------|--------|--------|
+| Goalie-adjusted predictions | High | Medium | High | ✅ COMPLETED |
+| Player props engine | High | High | High | ✅ COMPLETED |
+| Historical backtesting UI | Medium | Medium | Medium | ✅ COMPLETED (Page 11) |
+| Line movement alerts | Medium | Low | Medium | ✅ COMPLETED |
+| ML-based predictions | Medium | High | High | ✅ PARTIALLY (Basic ML exists) |
+| Mobile-responsive UI | Low | Medium | Low | ❌ Not implemented |
+| Discord/email alerts | Low | Low | Medium | ❌ Not implemented |
+| Multiple sportsbook odds | Low | High | High | ❌ Not implemented |
 
 ---
 
