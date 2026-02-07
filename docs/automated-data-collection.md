@@ -9,6 +9,7 @@ The app uses GitHub Actions to automatically fetch and cache data on scheduled i
 1. **Daily Game Schedule Fetch** - Runs once per day (2 AM ET)
 2. **4-Hour Odds Capture** - Runs 6 times per day to track line movement
 3. **Weekly Model Retraining** - Runs weekly on Sundays (3 AM ET)
+4. **Keep-Alive Ping** - Runs twice daily to prevent Streamlit app from sleeping
 
 ## Why Automated Collection?
 
@@ -83,6 +84,42 @@ python auto_capture_odds.py
 
 **Script**: `retrain_model.py`
 
+## Keep-Alive Ping
+
+### Workflow: `.github/workflows/keep-alive.yml`
+
+**Schedule**: Twice daily at 9:00 AM and 9:00 PM UTC (4:00 AM and 4:00 PM ET)
+
+**What it does**:
+1. Sends HTTP request to Streamlit app URL
+2. Prevents app from going to sleep on Streamlit Community Cloud
+3. Logs response status
+
+**Why**: Streamlit Community Cloud puts inactive apps to sleep after extended periods. Regular pings keep the app responsive.
+
+### Configuration
+
+Update the `STREAMLIT_APP_URL` in the workflow file:
+
+```yaml
+env:
+  STREAMLIT_APP_URL: 'https://your-app-name.streamlit.app'
+```
+
+### Manual Trigger
+
+Test the keep-alive ping:
+```bash
+curl https://your-app-name.streamlit.app
+```
+
+### Reusability
+
+This workflow is designed to be easily copied to other Streamlit projects:
+1. Copy `.github/workflows/keep-alive.yml` to your repository
+2. Update the `STREAMLIT_APP_URL` environment variable
+3. Adjust the schedule if needed (default: twice daily)
+
 ## Cache Strategy
 
 ### Schedule Data (24-hour TTL)
@@ -127,6 +164,7 @@ def get_schedule(self, game_date: str) -> dict:
 3. **Reliability**: App works even if external APIs are temporarily unavailable
 4. **Line Movement Tracking**: 4-hour snapshots capture odds changes throughout the day
 5. **Fresh Models**: Weekly retraining keeps predictions accurate
+6. **Always Available**: Keep-alive pings ensure the app stays responsive 24/7
 
 ## Monitoring
 
@@ -134,6 +172,7 @@ Check GitHub Actions workflow runs:
 - [Daily Game Fetch](../../actions/workflows/daily-game-fetch.yml)
 - [Odds Capture](../../actions/workflows/capture-odds.yml)
 - [Model Retraining](../../actions/workflows/weekly-model-retraining.yml)
+- [Keep-Alive Ping](../../actions/workflows/keep-alive.yml)
 
 ## Troubleshooting
 
