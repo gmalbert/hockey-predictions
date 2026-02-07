@@ -205,7 +205,7 @@ if st.button("🚀 Run Backtest", type="primary"):
             })
         
         df = pd.DataFrame(bet_data)
-        st.dataframe(df, hide_index=True, use_container_width=True)
+        st.dataframe(df, hide_index=True, width='stretch')
     
     # Cumulative Profit Chart
     st.subheader("Profit Curve")

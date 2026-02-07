@@ -23,14 +23,24 @@ from src.models.evaluation import (
     calibration_error,
     PredictionResult
 )
+from src.models.ml_predictor import NHLPredictor
+from src.models.training import NHLModelTrainer
 from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
 
 st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="📊", layout="wide")
 apply_custom_css()
 
-st.title("📊 Model Performance")
-st.markdown("Track prediction accuracy and identify areas for improvement.")
+# Header with refresh button
+header_col1, header_col2 = st.columns([4, 1])
+with header_col1:
+    st.title("📊 Model Performance")
+    st.markdown("Track prediction accuracy and identify areas for improvement.")
+with header_col2:
+    st.write("")  # Spacer
+    if st.button("🔄 Refresh Model", help="Reload ML model from disk", width='stretch'):
+        st.cache_resource.clear()
+        st.rerun()
 
 # Load evaluation data for last 7 days
 all_predictions = []
@@ -61,9 +71,35 @@ else:
         "calibration": 0
     }
 
+# Load ML model information
+@st.cache_resource
+def get_ml_predictor():
+    predictor = NHLPredictor()
+    if predictor.load():
+        return predictor
+    return None
+
+ml_predictor = get_ml_predictor()
+ml_model_info = ml_predictor.get_model_info() if ml_predictor else None
+
+# Calculate ML metrics if model exists
+ml_metrics = {}
+if ml_model_info and ml_predictor:
+    # Use model info directly instead of validation
+    ml_metrics = {
+        "model_type": ml_model_info.get("model_type", "Unknown"),
+        "training_date": ml_model_info.get("training_date", "Unknown"),
+        "feature_count": ml_model_info.get("n_features", 0),
+        "has_validation": False,
+        "model_available": True
+    }
+else:
+    ml_metrics = {"model_available": False}
+
 # Summary metrics
 st.subheader("Recent Performance (Last 7 Days)")
 
+# Rule-based model metrics
 col1, col2, col3, col4 = st.columns(4)
 with col1:
     accuracy = eval_data.get("accuracy", 0) * 100
@@ -86,10 +122,53 @@ with col4:
               delta=calib_quality,
               help="How well predicted probabilities match outcomes (lower is better)")
 
+# ML Model Status
+st.subheader("🤖 Machine Learning Model Status")
+
+if ml_model_info and ml_metrics.get("model_available", True):  # Default to True if key doesn't exist
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        model_type = ml_model_info.get("model_type", "Not Available")
+        st.metric("ML Model Type", model_type.replace('_', ' ').title(), 
+                  help="Type of machine learning algorithm used")
+    
+    with col2:
+        if ml_metrics.get("has_validation", False):
+            ml_accuracy = ml_metrics.get("accuracy", 0) * 100
+            st.metric("ML Accuracy", f"{ml_accuracy:.1f}%", 
+                      help="ML model prediction accuracy on validation set")
+        else:
+            st.metric("ML Status", "Trained", 
+                      help="ML model is trained and ready to use")
+    
+    with col3:
+        feature_count = ml_model_info.get("n_features", 0)
+        st.metric("Features Used", feature_count, 
+                  help="Number of features used in ML model")
+    
+    with col4:
+        training_date = ml_model_info.get("training_date", "Unknown")
+        if training_date != "Unknown":
+            try:
+                from datetime import datetime
+                dt = datetime.fromisoformat(training_date)
+                training_date_display = dt.strftime('%Y-%m-%d')
+            except:
+                training_date_display = training_date[:10] if len(str(training_date)) >= 10 else training_date
+            st.metric("Last Trained", training_date_display, 
+                      help="Date when ML model was last trained")
+        else:
+            st.metric("Training Status", "Unknown", 
+                      help="ML model training date unknown")
+else:
+    st.info("🤖 **ML Model Not Available** - Train a model using the training pipeline to see ML metrics here.")
+
 # Tabs for different views
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     "Goal Predictions", 
     "Calibration", 
+    "ML Model Analysis",
     "Evaluation Guide"
 ])
 
@@ -109,7 +188,7 @@ with tab1:
                     eval_data.get("mae_away", 0)
                 ]
             })
-            st.dataframe(mae_data, hide_index=True, use_container_width=True)
+            st.dataframe(mae_data, hide_index=True, width='stretch')
             
             st.info("""
             **MAE Interpretation:**
@@ -148,7 +227,7 @@ with tab2:
         if buckets:
             bucket_df = pd.DataFrame(buckets, columns=["Predicted Prob", "Actual Win Rate", "Count"])
             
-            st.dataframe(bucket_df, hide_index=True, use_container_width=True)
+            st.dataframe(bucket_df, hide_index=True, width='stretch')
             
             # Visualize calibration
             st.line_chart(bucket_df.set_index("Predicted Prob")["Actual Win Rate"])
@@ -166,6 +245,149 @@ with tab2:
         st.info("No predictions with results yet for calibration analysis.")
 
 with tab3:
+    st.markdown("### 🤖 Machine Learning Model Analysis")
+    
+    # Debug info (can be removed later)
+    with st.expander("🔍 Debug Info", expanded=False):
+        st.write({
+            "ml_predictor exists": ml_predictor is not None,
+            "ml_model_info exists": ml_model_info is not None,
+            "ml_metrics keys": list(ml_metrics.keys()),
+            "model_available": ml_metrics.get("model_available", "key not found")
+        })
+        if ml_model_info:
+            st.write("Model type:", ml_model_info.get("model_type"))
+    
+    if ml_model_info:
+        # Model Information
+        st.markdown("#### Model Information")
+        info_col1, info_col2 = st.columns(2)
+        
+        with info_col1:
+            st.markdown(f"**Model Type:** {ml_model_info.get('model_type', 'Unknown').replace('_', ' ').title()}")
+            training_date = ml_model_info.get('training_date', 'Unknown')
+            if training_date != 'Unknown':
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(training_date)
+                    training_date = dt.strftime('%Y-%m-%d %H:%M')
+                except:
+                    pass
+            st.markdown(f"**Training Date:** {training_date}")
+            st.markdown(f"**Features Used:** {ml_model_info.get('n_features', 0)}")
+        
+        with info_col2:
+            st.markdown(f"**Training Samples:** {ml_model_info.get('n_training_samples', 'Unknown'):,}" if isinstance(ml_model_info.get('n_training_samples'), int) else f"**Training Samples:** {ml_model_info.get('n_training_samples', 'Unknown')}")
+            seasons = ml_model_info.get('seasons_used', [])
+            seasons_str = ', '.join(seasons) if seasons else 'Unknown'
+            st.markdown(f"**Seasons Trained:** {seasons_str}")
+        
+        # Feature Importance (if available)
+        if 'feature_importance' in ml_model_info and ml_model_info['feature_importance']:
+            st.markdown("#### Feature Importance")
+            
+            # Convert to DataFrame for display
+            importance_data = []
+            for feature, importance in ml_model_info['feature_importance'].items():
+                importance_data.append({
+                    'Feature': feature.replace('_', ' ').title(),
+                    'Importance': importance
+                })
+            
+            importance_df = pd.DataFrame(importance_data).sort_values('Importance', ascending=False)
+            
+            # Display top 10 features
+            st.dataframe(importance_df.head(10), hide_index=True, width='stretch')
+            
+            # Feature importance chart
+            st.bar_chart(importance_df.head(10).set_index('Feature'))
+        
+        # Training Metrics (if available)
+        metrics = ml_model_info.get('metrics', {})
+        if metrics:
+            st.markdown("#### Training Performance")
+            
+            metrics_col1, metrics_col2, metrics_col3 = st.columns(3)
+            
+            with metrics_col1:
+                st.markdown("**Accuracy Metrics**")
+                train_acc = metrics.get('train_accuracy', 0)
+                test_acc = metrics.get('test_accuracy', 0)
+                cv_acc = metrics.get('cv_accuracy_mean', 0)
+                
+                st.metric("Training Accuracy", f"{train_acc:.1%}")
+                st.metric("Test Accuracy", f"{test_acc:.1%}")
+                st.metric("Cross-Val Accuracy", f"{cv_acc:.1%}")
+            
+            with metrics_col2:
+                st.markdown("**Loss Metrics**")
+                train_loss = metrics.get('train_log_loss', 0)
+                test_loss = metrics.get('test_log_loss', 0)
+                
+                st.metric("Training Log Loss", f"{train_loss:.3f}")
+                st.metric("Test Log Loss", f"{test_loss:.3f}")
+                st.metric("CV Std Dev", f"{metrics.get('cv_accuracy_std', 0):.3%}")
+            
+            with metrics_col3:
+                st.markdown("**Classification Metrics**")
+                precision = metrics.get('precision', 0)
+                recall = metrics.get('recall', 0)
+                f1 = metrics.get('f1_score', 0)
+                
+                st.metric("Precision", f"{precision:.3f}")
+                st.metric("Recall", f"{recall:.3f}")
+                st.metric("F1 Score", f"{f1:.3f}")
+        
+        # Model Actions
+        st.markdown("#### Model Actions")
+        
+        action_col1, action_col2, action_col3 = st.columns(3)
+        
+        with action_col1:
+            if st.button("🔄 Retrain Model", help="Train a new ML model with latest data"):
+                with st.spinner("Training new model..."):
+                    trainer = NHLModelTrainer()
+                    trainer.train_game_outcome_model()
+                    st.success("Model retrained! Refresh page to see updated metrics.")
+                    st.rerun()
+        
+        with action_col2:
+            if st.button("📊 Validate Model", help="Run validation on current model"):
+                with st.spinner("Validating model..."):
+                    validation = ml_predictor.validate_predictions()
+                    if validation:
+                        st.success("Validation complete! Check metrics above.")
+                        st.rerun()
+                    else:
+                        st.error("Validation failed. Check model and data.")
+        
+        with action_col3:
+            if st.button("📈 Feature Analysis", help="Analyze feature correlations"):
+                st.info("Feature analysis coming in next update")
+    
+    else:
+        st.info("🤖 **No ML Model Available**")
+        st.markdown("""
+        To see ML model metrics here:
+        
+        1. **Train a model** using the training pipeline:
+           ```python
+           from src.models.training import NHLModelTrainer
+           trainer = NHLModelTrainer()
+           trainer.train_game_outcome_model()
+           ```
+        
+        2. **Or use the ML predictor** to train programmatically:
+           ```python
+           from src.models.ml_predictor import NHLPredictor
+           predictor = NHLPredictor()
+           predictor.train_new_model()
+           ```
+        
+        3. **Refresh this page** to see the metrics appear
+        """)
+
+with tab4:
     st.markdown("### Evaluation Metrics Guide")
     
     st.markdown("""

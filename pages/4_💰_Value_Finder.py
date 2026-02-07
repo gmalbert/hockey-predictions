@@ -37,17 +37,37 @@ with col2:
 with col3:
     show_all = st.checkbox("Show All Bets", value=False, help="Show bets even without positive edge")
 
-# Get today's games with predictions
-st.subheader("🎯 Value Bets Today")
+# Date selection
+st.subheader("📅 Select Date")
+from datetime import date, timedelta
+selected_date = st.date_input(
+    "Choose a date for value bets",
+    value=date.today(),
+    min_value=date.today() - timedelta(days=30),  # Allow past 30 days
+    max_value=date.today() + timedelta(days=7),   # Allow next 7 days
+    help="Select a date to analyze games and find value bets"
+)
+
+# Get games with predictions for selected date
+date_str = selected_date.strftime("%Y-%m-%d")
+st.subheader(f"🎯 Value Bets for {selected_date.strftime('%B %d, %Y')}")
 
 try:
-    from datetime import date
-    today = date.today()
-    date_str = today.strftime("%Y-%m-%d")
-    
     # Get schedule and odds
     schedule = client.get_schedule(date_str)
-    odds_data = client.get_espn_odds(days_ahead=1)
+
+    # Try to get odds - may not be available for past dates
+    try:
+        if selected_date >= date.today():
+            # For today and future, try to get odds
+            days_ahead = (selected_date - date.today()).days + 1
+            odds_data = client.get_espn_odds(days_ahead=max(days_ahead, 1))
+        else:
+            # For past dates, odds won't be available
+            odds_data = []
+    except Exception as e:
+        st.warning(f"Could not fetch odds data: {e}")
+        odds_data = []
     
     games_list = []
     for game_week in schedule.get("gameWeek", []):
@@ -56,8 +76,9 @@ try:
                 games_list.append(game)
     
     value_bets = []
+    model_predictions = []
     
-    if games_list and odds_data:
+    if games_list:
         for game in games_list:
             try:
                 away_abbrev = game.get("awayTeam", {}).get("abbrev", "")
@@ -95,13 +116,24 @@ try:
                 home_xg, away_xg = calculate_expected_goals(home_metrics, away_metrics)
                 probs = calculate_win_probability(home_xg, away_xg)
                 
-                # Find odds for this game
+                # Store model predictions for all games
                 matchup = f"{away_abbrev} @ {home_abbrev}"
+                model_predictions.append({
+                    "Game": matchup,
+                    "Home xG": f"{home_xg:.2f}",
+                    "Away xG": f"{away_xg:.2f}",
+                    "Home Win %": f"{probs.home_win:.1f}%",
+                    "Away Win %": f"{probs.away_win:.1f}%",
+                    "Total Pred": f"{home_xg + away_xg:.2f}"
+                })
+                
+                # Find odds for this game (if available)
                 game_odds = None
-                for odds_game in odds_data:
-                    if away_abbrev in odds_game.get("name", "") and home_abbrev in odds_game.get("name", ""):
-                        game_odds = odds_game
-                        break
+                if odds_data:
+                    for odds_game in odds_data:
+                        if away_abbrev in odds_game.get("name", "") and home_abbrev in odds_game.get("name", ""):
+                            game_odds = odds_game
+                            break
                 
                 if game_odds and game_odds.get("odds"):
                     provider = game_odds["odds"][0]
@@ -177,8 +209,27 @@ try:
                 st.warning(f"Error processing game {away_abbrev} @ {home_abbrev}: {e}")
                 continue
         
-        # Display value bets
+        # Display model predictions for all games
+        if model_predictions:
+            st.subheader("🤖 Model Predictions")
+            df_predictions = pd.DataFrame(model_predictions)
+            st.dataframe(
+                df_predictions,
+                width='stretch',
+                hide_index=True,
+                column_config={
+                    "Game": st.column_config.TextColumn("Matchup", width="medium"),
+                    "Home xG": st.column_config.TextColumn("Home xG", width="small"),
+                    "Away xG": st.column_config.TextColumn("Away xG", width="small"),
+                    "Home Win %": st.column_config.TextColumn("Home Win %", width="small"),
+                    "Away Win %": st.column_config.TextColumn("Away Win %", width="small"),
+                    "Total Pred": st.column_config.TextColumn("Total Pred", width="small"),
+                }
+            )
+        
+        # Display value bets (only when odds are available)
         if value_bets:
+            st.subheader("💰 Value Bets")
             # Filter by minimum edge
             if not show_all:
                 value_bets = [bet for bet in value_bets if float(bet["Edge"].replace("%", "").replace("+", "")) >= min_edge]
@@ -210,8 +261,10 @@ try:
                     st.info(f"No bets meet the minimum edge threshold of {min_edge:.1f}%")
             else:
                 st.info(f"No bets found with edge ≥ {min_edge:.1f}%. Try lowering the minimum edge or enabling 'Show All Bets'.")
+        elif model_predictions:
+            st.info("💡 Model predictions shown above. Odds data not available for this date.")
         else:
-            st.info("No betting opportunities found for today's games.")
+            st.info("No games found for the selected date.")
     else:
         st.warning("No games or odds data available for today.")
 

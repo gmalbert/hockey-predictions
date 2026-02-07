@@ -59,7 +59,7 @@ if movements:
         })
     
     movements_df = pd.DataFrame(movements_data)
-    st.dataframe(movements_df, use_container_width=True, hide_index=True)
+    st.dataframe(movements_df, width='stretch', hide_index=True)
 else:
     st.info("No significant line movements detected. Record odds below to start tracking.")
 
@@ -69,7 +69,7 @@ st.subheader("Tracked Games")
 tracked_files = get_all_odds_files()
 if tracked_files:
     tracked_df = pd.DataFrame(tracked_files)
-    st.dataframe(tracked_df, use_container_width=True, hide_index=True)
+    st.dataframe(tracked_df, width='stretch', hide_index=True)
     
     # Game selection for detailed view
     if tracked_files:
