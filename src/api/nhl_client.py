@@ -47,9 +47,10 @@ class NHLClient:
         Initialize NHL API client.
         
         Args:
-            cache_ttl_minutes: Cache time-to-live in minutes
+            cache_ttl_minutes: Default cache time-to-live in minutes (for stats/odds)
         """
         self.cache_ttl = timedelta(minutes=cache_ttl_minutes)
+        self.schedule_cache_ttl = timedelta(hours=24)  # 24-hour cache for schedules
         self.CACHE_DIR.mkdir(parents=True, exist_ok=True)
     
     def _get_cache_path(self, url: str) -> Path:
@@ -60,19 +61,27 @@ class NHLClient:
         safe_name = safe_name[-100:] if len(safe_name) > 100 else safe_name
         return self.CACHE_DIR / f"{safe_name}.json"
     
-    def _is_cache_valid(self, cache_path: Path) -> bool:
-        """Check if cached data is still fresh."""
+    def _is_cache_valid(self, cache_path: Path, ttl: Optional[timedelta] = None) -> bool:
+        """
+        Check if cached data is still fresh.
+        
+        Args:
+            cache_path: Path to cached file
+            ttl: Custom time-to-live (uses default cache_ttl if None)
+        """
         if not cache_path.exists():
             return False
         mtime = datetime.fromtimestamp(cache_path.stat().st_mtime)
-        return datetime.now() - mtime < self.cache_ttl
+        cache_ttl = ttl if ttl is not None else self.cache_ttl
+        return datetime.now() - mtime < cache_ttl
     
-    def _fetch_sync(self, url: str) -> dict[str, Any]:
+    def _fetch_sync(self, url: str, ttl: Optional[timedelta] = None) -> dict[str, Any]:
         """
         Synchronous fetch with caching.
         
         Args:
             url: Full URL to fetch
+            ttl: Custom cache TTL (uses default if None)
             
         Returns:
             JSON response as dictionary
@@ -80,7 +89,7 @@ class NHLClient:
         cache_path = self._get_cache_path(url)
         
         # Return cached data if valid
-        if self._is_cache_valid(cache_path):
+        if self._is_cache_valid(cache_path, ttl):
             return json.loads(cache_path.read_text())
         
         # Fetch fresh data
@@ -113,7 +122,7 @@ class NHLClient:
             Schedule data with gameWeek array
         """
         url = f"{self.BASE_WEB_API}/schedule/{game_date}"
-        return self._fetch_sync(url)
+        return self._fetch_sync(url, ttl=self.schedule_cache_ttl)
     
     def get_todays_games(self) -> list[dict]:
         """
@@ -171,7 +180,7 @@ class NHLClient:
             Team schedule data
         """
         url = f"{self.BASE_WEB_API}/club-schedule-season/{team}/{season}"
-        return self._fetch_sync(url)
+        return self._fetch_sync(url, ttl=self.schedule_cache_ttl)
     
     def get_season_games(self, team: str, season: str = "20252026") -> list[dict]:
         """
