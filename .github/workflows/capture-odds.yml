@@ -37,5 +37,12 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data_files/odds/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update odds snapshots [skip ci]" && git push)
+          # Create odds directory if it doesn't exist
+          mkdir -p data_files/odds
+          # Add files if any exist
+          if [ -n "$(find data_files/odds -type f -name '*.json' 2>/dev/null)" ]; then
+            git add data_files/odds/
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update odds snapshots [skip ci]" && git push)
+          else
+            echo "No new odds files to commit"
+          fi
