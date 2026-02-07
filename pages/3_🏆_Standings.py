@@ -62,7 +62,7 @@ try:
                         "GF": team.get("goalFor", 0),
                         "GA": team.get("goalAgainst", 0),
                         "DIFF": team.get("goalDifferential", 0),
-                        "P%": f"{team.get('pointPct', 0):.3f}"
+                        "P%": f"{team.get('pointPctg', 0):.3f}"
                     }
                     for idx, team in enumerate(div_teams)
                 ])
