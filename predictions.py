@@ -11,7 +11,7 @@ from footer import add_betting_oracle_footer
 
 # Page configuration
 st.set_page_config(
-    page_title="Hockey Predictions",
+    page_title="Oracle on Ice - Hockey Predictions",
     page_icon="🏒",
     layout="wide",
     initial_sidebar_state="expanded"

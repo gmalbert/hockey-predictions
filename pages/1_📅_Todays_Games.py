@@ -14,7 +14,7 @@ from src.models.totals import predict_total
 from src.utils.odds import calculate_edge, american_to_implied
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Today's Games", page_icon="📅", layout="wide")
+st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="📅", layout="wide")
 st.title("📅 Today's Games")
 
 # Initialize client

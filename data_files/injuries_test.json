@@ -1,0 +1,1144 @@
+{
+  "ANA": [
+    {
+      "player_name": "P. Mrazek",
+      "team": "ANA",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "L. Carlsson",
+      "team": "ANA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Thigh",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "F. Vatrano",
+      "team": "ANA",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Shoulder",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "BOS": [
+    {
+      "player_name": "P. Zacha",
+      "team": "BOS",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "E. Lindholm",
+      "team": "BOS",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "BUF": [
+    {
+      "player_name": "Z. Benson",
+      "team": "BUF",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Greenway",
+      "team": "BUF",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Abdomen",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Timmins",
+      "team": "BUF",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Leg",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Norris",
+      "team": "BUF",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Ribs",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "U. Luukkonen",
+      "team": "BUF",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Danforth",
+      "team": "BUF",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Dunne",
+      "team": "BUF",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Kulich",
+      "team": "BUF",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Ear",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "CGY": [
+    {
+      "player_name": "J. Huberdeau",
+      "team": "CGY",
+      "position": "C",
+      "status": "out",
+      "injury_type": "Hip",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Beecher",
+      "team": "CGY",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Coleman",
+      "team": "CGY",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Bean",
+      "team": "CGY",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "S. Honzek",
+      "team": "CGY",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "CAR": [
+    {
+      "player_name": "E. Robinson",
+      "team": "CAR",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "CHI": [
+    {
+      "player_name": "W. Kaiser",
+      "team": "CHI",
+      "position": "D",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Dach",
+      "team": "CHI",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "S. Weber",
+      "team": "CHI",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "COL": [
+    {
+      "player_name": "M. Necas",
+      "team": "COL",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "G. Landeskog",
+      "team": "COL",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. MacDonald",
+      "team": "COL",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Hip",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "L. O'Connor",
+      "team": "COL",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Hip",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "CLB": [
+    {
+      "player_name": "K. Marchenko",
+      "team": "CLB",
+      "position": "RW",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Smith",
+      "team": "CLB",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "DAL": [
+    {
+      "player_name": "L. Bichsel",
+      "team": "DAL",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Seguin",
+      "team": "DAL",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "DET": [
+    {
+      "player_name": "S. Edvinsson",
+      "team": "DET",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "EDM": [
+    {
+      "player_name": "A. Henrique",
+      "team": "EDM",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "FLA": [
+    {
+      "player_name": "A. Ekblad",
+      "team": "FLA",
+      "position": "D",
+      "status": "day-to-day",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "E. Rodrigues",
+      "team": "FLA",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Marchand",
+      "team": "FLA",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Tarasov",
+      "team": "FLA",
+      "position": "G",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Bjornfot",
+      "team": "FLA",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "S. Jones",
+      "team": "FLA",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Barkov",
+      "team": "FLA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Kulikov",
+      "team": "FLA",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Nosek",
+      "team": "FLA",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Gadjovich",
+      "team": "FLA",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "LA": [
+    {
+      "player_name": "A. Panarin",
+      "team": "LA",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Not Injury Related",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Kuzmenko",
+      "team": "LA",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "M. Anderson",
+      "team": "LA",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Turcotte",
+      "team": "LA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "MIN": [
+    {
+      "player_name": "J. Wallstedt",
+      "team": "MIN",
+      "position": "G",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "M. Foligno",
+      "team": "MIN",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Brodin",
+      "team": "MIN",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "MON": [
+    {
+      "player_name": "A. Texier",
+      "team": "MON",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Newhook",
+      "team": "MON",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "P. Laine",
+      "team": "MON",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Abdomen",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "NJ": [
+    {
+      "player_name": "J. Hughes",
+      "team": "NJ",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "S. Noesen",
+      "team": "NJ",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "M. McLaughlin",
+      "team": "NJ",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "L. Hughes",
+      "team": "NJ",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Shoulder",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "Z. MacEwen",
+      "team": "NJ",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "NYI": [
+    {
+      "player_name": "S. Varlamov",
+      "team": "NYI",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "K. Palmieri",
+      "team": "NYI",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Romanov",
+      "team": "NYI",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Shoulder",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "P. Engvall",
+      "team": "NYI",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "NYR": [
+    {
+      "player_name": "A. Fox",
+      "team": "NYR",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Edstrom",
+      "team": "NYR",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "I. Shesterkin",
+      "team": "NYR",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Sheary",
+      "team": "NYR",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "OTT": [
+    {
+      "player_name": "L. Ullmark",
+      "team": "OTT",
+      "position": "G",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Perron",
+      "team": "OTT",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Groin",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "PHI": [
+    {
+      "player_name": "S. Ersson",
+      "team": "PHI",
+      "position": "G",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "R. Abols",
+      "team": "PHI",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Foerster",
+      "team": "PHI",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Arm",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "R. Ellis",
+      "team": "PHI",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Back",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "PIT": [
+    {
+      "player_name": "B. Lizotte",
+      "team": "PIT",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Personal",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "R. Rakell",
+      "team": "PIT",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "N. Acciari",
+      "team": "PIT",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Illness",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Jones",
+      "team": "PIT",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Suspension",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "K. Letang",
+      "team": "PIT",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Foot",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. St. Ivany",
+      "team": "PIT",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Hand",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "F. Hallander",
+      "team": "PIT",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Leg",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "SJ": [
+    {
+      "player_name": "T. Dellandrea",
+      "team": "SJ",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "R. Reaves",
+      "team": "SJ",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Price",
+      "team": "SJ",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    }
+  ],
+  "SEA": [
+    {
+      "player_name": "J. Schwartz",
+      "team": "SEA",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Meyers",
+      "team": "SEA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Catton",
+      "team": "SEA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "M. Murray",
+      "team": "SEA",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    }
+  ],
+  "STL": [
+    {
+      "player_name": "R. Thomas",
+      "team": "STL",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Leg",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Holloway",
+      "team": "STL",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Krug",
+      "team": "STL",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Ankle",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "TB": [
+    {
+      "player_name": "A. Cirelli",
+      "team": "TB",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "N. Paul",
+      "team": "TB",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Point",
+      "team": "TB",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. D'Astous",
+      "team": "TB",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "E. Martinsen Lilleberg",
+      "team": "TB",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "TOR": [
+    {
+      "player_name": "M. Rielly",
+      "team": "TOR",
+      "position": "D",
+      "status": "out",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Tanev",
+      "team": "TOR",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Groin",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Joshua",
+      "team": "TOR",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "UTA": [
+    {
+      "player_name": "L. Cooley",
+      "team": "UTA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Kerfoot",
+      "team": "UTA",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "VAN": [
+    {
+      "player_name": "F. Chytil",
+      "team": "VAN",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Head",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "N. Hoglander",
+      "team": "VAN",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Boeser",
+      "team": "VAN",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Concussion",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "Z. Buium",
+      "team": "VAN",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Face",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "T. Demko",
+      "team": "VAN",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Hip",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "M. Rossi",
+      "team": "VAN",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "D. Forbort",
+      "team": "VAN",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "LV": [
+    {
+      "player_name": "C. Sissons",
+      "team": "LV",
+      "position": "C",
+      "status": "day-to-day",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Rondbjerg",
+      "team": "LV",
+      "position": "RW",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Howden",
+      "team": "LV",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. Saad",
+      "team": "LV",
+      "position": "LW",
+      "status": "ir",
+      "injury_type": "Undisclosed",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "B. McNabb",
+      "team": "LV",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Hart",
+      "team": "LV",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "W. Karlsson",
+      "team": "LV",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "A. Pietrangelo",
+      "team": "LV",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Hip",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ],
+  "WAS": [
+    {
+      "player_name": "S. Milano",
+      "team": "WAS",
+      "position": "LW",
+      "status": "day-to-day",
+      "injury_type": "Personal",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "J. Carlson",
+      "team": "WAS",
+      "position": "D",
+      "status": "day-to-day",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. McMichael",
+      "team": "WAS",
+      "position": "C",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Lindgren",
+      "team": "WAS",
+      "position": "G",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "high",
+      "updated": "2026-02-06"
+    }
+  ],
+  "WPG": [
+    {
+      "player_name": "N. Pionk",
+      "team": "WPG",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Lower Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "H. Fleury",
+      "team": "WPG",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Upper Body",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    },
+    {
+      "player_name": "C. Miller",
+      "team": "WPG",
+      "position": "D",
+      "status": "ir",
+      "injury_type": "Knee",
+      "player_tier": "medium",
+      "updated": "2026-02-06"
+    }
+  ]
+}
