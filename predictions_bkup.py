@@ -48,7 +48,7 @@ team_mapping = {
 
 # Page configuration
 st.set_page_config(
-    page_title="Oracle on Ice",
+    page_title="Oracle on Ice - Hockey Predictions",
     page_icon="🏒",
     layout="wide",
     initial_sidebar_state="expanded"

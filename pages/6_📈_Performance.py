@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Performance", page_icon="📈", layout="wide")
+st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="📈", layout="wide")
 st.title("📈 Performance Tracker")
 
 st.info("🚧 Performance tracking coming in Phase 3. This page shows placeholder data for UI demonstration.")

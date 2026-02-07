@@ -207,3 +207,98 @@ MAE (Away):      {self.mae_away:.2f} goals
 RMSE (Total):    {self.rmse_total:.2f} goals
 Calibration:     {self.calibration_error:.3f}
 """
+
+
+@dataclass
+class BetRecord:
+    """Single bet record."""
+    game_id: str
+    bet_type: str  # "home_ml", "away_ml", "over", "under", "home_pl", "away_pl"
+    odds: int
+    stake: float
+    won: bool
+    
+    @property
+    def profit(self) -> float:
+        """Calculate profit/loss."""
+        if not self.won:
+            return -self.stake
+        
+        if self.odds > 0:
+            return self.stake * (self.odds / 100)
+        else:
+            return self.stake * (100 / abs(self.odds))
+
+
+def calculate_roi(bets: List[BetRecord]) -> dict:
+    """
+    Calculate betting ROI and related metrics.
+    
+    Returns comprehensive betting performance stats.
+    """
+    if not bets:
+        return {"roi": 0, "win_rate": 0, "total_bets": 0}
+    
+    total_staked = sum(b.stake for b in bets)
+    total_profit = sum(b.profit for b in bets)
+    wins = sum(1 for b in bets if b.won)
+    
+    # Calculate max drawdown
+    cumulative = 0
+    peak = 0
+    max_drawdown = 0
+    
+    for bet in bets:
+        cumulative += bet.profit
+        peak = max(peak, cumulative)
+        drawdown = peak - cumulative
+        max_drawdown = max(max_drawdown, drawdown)
+    
+    return {
+        "total_bets": len(bets),
+        "wins": wins,
+        "losses": len(bets) - wins,
+        "win_rate": round(wins / len(bets), 4),
+        "total_staked": round(total_staked, 2),
+        "total_profit": round(total_profit, 2),
+        "roi": round((total_profit / total_staked) * 100, 2) if total_staked > 0 else 0,
+        "max_drawdown": round(max_drawdown, 2),
+        "avg_odds": round(sum(b.odds for b in bets) / len(bets), 0)
+    }
+
+
+def compare_models(
+    model_predictions: dict
+) -> List[ModelPerformance]:
+    """
+    Compare multiple models on the same games.
+    
+    Args:
+        model_predictions: Dict mapping model name to predictions
+    
+    Returns:
+        List of ModelPerformance sorted by accuracy
+    """
+    results = []
+    
+    for model_name, predictions in model_predictions.items():
+        perf = ModelPerformance.from_predictions(predictions)
+        results.append(perf)
+    
+    # Sort by accuracy
+    return sorted(results, key=lambda x: x.accuracy, reverse=True)
+
+
+def train_test_split_temporal(
+    games: List[dict],
+    test_ratio: float = 0.2
+) -> Tuple[List, List]:
+    """
+    Split data temporally (not randomly) for proper evaluation.
+    
+    Important: Never use future data to predict past!
+    """
+    games_sorted = sorted(games, key=lambda g: g.get("date", ""))
+    split_idx = int(len(games_sorted) * (1 - test_ratio))
+    
+    return games_sorted[:split_idx], games_sorted[split_idx:]
