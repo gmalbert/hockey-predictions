@@ -1,0 +1,1067 @@
+{
+  "nextStartDate": "2026-02-23",
+  "previousStartDate": "2026-02-09",
+  "gameWeek": [
+    {
+      "date": "2026-02-16",
+      "dayAbbrev": "MON",
+      "numberOfGames": 0,
+      "datePromo": [],
+      "games": []
+    },
+    {
+      "date": "2026-02-17",
+      "dayAbbrev": "TUE",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090019,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-17T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090020,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Rho Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-17T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090021,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-17T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090022,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-17T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-18",
+      "dayAbbrev": "WED",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090023,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-18T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090024,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-18T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090025,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Rho Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-18T17:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090026,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-18T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 29,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NBC",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "dayAbbrev": "THU",
+      "numberOfGames": 0,
+      "datePromo": [],
+      "games": []
+    },
+    {
+      "date": "2026-02-20",
+      "dayAbbrev": "FRI",
+      "numberOfGames": 2,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090027,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-20T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090028,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-20T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 29,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NBC",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-21",
+      "dayAbbrev": "SAT",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090029,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-21T19:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 2
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-22",
+      "dayAbbrev": "SUN",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090030,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-22T13:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 29,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NBC",
+              "sequenceNumber": 3
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 4
+            }
+          ],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-puck-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    }
+  ],
+  "preSeasonStartDate": "2025-09-20",
+  "regularSeasonStartDate": "2025-10-07",
+  "regularSeasonEndDate": "2026-04-17",
+  "playoffEndDate": "2026-06-15",
+  "numberOfGames": 12
+}

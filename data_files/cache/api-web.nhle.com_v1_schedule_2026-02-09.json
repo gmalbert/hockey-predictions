@@ -1,0 +1,1766 @@
+{
+  "nextStartDate": "2026-02-16",
+  "previousStartDate": "2026-02-02",
+  "gameWeek": [
+    {
+      "date": "2026-02-09",
+      "dayAbbrev": "MON",
+      "numberOfGames": 0,
+      "datePromo": [],
+      "games": []
+    },
+    {
+      "date": "2026-02-10",
+      "dayAbbrev": "TUE",
+      "numberOfGames": 0,
+      "datePromo": [],
+      "games": []
+    },
+    {
+      "date": "2026-02-11",
+      "dayAbbrev": "WED",
+      "numberOfGames": 2,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090001,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-11T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 65,
+            "commonName": {
+              "default": "Slovakia",
+              "cs": "Slovensko",
+              "de": "Slowakei",
+              "es": "Eslovaquia",
+              "fr": "Slovaquie",
+              "sk": "Slovensko",
+              "sv": "Slovakien"
+            },
+            "placeName": {
+              "default": "Slovakia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Slovakia"
+            },
+            "abbrev": "SVK",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SVK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SVK_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 62,
+            "commonName": {
+              "default": "Finland",
+              "cs": "Finsko",
+              "de": "Finnland",
+              "es": "Finlandia",
+              "fi": "Suomi",
+              "fr": "Finlande",
+              "sk": "F\u00ednsko"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FIN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FIN_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090002,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-11T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 66,
+            "commonName": {
+              "default": "Sweden",
+              "cs": "\u0160v\u00e9dsko",
+              "de": "Schweden",
+              "es": "Suecia",
+              "fi": "Ruotsi",
+              "fr": "Su\u00e8de",
+              "sk": "\u0160v\u00e9dsko",
+              "sv": "Sverige"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "SWE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SWE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SWE_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 6773,
+            "commonName": {
+              "default": "Italy",
+              "cs": "It\u00e1lie",
+              "de": "Italien",
+              "es": "Italia",
+              "fi": "Italia",
+              "fr": "Italie",
+              "sk": "Taliansko",
+              "sv": "Italien"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "ITA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/ITA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/ITA_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-12",
+      "dayAbbrev": "THU",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090003,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-12T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 6776,
+            "commonName": {
+              "default": "Switzerland",
+              "cs": "\u0160v\u00fdcarsko",
+              "de": "Schweiz",
+              "es": "Suiza",
+              "fi": "Sveitsi",
+              "fr": "Suisse",
+              "sk": "\u0160vaj\u010diarsko",
+              "sv": "Schweiz"
+            },
+            "placeName": {
+              "default": "Switzerland"
+            },
+            "placeNameWithPreposition": {
+              "default": "Switzerland"
+            },
+            "abbrev": "SUI",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SUI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SUI_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 7228,
+            "commonName": {
+              "default": "France",
+              "cs": "Francie",
+              "de": "Frankreich",
+              "es": "Francia",
+              "fi": "Ranska",
+              "sk": "Franc\u00fazsko",
+              "sv": "Frankrike"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FRA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FRA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FRA_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090004,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-12T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            }
+          ],
+          "awayTeam": {
+            "id": 61,
+            "commonName": {
+              "default": "Czechia",
+              "cs": "\u010cesko",
+              "de": "Tschechien",
+              "es": "Chequia",
+              "fi": "Tshekki",
+              "fr": "Tch\u00e9quie",
+              "sk": "\u010cesko",
+              "sv": "Tjeckien"
+            },
+            "placeName": {
+              "default": "Czechia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Czechia"
+            },
+            "abbrev": "CZE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CZE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CZE_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 60,
+            "commonName": {
+              "default": "Canada",
+              "cs": "Kanada",
+              "de": "Kanada",
+              "es": "Canad\u00e1",
+              "fi": "Kanada",
+              "sk": "Kanada",
+              "sv": "Kanada"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "CAN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CAN_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090005,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-12T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 6775,
+            "commonName": {
+              "default": "Latvia",
+              "cs": "Loty\u0161sko",
+              "de": "Lettland",
+              "es": "Letonia",
+              "fr": "Lettonie",
+              "sk": "Loty\u0161sko",
+              "sv": "Lettland"
+            },
+            "placeName": {
+              "default": "Latvia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Latvia"
+            },
+            "abbrev": "LAT",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/LAT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/LAT_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 67,
+            "commonName": {
+              "default": "USA",
+              "es": "Estados Unidos",
+              "fi": "Yhdysvaltojen",
+              "fr": "\u00c9tats-Unis"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "USA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/USA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/USA_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090006,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Fiera Milano Rho"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-12T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 63,
+            "commonName": {
+              "default": "Germany",
+              "cs": "N\u011bmecko",
+              "de": "Deutschland",
+              "es": "Alemania",
+              "fi": "Saksa",
+              "fr": "Allemagne",
+              "sk": "Nemecko",
+              "sv": "Tyskland"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "GER",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/GER_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/GER_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 5096,
+            "commonName": {
+              "default": "Denmark",
+              "cs": "D\u00e1nsko",
+              "de": "D\u00e4nemark",
+              "es": "Dinamarca",
+              "fi": "Tanska",
+              "fr": "Danemark",
+              "sk": "D\u00e1nsko",
+              "sv": "Danmark"
+            },
+            "placeName": {
+              "default": "Denmark"
+            },
+            "placeNameWithPreposition": {
+              "default": "Denmark"
+            },
+            "abbrev": "DEN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/DEN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/DEN_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-13",
+      "dayAbbrev": "FRI",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090007,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-13T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 62,
+            "commonName": {
+              "default": "Finland",
+              "cs": "Finsko",
+              "de": "Finnland",
+              "es": "Finlandia",
+              "fi": "Suomi",
+              "fr": "Finlande",
+              "sk": "F\u00ednsko"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FIN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FIN_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 66,
+            "commonName": {
+              "default": "Sweden",
+              "cs": "\u0160v\u00e9dsko",
+              "de": "Schweden",
+              "es": "Suecia",
+              "fi": "Ruotsi",
+              "fr": "Su\u00e8de",
+              "sk": "\u0160v\u00e9dsko",
+              "sv": "Sverige"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "SWE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SWE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SWE_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090008,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Fiera Milano Rho"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-13T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 6773,
+            "commonName": {
+              "default": "Italy",
+              "cs": "It\u00e1lie",
+              "de": "Italien",
+              "es": "Italia",
+              "fi": "Italia",
+              "fr": "Italie",
+              "sk": "Taliansko",
+              "sv": "Italien"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "ITA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/ITA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/ITA_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 65,
+            "commonName": {
+              "default": "Slovakia",
+              "cs": "Slovensko",
+              "de": "Slowakei",
+              "es": "Eslovaquia",
+              "fr": "Slovaquie",
+              "sk": "Slovensko",
+              "sv": "Slovakien"
+            },
+            "placeName": {
+              "default": "Slovakia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Slovakia"
+            },
+            "abbrev": "SVK",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SVK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SVK_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090009,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-13T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 7228,
+            "commonName": {
+              "default": "France",
+              "cs": "Francie",
+              "de": "Frankreich",
+              "es": "Francia",
+              "fi": "Ranska",
+              "sk": "Franc\u00fazsko",
+              "sv": "Frankrike"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FRA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FRA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FRA_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 61,
+            "commonName": {
+              "default": "Czechia",
+              "cs": "\u010cesko",
+              "de": "Tschechien",
+              "es": "Chequia",
+              "fi": "Tshekki",
+              "fr": "Tch\u00e9quie",
+              "sk": "\u010cesko",
+              "sv": "Tjeckien"
+            },
+            "placeName": {
+              "default": "Czechia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Czechia"
+            },
+            "abbrev": "CZE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CZE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CZE_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090010,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-13T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            }
+          ],
+          "awayTeam": {
+            "id": 60,
+            "commonName": {
+              "default": "Canada",
+              "cs": "Kanada",
+              "de": "Kanada",
+              "es": "Canad\u00e1",
+              "fi": "Kanada",
+              "sk": "Kanada",
+              "sv": "Kanada"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "CAN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CAN_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 6776,
+            "commonName": {
+              "default": "Switzerland",
+              "cs": "\u0160v\u00fdcarsko",
+              "de": "Schweiz",
+              "es": "Suiza",
+              "fi": "Sveitsi",
+              "fr": "Suisse",
+              "sk": "\u0160vaj\u010diarsko",
+              "sv": "Schweiz"
+            },
+            "placeName": {
+              "default": "Switzerland"
+            },
+            "placeNameWithPreposition": {
+              "default": "Switzerland"
+            },
+            "abbrev": "SUI",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SUI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SUI_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-14",
+      "dayAbbrev": "SAT",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090011,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-14T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 66,
+            "commonName": {
+              "default": "Sweden",
+              "cs": "\u0160v\u00e9dsko",
+              "de": "Schweden",
+              "es": "Suecia",
+              "fi": "Ruotsi",
+              "fr": "Su\u00e8de",
+              "sk": "\u0160v\u00e9dsko",
+              "sv": "Sverige"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "SWE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SWE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SWE_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 65,
+            "commonName": {
+              "default": "Slovakia",
+              "cs": "Slovensko",
+              "de": "Slowakei",
+              "es": "Eslovaquia",
+              "fr": "Slovaquie",
+              "sk": "Slovensko",
+              "sv": "Slovakien"
+            },
+            "placeName": {
+              "default": "Slovakia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Slovakia"
+            },
+            "abbrev": "SVK",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SVK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SVK_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090012,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Fiera Milano Rho"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-14T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 186,
+              "market": "N",
+              "countryCode": "US",
+              "network": "CNBC",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 63,
+            "commonName": {
+              "default": "Germany",
+              "cs": "N\u011bmecko",
+              "de": "Deutschland",
+              "es": "Alemania",
+              "fi": "Saksa",
+              "fr": "Allemagne",
+              "sk": "Nemecko",
+              "sv": "Tyskland"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "GER",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/GER_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/GER_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 6775,
+            "commonName": {
+              "default": "Latvia",
+              "cs": "Loty\u0161sko",
+              "de": "Lettland",
+              "es": "Letonia",
+              "fr": "Lettonie",
+              "sk": "Loty\u0161sko",
+              "sv": "Lettland"
+            },
+            "placeName": {
+              "default": "Latvia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Latvia"
+            },
+            "abbrev": "LAT",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/LAT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/LAT_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090013,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-14T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 62,
+            "commonName": {
+              "default": "Finland",
+              "cs": "Finsko",
+              "de": "Finnland",
+              "es": "Finlandia",
+              "fi": "Suomi",
+              "fr": "Finlande",
+              "sk": "F\u00ednsko"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FIN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FIN_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 6773,
+            "commonName": {
+              "default": "Italy",
+              "cs": "It\u00e1lie",
+              "de": "Italien",
+              "es": "Italia",
+              "fi": "Italia",
+              "fr": "Italie",
+              "sk": "Taliansko",
+              "sv": "Italien"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "ITA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/ITA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/ITA_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090014,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-14T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 67,
+            "commonName": {
+              "default": "USA",
+              "es": "Estados Unidos",
+              "fi": "Yhdysvaltojen",
+              "fr": "\u00c9tats-Unis"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "USA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/USA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/USA_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 5096,
+            "commonName": {
+              "default": "Denmark",
+              "cs": "D\u00e1nsko",
+              "de": "D\u00e4nemark",
+              "es": "Dinamarca",
+              "fi": "Tanska",
+              "fr": "Danemark",
+              "sk": "D\u00e1nsko",
+              "sv": "Danmark"
+            },
+            "placeName": {
+              "default": "Denmark"
+            },
+            "placeNameWithPreposition": {
+              "default": "Denmark"
+            },
+            "abbrev": "DEN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/DEN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/DEN_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-02-15",
+      "dayAbbrev": "SUN",
+      "numberOfGames": 4,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025090015,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-15T11:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 186,
+              "market": "N",
+              "countryCode": "US",
+              "network": "CNBC",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            }
+          ],
+          "awayTeam": {
+            "id": 6776,
+            "commonName": {
+              "default": "Switzerland",
+              "cs": "\u0160v\u00fdcarsko",
+              "de": "Schweiz",
+              "es": "Suiza",
+              "fi": "Sveitsi",
+              "fr": "Suisse",
+              "sk": "\u0160vaj\u010diarsko",
+              "sv": "Schweiz"
+            },
+            "placeName": {
+              "default": "Switzerland"
+            },
+            "placeNameWithPreposition": {
+              "default": "Switzerland"
+            },
+            "abbrev": "SUI",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/SUI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/SUI_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 61,
+            "commonName": {
+              "default": "Czechia",
+              "cs": "\u010cesko",
+              "de": "Tschechien",
+              "es": "Chequia",
+              "fi": "Tshekki",
+              "fr": "Tch\u00e9quie",
+              "sk": "\u010cesko",
+              "sv": "Tjeckien"
+            },
+            "placeName": {
+              "default": "Czechia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Czechia"
+            },
+            "abbrev": "CZE",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CZE_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CZE_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090016,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-15T15:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            }
+          ],
+          "awayTeam": {
+            "id": 60,
+            "commonName": {
+              "default": "Canada",
+              "cs": "Kanada",
+              "de": "Kanada",
+              "es": "Canad\u00e1",
+              "fi": "Kanada",
+              "sk": "Kanada",
+              "sv": "Kanada"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "CAN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/CAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/CAN_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 7228,
+            "commonName": {
+              "default": "France",
+              "cs": "Francie",
+              "de": "Frankreich",
+              "es": "Francia",
+              "fi": "Ranska",
+              "sk": "Franc\u00fazsko",
+              "sv": "Frankrike"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "FRA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/FRA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/FRA_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090017,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Fiera Milano Rho"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-15T18:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 186,
+              "market": "N",
+              "countryCode": "US",
+              "network": "CNBC",
+              "sequenceNumber": 2
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            }
+          ],
+          "awayTeam": {
+            "id": 5096,
+            "commonName": {
+              "default": "Denmark",
+              "cs": "D\u00e1nsko",
+              "de": "D\u00e4nemark",
+              "es": "Dinamarca",
+              "fi": "Tanska",
+              "fr": "Danemark",
+              "sk": "D\u00e1nsko",
+              "sv": "Danmark"
+            },
+            "placeName": {
+              "default": "Denmark"
+            },
+            "placeNameWithPreposition": {
+              "default": "Denmark"
+            },
+            "abbrev": "DEN",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/DEN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/DEN_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 6775,
+            "commonName": {
+              "default": "Latvia",
+              "cs": "Loty\u0161sko",
+              "de": "Lettland",
+              "es": "Letonia",
+              "fr": "Lettonie",
+              "sk": "Loty\u0161sko",
+              "sv": "Lettland"
+            },
+            "placeName": {
+              "default": "Latvia"
+            },
+            "placeNameWithPreposition": {
+              "default": "Latvia"
+            },
+            "abbrev": "LAT",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/LAT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/LAT_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        },
+        {
+          "id": 2025090018,
+          "season": 20252026,
+          "gameType": 9,
+          "venue": {
+            "default": "Milano Santagiulia Ice Hockey Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-02-15T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "+01:00",
+          "venueTimezone": "Europe/Rome",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 637,
+              "market": "N",
+              "countryCode": "US",
+              "network": "Peacock",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 188,
+              "market": "N",
+              "countryCode": "US",
+              "network": "USA",
+              "sequenceNumber": 31
+            },
+            {
+              "id": 4,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC",
+              "sequenceNumber": 101
+            },
+            {
+              "id": 636,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "CBC Gem",
+              "sequenceNumber": 103
+            },
+            {
+              "id": 40,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TSN",
+              "sequenceNumber": 136
+            }
+          ],
+          "awayTeam": {
+            "id": 67,
+            "commonName": {
+              "default": "USA",
+              "es": "Estados Unidos",
+              "fi": "Yhdysvaltojen",
+              "fr": "\u00c9tats-Unis"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "USA",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/USA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/USA_dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 63,
+            "commonName": {
+              "default": "Germany",
+              "cs": "N\u011bmecko",
+              "de": "Deutschland",
+              "es": "Alemania",
+              "fi": "Saksa",
+              "fr": "Allemagne",
+              "sk": "Nemecko",
+              "sv": "Tyskland"
+            },
+            "placeName": {
+              "default": ""
+            },
+            "placeNameWithPreposition": {
+              "default": ""
+            },
+            "abbrev": "GER",
+            "logo": "https://assets.nhle.com/logos/ntl/svg/GER_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/ntl/svg/GER_dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          }
+        }
+      ]
+    }
+  ],
+  "preSeasonStartDate": "2025-09-20",
+  "regularSeasonStartDate": "2025-10-07",
+  "regularSeasonEndDate": "2026-04-17",
+  "playoffEndDate": "2026-06-15",
+  "numberOfGames": 18
+}
