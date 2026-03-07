@@ -7,18 +7,16 @@ import sys
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
-from src.models.expected_goals import TeamMetrics, calculate_expected_goals
-from src.models.win_probability import calculate_win_probability
-from src.models.totals import predict_total
-from src.utils.odds import calculate_edge, american_to_implied
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="💰", layout="wide")
+st.set_page_config(page_title="Value Finder", page_icon="💰", layout="wide")
 st.title("💰 Value Finder")
 
 st.markdown("""
 Find bets where the model's probability exceeds the implied odds.
 A **positive edge** suggests potential value.
+
+*Note: This is a placeholder implementation. Full value calculation requires prediction models.*
 """)
 
 # Initialize client
@@ -28,276 +26,183 @@ def get_client():
 
 client = get_client()
 
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
+# Date selector for value bets
+from datetime import date
+from src.models.expected_goals import TeamMetrics, calculate_expected_goals, calculate_total_xg
+from src.models.win_probability import calculate_win_probability
+
+selected_date = st.date_input("Select Date", value=date.today())
+st.subheader(f"Value Bets for {selected_date:%Y-%m-%d}")
 
 # Filters
 col1, col2, col3 = st.columns(3)
 with col1:
-    min_edge = st.slider("Minimum Edge %", 0.0, 20.0, 2.0, 0.5)
+    min_edge = st.slider("Minimum Edge %", 0, 20, 3)
 with col2:
-    bet_types = st.multiselect("Bet Types", ["Moneyline", "Totals"], default=["Moneyline", "Totals"])
+    bet_types = st.multiselect("Bet Types", ["Moneyline", "Puck Line", "Totals"], default=["Moneyline"])
 with col3:
-    show_all = st.checkbox("Show All Bets", value=False, help="Show bets even without positive edge")
+    confidence = st.selectbox("Model Confidence", ["All", "High", "Medium", "Low"])
 
-# Date selection
-st.subheader("📅 Select Date")
-from datetime import date, timedelta
-selected_date = st.date_input(
-    "Choose a date for value bets",
-    value=date.today(),
-    min_value=date.today() - timedelta(days=30),  # Allow past 30 days
-    max_value=date.today() + timedelta(days=7),   # Allow next 7 days
-    help="Select a date to analyze games and find value bets"
-)
-
-# Get games with predictions for selected date
-date_str = selected_date.strftime("%Y-%m-%d")
-st.subheader(f"🎯 Value Bets for {selected_date.strftime('%B %d, %Y')}")
-
+# Get games for selected date and display model predictions
+st.subheader("Model Predictions")
 try:
-    # Get schedule and odds
+    date_str = selected_date.strftime("%Y-%m-%d")
     schedule = client.get_schedule(date_str)
-
-    # Try to get odds - may not be available for past dates
-    try:
-        if selected_date >= date.today():
-            # For today and future, try to get odds
-            days_ahead = (selected_date - date.today()).days + 1
-            odds_data = client.get_espn_odds(days_ahead=max(days_ahead, 1))
-        else:
-            # For past dates, odds won't be available
-            odds_data = []
-    except Exception as e:
-        st.warning(f"Could not fetch odds data: {e}")
-        odds_data = []
-    
     games_list = []
-    for game_week in schedule.get("gameWeek", []):
-        for game in game_week.get("games", []):
+    for week in schedule.get("gameWeek", []):
+        for game in week.get("games", []):
             if game.get("gameType") in [2, 3]:
                 games_list.append(game)
-    
-    value_bets = []
-    model_predictions = []
-    
+
     if games_list:
+        preds = []
         for game in games_list:
-            try:
-                away_abbrev = game.get("awayTeam", {}).get("abbrev", "")
-                home_abbrev = game.get("homeTeam", {}).get("abbrev", "")
-                
-                # Get team stats
-                home_stats = client.get_team_summary(home_abbrev)
-                away_stats = client.get_team_summary(away_abbrev)
-                
-                if not home_stats or not away_stats:
-                    continue
-                
-                # Create TeamMetrics
-                home_metrics = TeamMetrics(
-                    team=home_abbrev,
-                    goals_for_pg=home_stats['goals_for_pg'],
-                    goals_against_pg=home_stats['goals_against_pg'],
-                    shots_for_pg=home_stats.get('shots_for_pg', 30),
-                    shots_against_pg=home_stats.get('shots_against_pg', 30),
-                    pp_pct=home_stats['pp_pct'],
-                    pk_pct=home_stats['pk_pct']
-                )
-                
-                away_metrics = TeamMetrics(
-                    team=away_abbrev,
-                    goals_for_pg=away_stats['goals_for_pg'],
-                    goals_against_pg=away_stats['goals_against_pg'],
-                    shots_for_pg=away_stats.get('shots_for_pg', 30),
-                    shots_against_pg=away_stats.get('shots_against_pg', 30),
-                    pp_pct=away_stats['pp_pct'],
-                    pk_pct=away_stats['pk_pct']
-                )
-                
-                # Calculate predictions
-                home_xg, away_xg = calculate_expected_goals(home_metrics, away_metrics)
+            away_abbr = game.get("awayTeam", {}).get("abbrev")
+            home_abbr = game.get("homeTeam", {}).get("abbrev")
+            # fetch stats and compute predictions
+            home_stats = client.get_team_summary(home_abbr)
+            away_stats = client.get_team_summary(away_abbr)
+            if home_stats and away_stats:
+                home_tm = TeamMetrics.from_api_response(home_stats)
+                away_tm = TeamMetrics.from_api_response(away_stats)
+                home_xg, away_xg = calculate_expected_goals(home_tm, away_tm)
                 probs = calculate_win_probability(home_xg, away_xg)
-                
-                # Store model predictions for all games
-                matchup = f"{away_abbrev} @ {home_abbrev}"
-                model_predictions.append({
-                    "Game": matchup,
-                    "Home xG": f"{home_xg:.2f}",
-                    "Away xG": f"{away_xg:.2f}",
-                    "Home Win %": f"{probs.home_win:.1f}%",
-                    "Away Win %": f"{probs.away_win:.1f}%",
-                    "Total Pred": f"{home_xg + away_xg:.2f}"
+                total_pred = calculate_total_xg(home_xg, away_xg)
+
+                preds.append({
+                    "Matchup": f"{away_abbr} @ {home_abbr}",
+                    "Home xG": home_xg,
+                    "Away xG": away_xg,
+                    "Home Win %": f"{probs.home_win:.1%}",
+                    "Away Win %": f"{probs.away_win:.1%}",
+                    "Total Pred": total_pred,
                 })
+        if preds:
+            preds_df = pd.DataFrame(preds)
+            st.dataframe(preds_df, width='stretch', hide_index=True)
+        else:
+            st.info("Unable to compute predictions for selected date.")
+    else:
+        st.info("No NHL games scheduled for that date.")
+except Exception as e:
+    st.error(f"Error loading model predictions: {e}")
+
+# continue with odds section
+st.subheader("Today's Betting Odds")
+
+try:
+    odds_data = client.get_espn_odds(days_ahead=7)
+    
+    if odds_data:
+        odds_list = []
+        for game in odds_data:
+            if game.get("odds"):
+                provider = game["odds"][0]
                 
-                # Find odds for this game (if available)
-                game_odds = None
-                if odds_data:
-                    for odds_game in odds_data:
-                        if away_abbrev in odds_game.get("name", "") and home_abbrev in odds_game.get("name", ""):
-                            game_odds = odds_game
-                            break
+                # Parse odds
+                home_ml = provider.get("moneyline", {}).get("home")
+                away_ml = provider.get("moneyline", {}).get("away")
                 
-                if game_odds and game_odds.get("odds"):
-                    provider = game_odds["odds"][0]
-                    home_ml = provider.get("moneyline", {}).get("home")
-                    away_ml = provider.get("moneyline", {}).get("away")
-                    
-                    # Moneyline bets
-                    if "Moneyline" in bet_types:
-                        if home_ml:
-                            home_edge_data = calculate_edge(probs.home_win, int(home_ml))
-                            if show_all or home_edge_data["has_value"]:
-                                value_bets.append({
-                                    "Game": matchup,
-                                    "Bet": f"{home_abbrev} ML",
-                                    "Odds": int(home_ml),
-                                    "Model Prob": f"{home_edge_data['model_prob']:.1f}%",
-                                    "Implied": f"{home_edge_data['implied_prob']:.1f}%",
-                                    "Edge": f"{home_edge_data['edge_pct']:+.1f}%",
-                                    "Kelly": f"{home_edge_data['kelly_fraction']:.2%}",
-                                    "Recommendation": "✅ BET" if home_edge_data["edge_pct"] >= min_edge else ("⚠️ Small Edge" if home_edge_data["has_value"] else "❌ No Value")
-                                })
-                        
-                        if away_ml:
-                            away_edge_data = calculate_edge(probs.away_win, int(away_ml))
-                            if show_all or away_edge_data["has_value"]:
-                                value_bets.append({
-                                    "Game": matchup,
-                                    "Bet": f"{away_abbrev} ML",
-                                    "Odds": int(away_ml),
-                                    "Model Prob": f"{away_edge_data['model_prob']:.1f}%",
-                                    "Implied": f"{away_edge_data['implied_prob']:.1f}%",
-                                    "Edge": f"{away_edge_data['edge_pct']:+.1f}%",
-                                    "Kelly": f"{away_edge_data['kelly_fraction']:.2%}",
-                                    "Recommendation": "✅ BET" if away_edge_data["edge_pct"] >= min_edge else ("⚠️ Small Edge" if away_edge_data["has_value"] else "❌ No Value")
-                                })
-                    
-                    # Totals bets
-                    if "Totals" in bet_types:
-                        over_line = provider.get("total", {}).get("over", {}).get("line")
-                        over_odds = provider.get("total", {}).get("over", {}).get("odds")
-                        under_odds = provider.get("total", {}).get("under", {}).get("odds")
-                        
-                        if over_line and over_odds and under_odds:
-                            totals_pred = predict_total(home_xg, away_xg, float(over_line))
-                            
-                            over_edge_data = calculate_edge(totals_pred.over_prob, int(over_odds))
-                            if show_all or over_edge_data["has_value"]:
-                                value_bets.append({
-                                    "Game": matchup,
-                                    "Bet": f"Over {over_line}",
-                                    "Odds": int(over_odds),
-                                    "Model Prob": f"{over_edge_data['model_prob']:.1f}%",
-                                    "Implied": f"{over_edge_data['implied_prob']:.1f}%",
-                                    "Edge": f"{over_edge_data['edge_pct']:+.1f}%",
-                                    "Kelly": f"{over_edge_data['kelly_fraction']:.2%}",
-                                    "Recommendation": "✅ BET" if over_edge_data["edge_pct"] >= min_edge else ("⚠️ Small Edge" if over_edge_data["has_value"] else "❌ No Value")
-                                })
-                            
-                            under_edge_data = calculate_edge(totals_pred.under_prob, int(under_odds))
-                            if show_all or under_edge_data["has_value"]:
-                                value_bets.append({
-                                    "Game": matchup,
-                                    "Bet": f"Under {over_line}",
-                                    "Odds": int(under_odds),
-                                    "Model Prob": f"{under_edge_data['model_prob']:.1f}%",
-                                    "Implied": f"{under_edge_data['implied_prob']:.1f}%",
-                                    "Edge": f"{under_edge_data['edge_pct']:+.1f}%",
-                                    "Kelly": f"{under_edge_data['kelly_fraction']:.2%}",
-                                    "Recommendation": "✅ BET" if under_edge_data["edge_pct"] >= min_edge else ("⚠️ Small Edge" if under_edge_data["has_value"] else "❌ No Value")
-                                })
+                # Calculate implied probability from American odds
+                def implied_prob(odds):
+                    if odds is None:
+                        return None
+                    try:
+                        odds = float(odds)
+                        if odds > 0:
+                            return 100 / (odds + 100)
+                        else:
+                            return abs(odds) / (abs(odds) + 100)
+                    except:
+                        return None
                 
-            except Exception as e:
-                st.warning(f"Error processing game {away_abbrev} @ {home_abbrev}: {e}")
-                continue
+                home_impl = implied_prob(home_ml)
+                away_impl = implied_prob(away_ml)
+                
+                # Get spread info
+                home_spread_line = provider.get("spread", {}).get("home", {}).get("line")
+                home_spread_odds = provider.get("spread", {}).get("home", {}).get("odds")
+                
+                # Get total info
+                over_line = provider.get("total", {}).get("over", {}).get("line")
+                over_odds = provider.get("total", {}).get("over", {}).get("odds")
+                under_odds = provider.get("total", {}).get("under", {}).get("odds")
+                
+                odds_list.append({
+                    "Game": game.get("name", ""),
+                    "Home Team": game.get("home_team", ""),
+                    "Away Team": game.get("away_team", ""),
+                    "Home ML": home_ml if home_ml else "N/A",
+                    "Away ML": away_ml if away_ml else "N/A",
+                    "Home Impl%": f"{home_impl:.1%}" if home_impl else "N/A",
+                    "Away Impl%": f"{away_impl:.1%}" if away_impl else "N/A",
+                    "Spread": f"{home_spread_line}" if home_spread_line else "N/A",
+                    "Total": f"{over_line}" if over_line else "N/A",
+                    "Provider": provider.get("provider", "DraftKings")
+                })
         
-        # Display model predictions for all games
-        if model_predictions:
-            st.subheader("🤖 Model Predictions")
-            df_predictions = pd.DataFrame(model_predictions)
+        if odds_list:
+            odds_df = pd.DataFrame(odds_list)
+            
             st.dataframe(
-                df_predictions,
+                odds_df,
                 width='stretch',
                 hide_index=True,
                 column_config={
-                    "Game": st.column_config.TextColumn("Matchup", width="medium"),
-                    "Home xG": st.column_config.TextColumn("Home xG", width="small"),
-                    "Away xG": st.column_config.TextColumn("Away xG", width="small"),
-                    "Home Win %": st.column_config.TextColumn("Home Win %", width="small"),
-                    "Away Win %": st.column_config.TextColumn("Away Win %", width="small"),
-                    "Total Pred": st.column_config.TextColumn("Total Pred", width="small"),
+                    "Game": st.column_config.TextColumn("Matchup", width="large"),
+                    "Home Team": st.column_config.TextColumn("Home", width="small"),
+                    "Away Team": st.column_config.TextColumn("Away", width="small"),
+                    "Home ML": st.column_config.TextColumn("Home ML", width="small"),
+                    "Away ML": st.column_config.TextColumn("Away ML", width="small"),
+                    "Home Impl%": st.column_config.TextColumn("Home Prob", width="small", help="Implied probability from odds"),
+                    "Away Impl%": st.column_config.TextColumn("Away Prob", width="small", help="Implied probability from odds"),
+                    "Spread": st.column_config.TextColumn("Spread", width="small"),
+                    "Total": st.column_config.TextColumn("Total", width="small"),
                 }
             )
-        
-        # Display value bets (only when odds are available)
-        if value_bets:
-            st.subheader("💰 Value Bets")
-            # Filter by minimum edge
-            if not show_all:
-                value_bets = [bet for bet in value_bets if float(bet["Edge"].replace("%", "").replace("+", "")) >= min_edge]
             
-            if value_bets:
-                df = pd.DataFrame(value_bets)
-                st.dataframe(
-                    df,
-                    width='stretch',
-                    hide_index=True,
-                    column_config={
-                        "Game": st.column_config.TextColumn("Matchup", width="medium"),
-                        "Bet": st.column_config.TextColumn("Bet", width="small"),
-                        "Odds": st.column_config.NumberColumn("Odds", width="small"),
-                        "Model Prob": st.column_config.TextColumn("Model", width="small"),
-                        "Implied": st.column_config.TextColumn("Implied", width="small"),
-                        "Edge": st.column_config.TextColumn("Edge", width="small"),
-                        "Kelly": st.column_config.TextColumn("Kelly %", width="small"),
-                        "Recommendation": st.column_config.TextColumn("Action", width="medium"),
-                    }
-                )
-                
-                # Summary stats
-                st.divider()
-                good_bets = [b for b in value_bets if "✅" in b["Recommendation"]]
-                if good_bets:
-                    st.success(f"🎯 Found {len(good_bets)} recommended bet(s) with edge ≥ {min_edge:.1f}%")
-                else:
-                    st.info(f"No bets meet the minimum edge threshold of {min_edge:.1f}%")
-            else:
-                st.info(f"No bets found with edge ≥ {min_edge:.1f}%. Try lowering the minimum edge or enabling 'Show All Bets'.")
-        elif model_predictions:
-            st.info("💡 Model predictions shown above. Odds data not available for this date.")
+            # Show sample calculation
+            st.divider()
+            st.subheader("How It Works")
+            st.markdown("""
+            **Value betting** occurs when your estimated probability of an outcome is higher than the implied probability from the odds.
+            
+            **Example:**
+            - Odds: -150 (Implied: 60%)
+            - Your Model: 65% win probability
+            - **Edge:** +5% (65% - 60%)
+            
+            **Kelly Criterion** suggests bet sizing based on edge:
+            - Kelly % = (Model Prob × (Odds + 1) - 1) / Odds
+            
+            *Full implementation coming with prediction models in Phase 2.*
+            """)
         else:
-            st.info("No games found for the selected date.")
+            st.info("No odds data available.")
     else:
-        st.warning("No games or odds data available for today.")
-
+        st.info("Unable to fetch odds data.")
+        
 except Exception as e:
-    st.error(f"Error calculating value bets: {e}")
-    import traceback
-    st.code(traceback.format_exc())
+    st.error(f"Error loading odds: {e}")
 
-# How it works section
+# Placeholder value bets section
 st.divider()
-st.subheader("📖 How It Works")
-st.markdown("""
-**Value betting** occurs when your estimated probability of an outcome is higher than the implied probability from the odds.
+st.subheader("Identified Value Bets")
+st.info("🚧 Value calculation requires prediction models. See roadmap for implementation timeline.")
 
-**Example:**
-- Odds: -150 (Implied: 60%)
-- Model Prediction: 65% win probability
-- **Edge:** +5% (65% - 60%)
+# Show what value bets would look like
+st.markdown("**Sample Format (Coming Soon):**")
+sample_df = pd.DataFrame({
+    "Game": ["TOR @ MTL", "BOS @ NYR", "COL @ VGK"],
+    "Bet": ["MTL ML", "Under 6.0", "COL -1.5"],
+    "Odds": ["+125", "-110", "+145"],
+    "Model Prob": ["48%", "58%", "42%"],
+    "Implied": ["44%", "52%", "41%"],
+    "Edge": ["+4.0%", "+6.0%", "+1.0%"],
+    "Kelly": ["2.1%", "3.2%", "0.5%"]
+})
 
-**Kelly Criterion** suggests optimal bet sizing based on your edge:
-- Kelly % = (Decimal Odds × Model Prob - 1) / (Decimal Odds - 1)
-- Conservative approach: Use 25-50% of Kelly recommendation
-
-**Recommendations:**
-- ✅ **BET**: Edge meets your minimum threshold
-- ⚠️ **Small Edge**: Positive edge but below threshold
-- ❌ **No Value**: Negative edge, avoid bet
-""")
+st.dataframe(sample_df, width='stretch', hide_index=True)
 
 # Add footer
 add_betting_oracle_footer()
