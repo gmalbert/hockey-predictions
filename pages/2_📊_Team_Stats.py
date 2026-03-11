@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Team Stats", page_icon="📊", layout="wide")
 st.title("📊 Team Statistics")
 
 # Initialize client
@@ -18,11 +18,6 @@ def get_client():
     return NHLClient()
 
 client = get_client()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 # Team selector - create list of (full name, abbreviation) tuples
 team_options = [(client.TEAM_NAMES.get(abbr, abbr), abbr) for abbr in sorted(client.TEAM_NAMES.keys())]

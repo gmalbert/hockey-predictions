@@ -2,6 +2,12 @@
 Quick test to verify all Data Gathering Roadmap tasks are working.
 Run this to verify the implementation after setup.
 """
+import sys
+from pathlib import Path
+
+# ensure src package is importable when running under pytest
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from src.api.nhl_client import NHLClient
 from src.utils.cache import get_cache_size_mb, clear_old_cache
 
@@ -52,6 +58,16 @@ def test_phase_2(client):
     assert summary is not None, "get_team_summary should return data"
     assert 'wins' in summary, "Summary should have wins"
     print(f"✅ Task 2.2: Team Statistics - TOR: {summary['wins']}-{summary['losses']}-{summary['ot_losses']}")
+
+    # historical and current team mapping
+    hist = client.get_team_summary('ARI', season='20232024')
+    assert hist is not None, "Historical ARI should return stats"
+    assert hist['team'] == 'ARI'
+    curr = client.get_team_summary('UTA')
+    # when Utah stats aren't published, fallback returns Arizona data
+    assert curr is not None, "get_team_summary('UTA') should return data via fallback"
+    assert curr['team'] == 'ARI', "Fallback should use Arizona summary"
+    print(f"✅ ARI/UTA mapping validated (historic {hist['wins']} wins, fallback record {curr['wins']}-{curr['losses']})")
     
     # Task 2.3: Player Statistics
     skaters = client.get_skater_stats(limit=5)

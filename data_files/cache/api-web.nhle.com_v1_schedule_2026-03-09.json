@@ -20,7 +20,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "US/Eastern",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -54,7 +54,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20252026/LAK-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20252026/LAK-radio.m3u8",
+            "score": 3
           },
           "homeTeam": {
             "id": 29,
@@ -72,15 +73,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20252026/CBJ-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20252026/CBJ-radio.m3u8",
+            "score": 3
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/050062EFC9F23D40?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM26&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM26",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/050062EFC9F23D40?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM26&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM26",
           "gameCenterLink": "/gamecenter/lak-vs-cbj/2026/03/09/2025020828"
         },
         {
@@ -136,7 +136,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20252026/NYR-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20252026/NYR-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 8,
+                "value": "+117"
+              },
+              {
+                "providerId": 9,
+                "value": "+120"
+              },
+              {
+                "providerId": 7,
+                "value": "+115"
+              },
+              {
+                "providerId": 6,
+                "value": "2.12"
+              },
+              {
+                "providerId": 3,
+                "value": "2.17"
+              },
+              {
+                "providerId": 10,
+                "value": "2.95"
+              }
+            ]
           },
           "homeTeam": {
             "id": 4,
@@ -155,7 +181,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20252026/PHI-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20252026/PHI-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 8,
+                "value": "-139"
+              },
+              {
+                "providerId": 9,
+                "value": "-142"
+              },
+              {
+                "providerId": 7,
+                "value": "-138"
+              },
+              {
+                "providerId": 6,
+                "value": "1.68"
+              },
+              {
+                "providerId": 3,
+                "value": "1.72"
+              },
+              {
+                "providerId": 10,
+                "value": "2.20"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -212,7 +264,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 3,
+                "value": "2.54"
+              },
+              {
+                "providerId": 9,
+                "value": "+160"
+              },
+              {
+                "providerId": 7,
+                "value": "+162"
+              },
+              {
+                "providerId": 6,
+                "value": "2.52"
+              },
+              {
+                "providerId": 8,
+                "value": "+158"
+              },
+              {
+                "providerId": 10,
+                "value": "3.60"
+              }
+            ]
           },
           "homeTeam": {
             "id": 15,
@@ -230,7 +308,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WSH/20252026/WSH-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WSH/20252026/WSH-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 3,
+                "value": "1.53"
+              },
+              {
+                "providerId": 9,
+                "value": "-192"
+              },
+              {
+                "providerId": 7,
+                "value": "-196"
+              },
+              {
+                "providerId": 6,
+                "value": "1.50"
+              },
+              {
+                "providerId": 8,
+                "value": "-191"
+              },
+              {
+                "providerId": 10,
+                "value": "1.87"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -287,7 +391,29 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg?season=20252026",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 3,
+                "value": "1.43"
+              },
+              {
+                "providerId": 9,
+                "value": "-218"
+              },
+              {
+                "providerId": 7,
+                "value": "-220"
+              },
+              {
+                "providerId": 8,
+                "value": "-224"
+              },
+              {
+                "providerId": 6,
+                "value": "1.43"
+              }
+            ]
           },
           "homeTeam": {
             "id": 16,
@@ -305,7 +431,29 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg?season=20252026",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20252026/CHI-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20252026/CHI-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 3,
+                "value": "2.83"
+              },
+              {
+                "providerId": 9,
+                "value": "+180"
+              },
+              {
+                "providerId": 7,
+                "value": "+180"
+              },
+              {
+                "providerId": 8,
+                "value": "+184"
+              },
+              {
+                "providerId": 6,
+                "value": "2.75"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -363,7 +511,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20252026/OTT-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20252026/OTT-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 7,
+                "value": "-225"
+              },
+              {
+                "providerId": 8,
+                "value": "-234"
+              },
+              {
+                "providerId": 6,
+                "value": "1.41"
+              },
+              {
+                "providerId": 9,
+                "value": "-230"
+              },
+              {
+                "providerId": 3,
+                "value": "1.44"
+              },
+              {
+                "providerId": 10,
+                "value": "1.70"
+              }
+            ]
           },
           "homeTeam": {
             "id": 23,
@@ -381,7 +555,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20252026/VAN-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20252026/VAN-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 7,
+                "value": "+184"
+              },
+              {
+                "providerId": 8,
+                "value": "+193"
+              },
+              {
+                "providerId": 6,
+                "value": "2.81"
+              },
+              {
+                "providerId": 9,
+                "value": "+190"
+              },
+              {
+                "providerId": 3,
+                "value": "2.83"
+              },
+              {
+                "providerId": 10,
+                "value": "4.00"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -4568,6 +4768,78 @@
           "gameCenterLink": "/gamecenter/fla-vs-sea/2026/03/15/2025021062"
         }
       ]
+    }
+  ],
+  "oddsPartners": [
+    {
+      "partnerId": 2,
+      "country": "SE",
+      "name": "Unibet",
+      "imageUrl": "https://assets.nhle.com/betting_partner/unibet.svg",
+      "siteUrl": "https://www.unibet.se/betting/sports/filter/ice_hockey/nhl/all/matches",
+      "bgColor": "#14805E",
+      "textColor": "#FFFFFF",
+      "accentColor": "#3AAA35"
+    },
+    {
+      "partnerId": 3,
+      "country": "CZ",
+      "name": "Tipsport",
+      "imageUrl": "https://assets.nhle.com/betting_partner/tipsport.svg",
+      "siteUrl": "https://www.tipsport.cz/PartnerRedirectAction.do?pid=16961&sid=20360&bid=34954&tid=11268",
+      "bgColor": "#2497F2",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 6,
+      "country": "FI",
+      "name": "Veikkaus",
+      "imageUrl": "https://assets.nhle.com/betting_partner/veikkaus.svg",
+      "siteUrl": "https://www.veikkaus.fi/fi/vedonlyonti/pitkaveto?t=3-2-1_NHL",
+      "bgColor": "#0025F5",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 7,
+      "country": "CA",
+      "name": "FanDuel",
+      "imageUrl": "https://assets.nhle.com/betting_partner/fanduel.svg",
+      "siteUrl": "https://fanduel.com",
+      "bgColor": "#0078ff",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 8,
+      "country": "DE",
+      "name": "Sportradar",
+      "imageUrl": "https://assets.nhle.com/betting_partner/sportsradar.svg",
+      "siteUrl": "https://sportradar.com",
+      "bgColor": "#000000",
+      "textColor": "#FFFFFF",
+      "accentColor": "#E6E6E6"
+    },
+    {
+      "partnerId": 9,
+      "country": "US",
+      "name": "DraftKings",
+      "imageUrl": "https://assets.nhle.com/betting_partner/draftkings.svg",
+      "siteUrl": "https://dksb.sng.link/As9kz/3i4d?_dl=https%3A%2F%2Fsportsbook.draftkings.com%2Fgateway%3Fs%3D333653091&pcid=427326&psn=1320&pcn=NHL&pscn=OddsWidget&pcrn=NoOffer&pscid=SP&wpcid=427326&wpsrc=1320&wpcn=NHL&wpscn=OddsWidget&wpcrn=NoOffer&wpscid=SP&_forward_params=1",
+      "bgColor": "#000000",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 10,
+      "country": "SK",
+      "name": "Doxxbet",
+      "imageUrl": "https://assets.nhle.com/betting_partner/doxxbet.svg",
+      "siteUrl": "https://www.doxxbet.sk/sk/sportove-tipovanie-online/kurzy/ladovy-hokej/usa/nhl/?msID=21&mbID=27",
+      "bgColor": "#f30d31",
+      "textColor": "#202020",
+      "accentColor": "#ffffff"
     }
   ],
   "preSeasonStartDate": "2025-09-20",

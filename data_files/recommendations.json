@@ -1,0 +1,70 @@
+{
+  "recommendations": [
+    {
+      "id": 1,
+      "game_id": "2025020789",
+      "date": "2026-02-07",
+      "home_team": "MTL",
+      "away_team": "TOR",
+      "matchup": "TOR @ MTL",
+      "bet_type": "Moneyline",
+      "recommendation": "TOR ML",
+      "odds": "-150",
+      "edge_percent": 5.2,
+      "model_prob": 0.65,
+      "result": {
+        "game_id": "2025020789",
+        "home_goals": 2,
+        "away_goals": 4,
+        "total_goals": 6,
+        "home_won": false
+      },
+      "won": true,
+      "created_at": "2026-03-09T18:18:19.362150"
+    },
+    {
+      "id": 2,
+      "game_id": "2025020790",
+      "date": "2026-02-06",
+      "home_team": "NYR",
+      "away_team": "BOS",
+      "matchup": "BOS @ NYR",
+      "bet_type": "Over",
+      "recommendation": "Over 6.0",
+      "odds": "-110",
+      "edge_percent": 3.8,
+      "model_prob": 0.54,
+      "result": {
+        "game_id": "2025020790",
+        "home_goals": 4,
+        "away_goals": 3,
+        "total_goals": 7,
+        "home_won": true
+      },
+      "won": true,
+      "created_at": "2026-03-09T18:18:19.377206"
+    },
+    {
+      "id": 3,
+      "game_id": "2025020791",
+      "date": "2026-02-05",
+      "home_team": "VGK",
+      "away_team": "COL",
+      "matchup": "COL @ VGK",
+      "bet_type": "Puck Line",
+      "recommendation": "COL -1.5",
+      "odds": "+140",
+      "edge_percent": 4.1,
+      "model_prob": 0.38,
+      "result": {
+        "game_id": "2025020791",
+        "home_goals": 3,
+        "away_goals": 5,
+        "total_goals": 8,
+        "home_won": false
+      },
+      "won": true,
+      "created_at": "2026-03-09T18:18:19.392081"
+    }
+  ]
+}

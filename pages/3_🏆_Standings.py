@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.api.nhl_client import NHLClient
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="🏆", layout="wide")
+st.set_page_config(page_title="Standings", page_icon="🏆", layout="wide")
 st.title("🏆 NHL Standings")
 
 # Initialize client
@@ -18,11 +18,6 @@ def get_client():
     return NHLClient()
 
 client = get_client()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 # Get standings
 try:
@@ -67,7 +62,7 @@ try:
                         "GF": team.get("goalFor", 0),
                         "GA": team.get("goalAgainst", 0),
                         "DIFF": team.get("goalDifferential", 0),
-                        "P%": f"{team.get('pointPctg', 0):.3f}"
+                        "P%": f"{team.get('pointPct', 0):.3f}"
                     }
                     for idx, team in enumerate(div_teams)
                 ])

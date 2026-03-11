@@ -20,7 +20,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "US/Eastern",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -54,7 +54,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20252026/LAK-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20252026/LAK-radio.m3u8",
+            "score": 0
           },
           "homeTeam": {
             "id": 6,
@@ -72,15 +73,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg?season=20252026",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BOS/20252026/BOS-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BOS/20252026/BOS-radio.m3u8",
+            "score": 0
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/010062E9D0036CF5?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM34&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM34",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/010062E9D0036CF5?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM34&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM34",
           "gameCenterLink": "/gamecenter/lak-vs-bos/2026/03/10/2025021012"
         },
         {
@@ -95,7 +95,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "America/New_York",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -129,7 +129,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20252026/SJS-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20252026/SJS-radio.m3u8",
+            "score": 2
           },
           "homeTeam": {
             "id": 7,
@@ -147,15 +148,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8",
+            "score": 5
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/000062EFBCB3503B?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM32&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM32",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/000062EFBCB3503B?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM32&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM32",
           "gameCenterLink": "/gamecenter/sjs-vs-buf/2026/03/10/2025021013"
         },
         {
@@ -170,7 +170,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "America/Montreal",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -204,7 +204,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TOR/20252026/TOR-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TOR/20252026/TOR-radio.m3u8",
+            "score": 1
           },
           "homeTeam": {
             "id": 8,
@@ -222,15 +223,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MTL/20252026/MTL-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MTL/20252026/MTL-radio.m3u8",
+            "score": 2
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.ca/event/310062F6867017C6?lang=en-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM31&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM31",
-          "ticketsLinkFr": "https://www.ticketmaster.ca/event/310062F6867017C6?lang=fr-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM31&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM31",
           "gameCenterLink": "/gamecenter/tor-vs-mtl/2026/03/10/2025021014"
         },
         {
@@ -245,7 +245,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "US/Eastern",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -279,7 +279,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20252026/CBJ-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20252026/CBJ-radio.m3u8",
+            "score": 3
           },
           "homeTeam": {
             "id": 14,
@@ -297,15 +298,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TBL/20252026/TBL-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TBL/20252026/TBL-radio.m3u8",
+            "score": 2
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 2,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/0D0062FEFEC149AE?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM30&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM30",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/0D0062FEFEC149AE?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM30&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM30",
           "gameCenterLink": "/gamecenter/cbj-vs-tbl/2026/03/10/2025021015"
         },
         {
@@ -320,7 +320,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "US/Eastern",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -354,7 +354,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg?season=20252026",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DET/20252026/DET-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DET/20252026/DET-radio.m3u8",
+            "score": 2
           },
           "homeTeam": {
             "id": 13,
@@ -373,15 +374,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/FLA/20252026/FLA-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/FLA/20252026/FLA-radio.m3u8",
+            "score": 1
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.nhl.com/panthers/tickets/",
-          "ticketsLinkFr": "https://www.nhl.com/panthers/tickets/",
           "gameCenterLink": "/gamecenter/det-vs-fla/2026/03/10/2025021016"
         },
         {
@@ -396,7 +396,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "America/New_York",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -430,7 +430,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8",
+            "score": 0
           },
           "homeTeam": {
             "id": 3,
@@ -448,15 +449,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20252026/NYR-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20252026/NYR-radio.m3u8",
+            "score": 3
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 3,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/3B0062F0AC24168D?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_SCHED_PG_GM30&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=SCHED_PG_GM30&CAMEFROM=CFC_RANGERS_WEB_NHL_SCHED_250825",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/3B0062F0AC24168D?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_SCHED_PG_GM30&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=SCHED_PG_GM30&CAMEFROM=CFC_RANGERS_WEB_NHL_SCHED_250825",
           "gameCenterLink": "/gamecenter/cgy-vs-nyr/2026/03/10/2025021017"
         },
         {
@@ -471,7 +471,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-04:00",
           "venueTimezone": "US/Eastern",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -505,7 +505,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20252026/PIT-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20252026/PIT-radio.m3u8",
+            "score": 2
           },
           "homeTeam": {
             "id": 12,
@@ -524,15 +525,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20252026/CAR-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20252026/CAR-radio.m3u8",
+            "score": 1
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 2,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/2D0062F0B8F293F6?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_SCHED_PG_GM34&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=SCHED_PG_GM34",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/2D0062F0B8F293F6?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_SCHED_PG_GM34&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=SCHED_PG_GM34",
           "gameCenterLink": "/gamecenter/pit-vs-car/2026/03/10/2025021018"
         },
         {
@@ -547,7 +547,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-05:00",
           "venueTimezone": "US/Central",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -588,7 +588,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20252026/NYI-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20252026/NYI-radio.m3u8",
+            "score": 1
           },
           "homeTeam": {
             "id": 19,
@@ -606,15 +607,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg?season=20252026",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20252026/STL-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20252026/STL-radio.m3u8",
+            "score": 3
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 2,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/060062F0B8273504?brand=blues&artistid=806025&wt.mc_id=NHL_TEAM_STL_SGT_PG_GM33&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_STL&utm_content=SGT_PG_GM33&camefrom=CFC_NHLBLUES_WEB_TICKETS_SGT-CAROUSEL",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/060062F0B8273504?brand=blues&artistid=806025&wt.mc_id=NHL_TEAM_STL_SGT_PG_GM33&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_STL&utm_content=SGT_PG_GM33&camefrom=CFC_NHLBLUES_WEB_TICKETS_SGT-CAROUSEL",
           "gameCenterLink": "/gamecenter/nyi-vs-stl/2026/03/10/2025021019"
         },
         {
@@ -629,7 +629,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-05:00",
           "venueTimezone": "US/Central",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -670,7 +670,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20252026/VGK-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20252026/VGK-radio.m3u8",
+            "score": 1
           },
           "homeTeam": {
             "id": 25,
@@ -688,15 +689,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DAL/20252026/DAL-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DAL/20252026/DAL-radio.m3u8",
+            "score": 0
           },
           "periodDescriptor": {
-            "number": 1,
+            "number": 2,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/0C0062EEC7C72057?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM31&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM31",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0062EEC7C72057?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM31&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM31",
           "gameCenterLink": "/gamecenter/vgk-vs-dal/2026/03/10/2025021020"
         },
         {
@@ -711,7 +711,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-05:00",
           "venueTimezone": "US/Central",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -745,7 +745,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg?season=20252026",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg?season=20252026",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8",
+            "score": 0
           },
           "homeTeam": {
             "id": 30,
@@ -763,15 +764,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20252026/MIN-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20252026/MIN-radio.m3u8",
+            "score": 1
           },
           "periodDescriptor": {
             "number": 1,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.com/event/060062F1D608550B?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_SCHED_PG_GM33&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=SCHED_PG_GM33",
-          "ticketsLinkFr": "https://www.ticketmaster.com/event/060062F1D608550B?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_SCHED_PG_GM33&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=SCHED_PG_GM33",
           "gameCenterLink": "/gamecenter/uta-vs-min/2026/03/10/2025021021"
         },
         {
@@ -786,7 +786,7 @@
           "easternUTCOffset": "-04:00",
           "venueUTCOffset": "-05:00",
           "venueTimezone": "America/Winnipeg",
-          "gameState": "FUT",
+          "gameState": "LIVE",
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
@@ -827,7 +827,8 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20252026/ANA-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20252026/ANA-radio.m3u8",
+            "score": 0
           },
           "homeTeam": {
             "id": 52,
@@ -845,15 +846,14 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20252026/WPG-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20252026/WPG-radio.m3u8",
+            "score": 0
           },
           "periodDescriptor": {
             "number": 1,
             "periodType": "REG",
             "maxRegulationPeriods": 3
           },
-          "ticketsLink": "https://www.ticketmaster.ca/event/110062F98DF72D54?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM32&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM32",
-          "ticketsLinkFr": "https://www.ticketmaster.ca/event/110062F98DF72D54?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM32&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM32",
           "gameCenterLink": "/gamecenter/ana-vs-wpg/2026/03/10/2025021022"
         },
         {
@@ -923,7 +923,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20252026/EDM-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20252026/EDM-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 7,
+                "value": "+160"
+              },
+              {
+                "providerId": 3,
+                "value": "2.41"
+              },
+              {
+                "providerId": 6,
+                "value": "2.43"
+              },
+              {
+                "providerId": 9,
+                "value": "+145"
+              },
+              {
+                "providerId": 8,
+                "value": "+146"
+              },
+              {
+                "providerId": 10,
+                "value": "3.40"
+              }
+            ]
           },
           "homeTeam": {
             "id": 21,
@@ -941,7 +967,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20252026/COL-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20252026/COL-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 7,
+                "value": "-194"
+              },
+              {
+                "providerId": 3,
+                "value": "1.58"
+              },
+              {
+                "providerId": 6,
+                "value": "1.53"
+              },
+              {
+                "providerId": 9,
+                "value": "-175"
+              },
+              {
+                "providerId": 8,
+                "value": "-175"
+              },
+              {
+                "providerId": 10,
+                "value": "1.90"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -1005,7 +1057,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg",
             "awaySplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NSH/20252026/NSH-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NSH/20252026/NSH-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 8,
+                "value": "-109"
+              },
+              {
+                "providerId": 9,
+                "value": "-110"
+              },
+              {
+                "providerId": 6,
+                "value": "1.89"
+              },
+              {
+                "providerId": 7,
+                "value": "-105"
+              },
+              {
+                "providerId": 3,
+                "value": "1.92"
+              },
+              {
+                "providerId": 10,
+                "value": "2.50"
+              }
+            ]
           },
           "homeTeam": {
             "id": 55,
@@ -1023,7 +1101,33 @@
             "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
             "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
             "homeSplitSquad": false,
-            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20252026/SEA-radio.m3u8"
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20252026/SEA-radio.m3u8",
+            "odds": [
+              {
+                "providerId": 8,
+                "value": "-111"
+              },
+              {
+                "providerId": 9,
+                "value": "-110"
+              },
+              {
+                "providerId": 6,
+                "value": "1.86"
+              },
+              {
+                "providerId": 7,
+                "value": "-114"
+              },
+              {
+                "providerId": 3,
+                "value": "1.92"
+              },
+              {
+                "providerId": 10,
+                "value": "2.45"
+              }
+            ]
           },
           "periodDescriptor": {
             "number": 1,
@@ -2178,11 +2282,11 @@
           "gameScheduleState": "OK",
           "tvBroadcasts": [
             {
-              "id": 283,
+              "id": 287,
               "market": "N",
               "countryCode": "CA",
-              "network": "SN360",
-              "sequenceNumber": 114
+              "network": "SNE",
+              "sequenceNumber": 30
             },
             {
               "id": 281,
@@ -2471,7 +2575,7 @@
               "market": "N",
               "countryCode": "CA",
               "network": "SN",
-              "sequenceNumber": 107
+              "sequenceNumber": 21
             }
           ],
           "awayTeam": {
@@ -4580,6 +4684,78 @@
           "gameCenterLink": "/gamecenter/pit-vs-col/2026/03/16/2025021067"
         }
       ]
+    }
+  ],
+  "oddsPartners": [
+    {
+      "partnerId": 2,
+      "country": "SE",
+      "name": "Unibet",
+      "imageUrl": "https://assets.nhle.com/betting_partner/unibet.svg",
+      "siteUrl": "https://www.unibet.se/betting/sports/filter/ice_hockey/nhl/all/matches",
+      "bgColor": "#14805E",
+      "textColor": "#FFFFFF",
+      "accentColor": "#3AAA35"
+    },
+    {
+      "partnerId": 3,
+      "country": "CZ",
+      "name": "Tipsport",
+      "imageUrl": "https://assets.nhle.com/betting_partner/tipsport.svg",
+      "siteUrl": "https://www.tipsport.cz/PartnerRedirectAction.do?pid=16961&sid=20360&bid=34954&tid=11268",
+      "bgColor": "#2497F2",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 6,
+      "country": "FI",
+      "name": "Veikkaus",
+      "imageUrl": "https://assets.nhle.com/betting_partner/veikkaus.svg",
+      "siteUrl": "https://www.veikkaus.fi/fi/vedonlyonti/pitkaveto?t=3-2-1_NHL",
+      "bgColor": "#0025F5",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 7,
+      "country": "CA",
+      "name": "FanDuel",
+      "imageUrl": "https://assets.nhle.com/betting_partner/fanduel.svg",
+      "siteUrl": "https://fanduel.com",
+      "bgColor": "#0078ff",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 8,
+      "country": "DE",
+      "name": "Sportradar",
+      "imageUrl": "https://assets.nhle.com/betting_partner/sportsradar.svg",
+      "siteUrl": "https://sportradar.com",
+      "bgColor": "#000000",
+      "textColor": "#FFFFFF",
+      "accentColor": "#E6E6E6"
+    },
+    {
+      "partnerId": 9,
+      "country": "US",
+      "name": "DraftKings",
+      "imageUrl": "https://assets.nhle.com/betting_partner/draftkings.svg",
+      "siteUrl": "https://dksb.sng.link/As9kz/3i4d?_dl=https%3A%2F%2Fsportsbook.draftkings.com%2Fgateway%3Fs%3D333653091&pcid=427326&psn=1320&pcn=NHL&pscn=OddsWidget&pcrn=NoOffer&pscid=SP&wpcid=427326&wpsrc=1320&wpcn=NHL&wpscn=OddsWidget&wpcrn=NoOffer&wpscid=SP&_forward_params=1",
+      "bgColor": "#000000",
+      "textColor": "#FFFFFF",
+      "accentColor": "#FFFFFF"
+    },
+    {
+      "partnerId": 10,
+      "country": "SK",
+      "name": "Doxxbet",
+      "imageUrl": "https://assets.nhle.com/betting_partner/doxxbet.svg",
+      "siteUrl": "https://www.doxxbet.sk/sk/sportove-tipovanie-online/kurzy/ladovy-hokej/usa/nhl/?msID=21&mbID=27",
+      "bgColor": "#f30d31",
+      "textColor": "#202020",
+      "accentColor": "#ffffff"
     }
   ],
   "preSeasonStartDate": "2025-09-20",

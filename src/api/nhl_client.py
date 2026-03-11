@@ -16,20 +16,22 @@ class NHLClient:
     
     # Team abbreviation to ID mapping
     TEAM_ID_MAP = {
-        "ANA": 24, "ARI": 53, "BOS": 6, "BUF": 7, "CAR": 12, "CBJ": 29,
+        "ANA": 24, "BOS": 6, "BUF": 7, "CAR": 12, "CBJ": 29,
         "CGY": 20, "CHI": 16, "COL": 21, "DAL": 25, "DET": 17, "EDM": 22,
         "FLA": 13, "LAK": 26, "MIN": 30, "MTL": 8, "NJD": 1, "NSH": 18,
         "NYI": 2, "NYR": 3, "OTT": 9, "PHI": 4, "PIT": 5, "SEA": 55,
         "SJS": 28, "STL": 19, "TBL": 14, "TOR": 10, "VAN": 23, "VGK": 54,
-        "WPG": 52, "WSH": 15, "UTA": 53  # Utah uses same ID as former ARI
+        "WPG": 52, "WSH": 15,
+        "UTA": 53,  # Utah Hockey Club (2024-25 onwards)
+        "ARI": 53,  # Arizona Coyotes (historical, through 2023-24)
     }
     
-    # Reverse mapping: ID to abbreviation
-    ID_TO_TEAM_MAP = {v: k for k, v in TEAM_ID_MAP.items() if k != "UTA"}  # Exclude duplicate
+    # Reverse mapping: ID to current abbreviation (ARI excluded so 53 → UTA)
+    ID_TO_TEAM_MAP = {v: k for k, v in TEAM_ID_MAP.items() if k != "ARI"}
     
     # Full team names
     TEAM_NAMES = {
-        "ANA": "Anaheim Ducks", "ARI": "Arizona Coyotes", "BOS": "Boston Bruins",
+        "ANA": "Anaheim Ducks", "BOS": "Boston Bruins",
         "BUF": "Buffalo Sabres", "CAR": "Carolina Hurricanes", "CBJ": "Columbus Blue Jackets",
         "CGY": "Calgary Flames", "CHI": "Chicago Blackhawks", "COL": "Colorado Avalanche",
         "DAL": "Dallas Stars", "DET": "Detroit Red Wings", "EDM": "Edmonton Oilers",
@@ -39,7 +41,9 @@ class NHLClient:
         "PHI": "Philadelphia Flyers", "PIT": "Pittsburgh Penguins", "SEA": "Seattle Kraken",
         "SJS": "San Jose Sharks", "STL": "St. Louis Blues", "TBL": "Tampa Bay Lightning",
         "TOR": "Toronto Maple Leafs", "VAN": "Vancouver Canucks", "VGK": "Vegas Golden Knights",
-        "WPG": "Winnipeg Jets", "WSH": "Washington Capitals", "UTA": "Utah Hockey Club"
+        "WPG": "Winnipeg Jets", "WSH": "Washington Capitals",
+        "UTA": "Utah Hockey Club",  # 2024-25 onwards
+        "ARI": "Arizona Coyotes",   # historical, through 2023-24
     }
     
     def __init__(self, cache_ttl_minutes: int = 5):
@@ -283,6 +287,14 @@ class NHLClient:
                     "shots_for_pg": team.get("shotsForPerGame", 0),
                     "shots_against_pg": team.get("shotsAgainstPerGame", 0),
                 }
+        # If we didn't find a row, there may not yet be data for the requested
+        # abbreviation.  Utah is a special case: the franchise relocated from
+        # Arizona (same teamId 53) and the stats API may still report only the
+        # Coyotes.  As a temporary fallback, return the most recent Arizona
+        # summary so that callers have something to display instead of None.
+        if team_abbrev == "UTA":
+            # use last season of ARI as placeholder
+            return self.get_team_summary("ARI", season="20232024")
         return None
     
     # -------------------------------------------------------------------------
