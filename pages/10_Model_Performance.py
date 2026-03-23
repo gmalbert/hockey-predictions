@@ -1,16 +1,30 @@
-"""Backtesting simulator for model validation."""
+﻿"""Model performance dashboard."""
 import streamlit as st
 import pandas as pd
 import sys
 from pathlib import Path
 from datetime import date, timedelta
-import random
 
 # Add src to path
 src_path = Path(__file__).parent.parent
 sys.path.insert(0, str(src_path))
 
-from src.models.backtest import BacktestEngine, BacktestConfig, BetResult
+from src.utils.prediction_storage import (
+    load_predictions_for_date,
+    load_game_results,
+    match_predictions_to_results,
+    daily_evaluation
+)
+from src.models.evaluation import (
+    calculate_accuracy,
+    calculate_mae,
+    calculate_rmse,
+    calibration_buckets,
+    calibration_error,
+    PredictionResult
+)
+from src.models.ml_predictor import NHLPredictor
+from src.models.training import NHLModelTrainer
 from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
 
@@ -21,292 +35,408 @@ logo_path = Path("data_files/logo.png")
 if logo_path.exists():
     st.sidebar.image(str(logo_path), width=150)
 
-st.title("🔬 Backtesting Simulator")
-st.markdown("Validate model predictions against historical performance.")
+# Header with refresh button
+header_col1, header_col2 = st.columns([4, 1])
+with header_col1:
+    st.title("📊 Model Performance")
+    st.markdown("Track prediction accuracy and identify areas for improvement.")
+with header_col2:
+    st.write("")  # Spacer
+    if st.button("🔄 Refresh Model", help="Reload ML model from disk", width='stretch'):
+        st.cache_resource.clear()
+        st.rerun()
 
-# Configuration Section
-st.subheader("Backtest Configuration")
+# Load evaluation data for last 7 days
+all_predictions = []
+for days_ago in range(7):
+    check_date = date.today() - timedelta(days=days_ago)
+    preds = load_predictions_for_date(check_date)
+    results = load_game_results()
+    matched = match_predictions_to_results(preds, results)
+    all_predictions.extend(matched)
 
-col1, col2, col3 = st.columns(3)
+# Calculate aggregate metrics
+if all_predictions:
+    eval_data = {
+        "games_evaluated": len(all_predictions),
+        "accuracy": calculate_accuracy(all_predictions),
+        "mae_total": calculate_mae(all_predictions, "total"),
+        "mae_home": calculate_mae(all_predictions, "home_goals"),
+        "mae_away": calculate_mae(all_predictions, "away_goals"),
+        "calibration": calibration_error(all_predictions)
+    }
+else:
+    eval_data = {
+        "games_evaluated": 0,
+        "accuracy": 0,
+        "mae_total": 0,
+        "mae_home": 0,
+        "mae_away": 0,
+        "calibration": 0
+    }
 
+# Load ML model information
+@st.cache_resource
+def get_ml_predictor():
+    predictor = NHLPredictor()
+    if predictor.load():
+        return predictor
+    return None
+
+ml_predictor = get_ml_predictor()
+ml_model_info = ml_predictor.get_model_info() if ml_predictor else None
+
+# Calculate ML metrics if model exists
+ml_metrics = {}
+if ml_model_info and ml_predictor:
+    # Use model info directly instead of validation
+    ml_metrics = {
+        "model_type": ml_model_info.get("model_type", "Unknown"),
+        "training_date": ml_model_info.get("training_date", "Unknown"),
+        "feature_count": ml_model_info.get("n_features", 0),
+        "has_validation": False,
+        "model_available": True
+    }
+else:
+    ml_metrics = {"model_available": False}
+
+# Summary metrics
+st.subheader("Recent Performance (Last 7 Days)")
+
+# Rule-based model metrics
+col1, col2, col3, col4 = st.columns(4)
 with col1:
-    start_date = st.date_input("Start Date", value=date(2025, 10, 1), min_value=date(2024, 9, 1), max_value=date.today())
-    end_date = st.date_input("End Date", value=date(2026, 1, 31), min_value=date(2024, 9, 1), max_value=date.today())
-    initial_bankroll = st.number_input("Initial Bankroll ($)", 100, 10000, 1000, 100)
-
+    accuracy = eval_data.get("accuracy", 0) * 100
+    st.metric("Win Prediction Accuracy", f"{accuracy:.1f}%", 
+              help="Percentage of correct win/loss predictions")
 with col2:
-    unit_size = st.number_input("Unit Size ($)", 1, 100, 10, 1)
-    min_edge = st.slider("Min Edge Required (%)", 0.0, 10.0, 1.0, 0.5) / 100
-    max_kelly = st.slider("Max Kelly Fraction", 0.05, 0.50, 0.25, 0.05)
-
+    mae_total = eval_data.get("mae_total", 0)
+    quality = "🟢 Excellent" if mae_total < 1.0 else "🟡 Good" if mae_total < 1.5 else "🟠 Fair"
+    st.metric("MAE (Total Goals)", f"{mae_total:.2f}", 
+              delta=quality,
+              help="Mean Absolute Error for total goals prediction")
 with col3:
-    bet_types = st.multiselect(
-        "Bet Types",
-        ["moneyline", "puck_line", "totals"],
-        default=["moneyline"]
-    )
+    games_eval = eval_data.get("games_evaluated", 0)
+    st.metric("Games Evaluated", games_eval,
+              help="Number of predictions with known results")
+with col4:
+    calib = eval_data.get("calibration", 0)
+    calib_quality = "🟢 Good" if calib < 0.05 else "🟡 Fair" if calib < 0.10 else "🟠 Needs Work"
+    st.metric("Calibration Error", f"{calib:.3f}",
+              delta=calib_quality,
+              help="How well predicted probabilities match outcomes (lower is better)")
 
-# Simulation Section
-st.markdown("---")
-st.subheader("Run Simulation")
+# ML Model Status
+st.subheader("🤖 Machine Learning Model Status")
 
-st.info("""
-💡 **Tip**: This simulates a model with real predictive skill that can find value against market odds.
-- Model has ~55% accuracy (better than random)
-- Finds bets where market odds are wrong
-- Tests Kelly criterion staking on historical data
-""")
+if ml_model_info and ml_metrics.get("model_available", True):  # Default to True if key doesn't exist
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        model_type = ml_model_info.get("model_type", "Not Available")
+        st.metric("ML Model Type", model_type.replace('_', ' ').title(), 
+                  help="Type of machine learning algorithm used")
+    
+    with col2:
+        if ml_metrics.get("has_validation", False):
+            ml_accuracy = ml_metrics.get("accuracy", 0) * 100
+            st.metric("ML Accuracy", f"{ml_accuracy:.1f}%", 
+                      help="ML model prediction accuracy on validation set")
+        else:
+            st.metric("ML Status", "Trained", 
+                      help="ML model is trained and ready to use")
+    
+    with col3:
+        feature_count = ml_model_info.get("n_features", 0)
+        st.metric("Features Used", feature_count, 
+                  help="Number of features used in ML model")
+    
+    with col4:
+        training_date = ml_model_info.get("training_date", "Unknown")
+        if training_date != "Unknown":
+            try:
+                from datetime import datetime
+                dt = datetime.fromisoformat(training_date)
+                training_date_display = dt.strftime('%Y-%m-%d')
+            except:
+                training_date_display = training_date[:10] if len(str(training_date)) >= 10 else training_date
+            st.metric("Last Trained", training_date_display, 
+                      help="Date when ML model was last trained")
+        else:
+            st.metric("Training Status", "Unknown", 
+                      help="ML model training date unknown")
+else:
+    st.info("🤖 **ML Model Not Available** - Train a model using the training pipeline to see ML metrics here.")
 
-if st.button("🚀 Run Backtest", type="primary"):
-    # Load historical game data
-    import json
-    from pathlib import Path
+# Tabs for different views
+tab1, tab2, tab3, tab4 = st.tabs([
+    "Goal Predictions", 
+    "Calibration", 
+    "ML Model Analysis",
+    "Evaluation Guide"
+])
+
+with tab1:
+    st.markdown("### Goal Prediction Accuracy")
     
-    games_file = Path("data_files/historical/2025-26/games.json")
-    if not games_file.exists():
-        st.error("Historical game data not found. Please ensure data_files/historical/2025-26/games.json exists.")
-        st.stop()
-    
-    with open(games_file, 'r') as f:
-        all_games = json.load(f)
-    
-    # Filter to completed games in our date range
-    from datetime import datetime
-    start_date_filter = datetime.combine(start_date, datetime.min.time())
-    end_date_filter = datetime.combine(end_date, datetime.max.time())
-    
-    completed_games = [
-        game for game in all_games
-        if game.get("game_state") == "OFF" and 
-        start_date_filter <= datetime.fromisoformat(game["date"]) <= end_date_filter
-    ]
-    
-    if not completed_games:
-        st.warning(f"No completed games found between {start_date} and {end_date}")
-        st.stop()
-    
-    # Create backtest config
-    config = BacktestConfig(
-        start_date=start_date.isoformat(),
-        end_date=end_date.isoformat(),
-        initial_bankroll=initial_bankroll,
-        unit_size=unit_size,
-        min_edge=min_edge,
-        max_kelly_fraction=max_kelly,
-        bet_types=bet_types
-    )
-    
-    # Initialize engine
-    engine = BacktestEngine(config)
-    
-    # Run backtest on real historical data
-    with st.spinner(f"Running backtest on {len(completed_games)} historical games..."):
-        for game in completed_games:
-            game_date = game["date"]
-            game_id = str(game["game_id"])
-            
-            # Generate realistic model prediction with actual edge
-            # Simulate a model that has some skill beyond market efficiency
-            home_team = game["home_team"]
-            away_team = game["away_team"]
-            
-            # Base market probability (what odds imply)
-            market_home_prob = 0.52  # Slight home advantage in NHL
-            
-            # Model prediction - add some skill (model is better than market)
-            # Model has ~55% accuracy, creating real edge
-            model_skill = random.gauss(0.03, 0.08)  # Model has slight edge
-            model_prob = max(0.35, min(0.75, market_home_prob + model_skill))
-            
-            # Generate market odds (what bookmakers offer)
-            # Market odds are efficient but not perfect
-            market_noise = random.gauss(0, 0.03)  # Small market inefficiencies
-            market_prob_for_odds = max(0.35, min(0.75, market_home_prob + market_noise))
-            
-            # Convert market probability to American odds
-            if market_prob_for_odds > 0.5:
-                odds = int(-100 / (1 - market_prob_for_odds) - 100)
-            else:
-                odds = int(100 * (1 / market_prob_for_odds - 1))
-            
-            # Ensure realistic odds range
-            odds = max(-800, min(600, odds))
-            
-            # Get actual result
-            actual_home_win = game["home_won"]
-            
-            # Evaluate bet (only on moneyline for now)
-            if "moneyline" in bet_types:
-                engine.evaluate_bet(
-                    game_id=game_id,
-                    date=game_date,
-                    bet_type="home_ml",
-                    model_prob=model_prob,
-                    odds=odds,
-                    actual_result=actual_home_win
-                )
-    
-    results = engine.get_results()
-    
-    # Display Results
-    st.success("✅ Backtest Complete!")
-    
-    # Summary Metrics
-    st.subheader("Performance Summary")
-    
-    metric_col1, metric_col2, metric_col3, metric_col4 = st.columns(4)
-    
-    with metric_col1:
-        st.metric("Total Bets", results.total_bets)
-        st.metric("Win Rate", f"{results.win_rate:.1%}")
-    
-    with metric_col2:
-        st.metric("Total Profit", f"${results.total_profit:+,.2f}")
-        st.metric("ROI", f"{results.roi:+.1f}%")
-    
-    with metric_col3:
-        st.metric("Units Profit", f"{results.units_profit:+.1f}u")
-        st.metric("Max Drawdown", f"${results.max_drawdown():,.2f}")
-    
-    with metric_col4:
-        breakeven_rate = 52.4  # At -110 odds
-        status = "🟢" if results.win_rate * 100 >= breakeven_rate else "🔴"
-        st.metric("vs Breakeven", f"{status} {results.win_rate * 100 - breakeven_rate:+.1f}%")
-        st.metric("Longest Losing", f"{results.longest_losing_streak()} bets")
-    
-    # Performance Analysis
-    st.markdown("---")
-    st.subheader("Detailed Analysis")
-    
-    # Profitability assessment
-    if results.roi > 5:
-        st.success("🎯 **Excellent Performance** - Model shows strong edge")
-    elif results.roi > 0:
-        st.info("📊 **Profitable** - Positive but modest returns")
-    elif results.roi > -5:
-        st.warning("⚠️ **Break-even** - Consider adjusting parameters")
-    else:
-        st.error("❌ **Unprofitable** - Model or strategy needs improvement")
-    
-    # Recent Bets Table
-    st.subheader("Recent Bets")
-    
-    if results.bets:
-        recent_bets = results.bets[-20:]  # Last 20 bets
-        bet_data = []
+    if eval_data.get("games_evaluated", 0) > 0:
+        col1, col2 = st.columns(2)
         
-        for bet in recent_bets:
-            result_icon = "✅" if bet.won else "❌"
-            bet_data.append({
-                "Date": bet.date,
-                "Game": bet.game_id[-6:],  # Last 6 chars
-                "Type": bet.bet_type.replace("_", " ").title(),
-                "Odds": f"{bet.odds:+d}",
-                "Stake": f"${bet.stake:.2f}",
-                "Edge": f"{bet.edge*100:.1f}%",
-                "Result": result_icon,
-                "Profit": f"${bet.profit:+,.2f}"
+        with col1:
+            st.markdown("**Mean Absolute Error (MAE)**")
+            mae_data = pd.DataFrame({
+                "Prediction Type": ["Total Goals", "Home Goals", "Away Goals"],
+                "MAE": [
+                    eval_data.get("mae_total", 0),
+                    eval_data.get("mae_home", 0),
+                    eval_data.get("mae_away", 0)
+                ]
             })
+            st.dataframe(mae_data, hide_index=True, width='stretch')
+            
+            st.info("""
+            **MAE Interpretation:**
+            - < 1.0: 🟢 Excellent
+            - 1.0-1.5: 🟡 Good
+            - 1.5-2.0: 🟠 Fair
+            - > 2.0: 🔴 Poor
+            """)
         
-        df = pd.DataFrame(bet_data)
-        st.dataframe(df, hide_index=True, width='stretch')
-    
-    # Cumulative Profit Chart
-    st.subheader("Profit Curve")
-    
-    cumulative = []
-    running_total = 0.0
-    
-    for bet in results.bets:
-        if bet.profit is not None:
-            running_total += bet.profit
-            cumulative.append(running_total)
-    
-    if cumulative:
-        profit_df = pd.DataFrame({
-            "Bet Number": range(1, len(cumulative) + 1),
-            "Cumulative Profit ($)": cumulative
-        })
-        st.line_chart(profit_df, x="Bet Number", y="Cumulative Profit ($)")
-    
-    # Download results
-    st.download_button(
-        "📥 Download Bet Log",
-        data=pd.DataFrame([{
-            "date": b.date,
-            "game_id": b.game_id,
-            "bet_type": b.bet_type,
-            "odds": b.odds,
-            "stake": b.stake,
-            "model_prob": b.model_prob,
-            "edge": b.edge,
-            "won": b.won,
-            "profit": b.profit
-        } for b in results.bets]).to_csv(index=False),
-        file_name=f"backtest_results_{config.start_date}_{config.end_date}.csv",
-        mime="text/csv"
-    )
+        with col2:
+            st.markdown("**Sample Statistics**")
+            st.write(f"**Games Analyzed:** {eval_data.get('games_evaluated', 0)}")
+            st.write(f"**Accuracy:** {eval_data.get('accuracy', 0) * 100:.1f}%")
+            
+            # Profitability threshold
+            breakeven_accuracy = 52.4  # At -110 odds
+            if accuracy >= breakeven_accuracy:
+                st.success(f"✅ Above breakeven threshold ({breakeven_accuracy}%)")
+            else:
+                st.warning(f"⚠️ Below breakeven threshold ({breakeven_accuracy}%)")
+    else:
+        st.info("No predictions with results yet. Results will be tracked automatically as games are completed.")
 
-# Interpretation Guide
-st.markdown("---")
-with st.expander("📚 Backtesting Guide"):
-    st.markdown("""
-    ### Understanding Backtest Results
+with tab2:
+    st.markdown("### Probability Calibration")
     
-    **Key Metrics Explained**
+    st.markdown("""
+    Well-calibrated models have predicted probabilities that match actual outcomes.
+    For example, games where we predict 70% home win probability should see the home team win ~70% of the time.
+    """)
+    
+    # Use already loaded predictions from above
+    if all_predictions:
+        buckets = calibration_buckets(all_predictions, n_buckets=10)
+        
+        if buckets:
+            bucket_df = pd.DataFrame(buckets, columns=["Predicted Prob", "Actual Win Rate", "Count"])
+            
+            st.dataframe(bucket_df, hide_index=True, width='stretch')
+            
+            # Visualize calibration
+            st.line_chart(bucket_df.set_index("Predicted Prob")["Actual Win Rate"])
+            
+            calib_err = calibration_error(all_predictions)
+            if calib_err < 0.05:
+                st.success(f"✅ Well calibrated! (ECE: {calib_err:.3f})")
+            elif calib_err < 0.10:
+                st.info(f"🟡 Acceptable calibration (ECE: {calib_err:.3f})")
+            else:
+                st.warning(f"⚠️ Poor calibration - model needs adjustment (ECE: {calib_err:.3f})")
+        else:
+            st.info("Not enough data for calibration analysis (need 20+ predictions)")
+    else:
+        st.info("No predictions with results yet for calibration analysis.")
+
+with tab3:
+    st.markdown("### 🤖 Machine Learning Model Analysis")
+    
+    # Debug info (can be removed later)
+    with st.expander("🔍 Debug Info", expanded=False):
+        st.write({
+            "ml_predictor exists": ml_predictor is not None,
+            "ml_model_info exists": ml_model_info is not None,
+            "ml_metrics keys": list(ml_metrics.keys()),
+            "model_available": ml_metrics.get("model_available", "key not found")
+        })
+        if ml_model_info:
+            st.write("Model type:", ml_model_info.get("model_type"))
+    
+    if ml_model_info:
+        # Model Information
+        st.markdown("#### Model Information")
+        info_col1, info_col2 = st.columns(2)
+        
+        with info_col1:
+            st.markdown(f"**Model Type:** {ml_model_info.get('model_type', 'Unknown').replace('_', ' ').title()}")
+            training_date = ml_model_info.get('training_date', 'Unknown')
+            if training_date != 'Unknown':
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(training_date)
+                    training_date = dt.strftime('%Y-%m-%d %H:%M')
+                except:
+                    pass
+            st.markdown(f"**Training Date:** {training_date}")
+            st.markdown(f"**Features Used:** {ml_model_info.get('n_features', 0)}")
+        
+        with info_col2:
+            st.markdown(f"**Training Samples:** {ml_model_info.get('n_training_samples', 'Unknown'):,}" if isinstance(ml_model_info.get('n_training_samples'), int) else f"**Training Samples:** {ml_model_info.get('n_training_samples', 'Unknown')}")
+            seasons = ml_model_info.get('seasons_used', [])
+            seasons_str = ', '.join(seasons) if seasons else 'Unknown'
+            st.markdown(f"**Seasons Trained:** {seasons_str}")
+        
+        # Feature Importance (if available)
+        if 'feature_importance' in ml_model_info and ml_model_info['feature_importance']:
+            st.markdown("#### Feature Importance")
+            
+            # Convert to DataFrame for display
+            importance_data = []
+            for feature, importance in ml_model_info['feature_importance'].items():
+                importance_data.append({
+                    'Feature': feature.replace('_', ' ').title(),
+                    'Importance': importance
+                })
+            
+            importance_df = pd.DataFrame(importance_data).sort_values('Importance', ascending=False)
+            
+            # Display top 10 features
+            st.dataframe(importance_df.head(10), hide_index=True, width='stretch')
+            
+            # Feature importance chart
+            st.bar_chart(importance_df.head(10).set_index('Feature'))
+        
+        # Training Metrics (if available)
+        metrics = ml_model_info.get('metrics', {})
+        if metrics:
+            st.markdown("#### Training Performance")
+            
+            metrics_col1, metrics_col2, metrics_col3 = st.columns(3)
+            
+            with metrics_col1:
+                st.markdown("**Accuracy Metrics**")
+                train_acc = metrics.get('train_accuracy', 0)
+                test_acc = metrics.get('test_accuracy', 0)
+                cv_acc = metrics.get('cv_accuracy_mean', 0)
+                
+                st.metric("Training Accuracy", f"{train_acc:.1%}")
+                st.metric("Test Accuracy", f"{test_acc:.1%}")
+                st.metric("Cross-Val Accuracy", f"{cv_acc:.1%}")
+            
+            with metrics_col2:
+                st.markdown("**Loss Metrics**")
+                train_loss = metrics.get('train_log_loss', 0)
+                test_loss = metrics.get('test_log_loss', 0)
+                
+                st.metric("Training Log Loss", f"{train_loss:.3f}")
+                st.metric("Test Log Loss", f"{test_loss:.3f}")
+                st.metric("CV Std Dev", f"{metrics.get('cv_accuracy_std', 0):.3%}")
+            
+            with metrics_col3:
+                st.markdown("**Classification Metrics**")
+                precision = metrics.get('precision', 0)
+                recall = metrics.get('recall', 0)
+                f1 = metrics.get('f1_score', 0)
+                
+                st.metric("Precision", f"{precision:.3f}")
+                st.metric("Recall", f"{recall:.3f}")
+                st.metric("F1 Score", f"{f1:.3f}")
+        
+        # Model Actions
+        st.markdown("#### Model Actions")
+        
+        action_col1, action_col2, action_col3 = st.columns(3)
+        
+        with action_col1:
+            if st.button("🔄 Retrain Model", help="Train a new ML model with latest data"):
+                with st.spinner("Training new model..."):
+                    trainer = NHLModelTrainer()
+                    trainer.train_game_outcome_model()
+                    st.success("Model retrained! Refresh page to see updated metrics.")
+                    st.rerun()
+        
+        with action_col2:
+            if st.button("📊 Validate Model", help="Run validation on current model"):
+                with st.spinner("Validating model..."):
+                    validation = ml_predictor.validate_predictions()
+                    if validation:
+                        st.success("Validation complete! Check metrics above.")
+                        st.rerun()
+                    else:
+                        st.error("Validation failed. Check model and data.")
+        
+        with action_col3:
+            if st.button("📈 Feature Analysis", help="Analyze feature correlations"):
+                st.info("Feature analysis coming in next update")
+    
+    else:
+        st.info("🤖 **No ML Model Available**")
+        st.markdown("""
+        To see ML model metrics here:
+        
+        1. **Train a model** using the training pipeline:
+           ```python
+           from src.models.training import NHLModelTrainer
+           trainer = NHLModelTrainer()
+           trainer.train_game_outcome_model()
+           ```
+        
+        2. **Or use the ML predictor** to train programmatically:
+           ```python
+           from src.models.ml_predictor import NHLPredictor
+           predictor = NHLPredictor()
+           predictor.train_new_model()
+           ```
+        
+        3. **Refresh this page** to see the metrics appear
+        """)
+
+with tab4:
+    st.markdown("### Evaluation Metrics Guide")
+    
+    st.markdown("""
+    #### Classification Metrics (Win/Loss Predictions)
     
     | Metric | Description | Target |
     |--------|-------------|--------|
-    | **Win Rate** | % of bets that won | > 52.4% for -110 odds |
-    | **ROI** | Return on investment | > 5% is excellent |
-    | **Units Profit** | Money made per unit bet | Positive = profitable |
-    | **Max Drawdown** | Worst losing streak (in $) | Lower is better |
+    | **Accuracy** | % of correct win predictions | > 52.4% for profit at -110 odds |
+    | **Calibration Error** | How well probabilities match reality | < 0.05 is excellent |
     
-    **Interpreting Results**
+    #### Regression Metrics (Goal Predictions)
     
-    ✅ **Profitable Model** (ROI > 5%)
-    - Model has genuine edge
-    - Consider live betting with proper bankroll
-    - Monitor for regression to mean
+    | Metric | Description | Target |
+    |--------|-------------|--------|
+    | **MAE** | Mean Absolute Error | < 1.2 goals |
+    | **RMSE** | Root Mean Square Error | < 1.5 goals |
     
-    📊 **Marginal Profit** (ROI 0-5%)
-    - Model shows promise but needs refinement
-    - Increase min edge requirement
-    - Focus on higher-confidence bets
+    #### Minimum Sample Sizes for Confidence
     
-    ⚠️ **Break-even** (ROI -2% to 0%)
-    - Model lacks edge or strategy too aggressive
-    - Reduce Kelly fraction
-    - Increase minimum edge threshold
+    - **Accuracy**: 100+ games
+    - **MAE**: 50+ games
+    - **Calibration**: 500+ predictions
+    - **ROI**: 200+ bets
     
-    ❌ **Losing Money** (ROI < -2%)
-    - Model predictions inaccurate
-    - Recalibrate probability estimates
-    - Check for data leakage or overfitting
+    #### When to Retrain Model
     
-    **Best Practices**
+    1. Accuracy drops 3%+ over 2 weeks
+    2. MAE increases by 0.2+ goals sustained
+    3. Calibration error > 0.10
+    4. Major roster changes (trades, injuries)
+    5. Season transitions (regular → playoffs)
     
-    1. **Sufficient Sample Size**: Need 100+ bets for statistical significance
-    2. **Realistic Parameters**: Don't over-optimize on limited data
-    3. **Out-of-Sample Testing**: Test on different time periods
-    4. **Monitor Slippage**: Real odds may differ from historical closing lines
-    5. **Account for Variance**: Even good models have losing streaks
+    #### Avoiding Overfitting
     
-    **Configuration Tips**
-    
-    - **Min Edge 2-3%**: Gives cushion for estimation errors
-    - **Max Kelly 25%**: Prevents overexposure to single bets
-    - **Unit Size 1-2%**: Standard bankroll management
-    - **Focus on ML**: Moneyline bets have lowest variance
-    
-    **Production Implementation**
-    
-    To run real backtests:
-    1. Save daily predictions to `data_files/predictions/`
-    2. Store game results in `data_files/results/`
-    3. Track actual odds (opening and closing lines)
-    4. Run backtest with historical data
-    5. Compare to this simulation for validation
+    - Always split data **temporally** (not randomly)
+    - Never use future data to predict past
+    - Test on out-of-sample games only
+    - Monitor performance on new predictions
     """)
+
+# Footer note
+st.markdown("---")
+st.caption("""
+💡 **Tip:** Consistent prediction tracking is key to model improvement. 
+Results are tracked automatically as games are completed.
+""")
 
 add_betting_oracle_footer()

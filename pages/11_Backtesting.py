@@ -1,4 +1,4 @@
-"""Backtesting simulator for model validation."""
+﻿"""Backtesting simulator for model validation."""
 import streamlit as st
 import pandas as pd
 import sys
