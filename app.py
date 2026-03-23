@@ -92,7 +92,7 @@ with col1:
     betting odds, and game analysis.
     """)
     if st.button("View Games", key="games_btn"):
-        st.switch_page("pages/1_📅_Todays_Games.py")
+        st.switch_page("pages/1_Todays_Games.py")
 
 with col2:
     st.markdown("### 📊 Team Analytics")
@@ -101,7 +101,7 @@ with col2:
     recent form, and head-to-head matchups.
     """)
     if st.button("Explore Teams", key="teams_btn"):
-        st.switch_page("pages/2_📊_Team_Stats.py")
+        st.switch_page("pages/2_Team_Stats.py")
 
 with col3:
     st.markdown("### 🏆 League Standings")
@@ -110,7 +110,7 @@ with col3:
     with key performance metrics.
     """)
     if st.button("View Standings", key="standings_btn"):
-        st.switch_page("pages/3_🏆_Standings.py")
+        st.switch_page("pages/3_Standings.py")
 
 # Second row of features
 col1, col2, col3 = st.columns(3)
@@ -122,7 +122,7 @@ with col1:
     statistical edge analysis.
     """)
     if st.button("Find Value", key="value_btn"):
-        st.switch_page("pages/4_💰_Value_Finder.py")
+        st.switch_page("pages/4_Value_Finder.py")
 
 with col2:
     st.markdown("### 🎯 Player Props")
@@ -131,7 +131,7 @@ with col2:
     prop betting insights.
     """)
     if st.button("Player Stats", key="props_btn"):
-        st.switch_page("pages/5_🎯_Player_Props.py")
+        st.switch_page("pages/5_Player_Props.py")
 
 with col3:
     st.markdown("### 📈 Performance")
@@ -140,7 +140,7 @@ with col3:
     monitor ROI over time.
     """)
     if st.button("View Performance", key="perf_btn"):
-        st.switch_page("pages/6_📈_Performance.py")
+        st.switch_page("pages/6_Performance.py")
 
 st.divider()
 
@@ -178,7 +178,7 @@ if 'games' in locals() and games:
         st.caption(f"Plus {len(games) - 3} more games today")
 
     if st.button("See All Today's Games", key="all_games_btn"):
-        st.switch_page("pages/1_📅_Todays_Games.py")
+        st.switch_page("pages/1_Todays_Games.py")
 
 # Add footer to all pages
 add_betting_oracle_footer()

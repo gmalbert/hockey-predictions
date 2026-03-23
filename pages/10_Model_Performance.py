@@ -14,7 +14,6 @@ from src.models.backtest import BacktestEngine, BacktestConfig, BetResult
 from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
 
-st.set_page_config(page_title="Oracle on Ice - Hockey Predictions", page_icon="🔬", layout="wide")
 apply_custom_css()
 
 # Load logo
