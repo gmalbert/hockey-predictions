@@ -11,15 +11,7 @@ src_path = Path(__file__).parent.parent
 sys.path.insert(0, str(src_path))
 
 from src.models.backtest import BacktestEngine, BacktestConfig, BetResult
-from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
-
-apply_custom_css()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 st.title("🔬 Backtesting Simulator")
 st.markdown("Validate model predictions against historical performance.")

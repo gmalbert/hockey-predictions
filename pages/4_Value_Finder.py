@@ -27,7 +27,12 @@ client = get_client()
 
 # Date selector for value bets
 from datetime import date
-from src.models.expected_goals import TeamMetrics, calculate_expected_goals, calculate_total_xg
+from src.models.expected_goals import (
+    TeamMetrics,
+    calculate_expected_goals,
+    calculate_expected_goals_with_analytics,
+    calculate_total_xg,
+)
 from src.models.win_probability import calculate_win_probability
 
 selected_date = st.date_input("Select Date", value=date.today())
@@ -54,6 +59,13 @@ try:
                 games_list.append(game)
 
     if games_list:
+        # Try to use NHL team analytics when available.
+        analytics_data = {}
+        try:
+            analytics_data = client.get_team_analytics(season="20252026")
+        except Exception:
+            analytics_data = {}
+
         preds = []
         for game in games_list:
             away_abbr = game.get("awayTeam", {}).get("abbrev")
@@ -64,12 +76,28 @@ try:
             if home_stats and away_stats:
                 home_tm = TeamMetrics.from_api_response(home_stats)
                 away_tm = TeamMetrics.from_api_response(away_stats)
-                home_xg, away_xg = calculate_expected_goals(home_tm, away_tm)
+
+                home_analytics = analytics_data.get(home_abbr)
+                away_analytics = analytics_data.get(away_abbr)
+                if home_analytics and away_analytics:
+                    home_xg, away_xg = calculate_expected_goals_with_analytics(
+                        home_tm,
+                        away_tm,
+                        home_analytics=home_analytics,
+                        away_analytics=away_analytics,
+                        analytics_weight=0.5,
+                    )
+                    model_source = "Analytics blend"
+                else:
+                    home_xg, away_xg = calculate_expected_goals(home_tm, away_tm)
+                    model_source = "Legacy"
+
                 probs = calculate_win_probability(home_xg, away_xg)
                 total_pred = calculate_total_xg(home_xg, away_xg)
 
                 preds.append({
                     "Matchup": f"{away_abbr} @ {home_abbr}",
+                    "Model": model_source,
                     "Home xG": home_xg,
                     "Away xG": away_xg,
                     "Home Win %": f"{probs.home_win:.1%}",
@@ -78,7 +106,21 @@ try:
                 })
         if preds:
             preds_df = pd.DataFrame(preds)
-            st.dataframe(preds_df, width='stretch', hide_index=True)
+            st.caption("Model uses analytics-blended xG when NHL team analytics are available; otherwise it falls back to the legacy goals-based estimate.")
+            st.dataframe(
+                preds_df,
+                width='stretch',
+                hide_index=True,
+                column_config={
+                    "Model": st.column_config.TextColumn("Model", width="small"),
+                    "Matchup": st.column_config.TextColumn("Matchup", width="large"),
+                    "Home xG": st.column_config.NumberColumn("Home xG", width="small", format="%.2f"),
+                    "Away xG": st.column_config.NumberColumn("Away xG", width="small", format="%.2f"),
+                    "Home Win %": st.column_config.TextColumn("Home Win %", width="small"),
+                    "Away Win %": st.column_config.TextColumn("Away Win %", width="small"),
+                    "Total Pred": st.column_config.NumberColumn("Total Pred", width="small", format="%.2f"),
+                },
+            )
         else:
             st.info("Unable to compute predictions for selected date.")
     else:

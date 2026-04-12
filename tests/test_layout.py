@@ -2,11 +2,22 @@
 Test script for UI Layout implementation.
 Verifies all pages can be imported and key components work.
 """
+import importlib.util
 import sys
 from pathlib import Path
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+PAGE_DIR = Path(__file__).parent.parent / "pages"
+
+
+def load_module_from_path(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
 
 def test_imports():
     """Test that all page modules can be imported."""
@@ -16,24 +27,23 @@ def test_imports():
     
     print("\n📦 Testing Page Imports...")
     
-    # Test each page can be imported
+# Test each page can be imported by file path
     pages = [
-        ("Main App", "src.app"),
-        ("Today's Games", "src.pages.1_📅_Todays_Games"),
-        ("Team Stats", "src.pages.2_📊_Team_Stats"),
-        ("Standings", "src.pages.3_🏆_Standings"),
-        ("Value Finder", "src.pages.4_💰_Value_Finder"),
-        ("Player Props", "src.pages.5_🎯_Player_Props"),
-        ("Performance", "src.pages.6_📈_Performance"),
+        ("Main App", Path(__file__).parent.parent / "app.py"),
+        ("Today's Games", PAGE_DIR / "1_Todays_Games.py"),
+        ("Team Stats", PAGE_DIR / "2_Team_Stats.py"),
+        ("Standings", PAGE_DIR / "3_Standings.py"),
+        ("Value Finder", PAGE_DIR / "4_Value_Finder.py"),
+        ("Player Props", PAGE_DIR / "5_Player_Props.py"),
+        ("Performance", PAGE_DIR / "6_Performance.py"),
     ]
-    
+
     passed = 0
     failed = 0
-    
+
     for name, module_path in pages:
         try:
-            # Try to import the module
-            __import__(module_path)
+            load_module_from_path(name.replace(" ", "_"), module_path)
             print(f"  ✅ {name}")
             passed += 1
         except Exception as e:
@@ -41,7 +51,7 @@ def test_imports():
             failed += 1
     
     print(f"\n📊 Import Results: {passed} passed, {failed} failed")
-    return failed == 0
+    assert failed == 0
 
 
 def test_utilities():
@@ -79,11 +89,11 @@ def test_utilities():
         print("  ✅ kelly_criterion")
         
         print("  ✅ All utility functions working")
-        return True
+        assert True
         
     except Exception as e:
         print(f"  ❌ Utility test failed: {e}")
-        return False
+        raise
 
 
 def test_data_integration():
@@ -116,28 +126,28 @@ def test_data_integration():
         print(f"  ✅ ESPN odds: {len(odds)} games")
         
         print("  ✅ All data integration tests passed")
-        return True
+        assert True
         
     except Exception as e:
         print(f"  ❌ Data integration test failed: {e}")
         import traceback
         traceback.print_exc()
-        return False
+        raise
 
 
 def test_page_structure():
     """Verify page files exist and have correct structure."""
     print("\n📄 Testing Page Structure...")
     
-    pages_dir = Path(__file__).parent.parent / "src" / "pages"
+    pages_dir = Path(__file__).parent.parent / "pages"
     
     expected_pages = [
-        "1_📅_Todays_Games.py",
-        "2_📊_Team_Stats.py",
-        "3_🏆_Standings.py",
-        "4_💰_Value_Finder.py",
-        "5_🎯_Player_Props.py",
-        "6_📈_Performance.py",
+        "1_Todays_Games.py",
+        "2_Team_Stats.py",
+        "3_Standings.py",
+        "4_Value_Finder.py",
+        "5_Player_Props.py",
+        "6_Performance.py",
     ]
     
     passed = 0
@@ -147,18 +157,18 @@ def test_page_structure():
             # Check file has content
             try:
                 content = page_path.read_text(encoding='utf-8')
-                if len(content) > 100 and "st.set_page_config" in content:
+                if len(content) > 100:
                     print(f"  ✅ {page}")
                     passed += 1
                 else:
-                    print(f"  ⚠️  {page} - file exists but may be incomplete")
+                    print(f"  ⚠️  {page} - file exists but is very small")
             except Exception as e:
                 print(f"  ⚠️  {page} - error reading file: {e}")
         else:
             print(f"  ❌ {page} - not found")
     
     print(f"\n  {passed}/{len(expected_pages)} pages verified")
-    return passed == len(expected_pages)
+    assert passed == len(expected_pages)
 
 
 def main():

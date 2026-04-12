@@ -11,7 +11,6 @@ sys.path.insert(0, str(src_path))
 
 from src.utils.injury_data import load_injuries, load_team_injuries
 from src.models.injury_impact import calculate_injury_impact, POSITION_IMPACTS
-from src.utils.styles import apply_custom_css
 from src.utils.injury_scraper import scrape_cbs_injuries, save_injuries_to_file
 from footer import add_betting_oracle_footer
 
@@ -22,13 +21,6 @@ POSITION_NAMES = {
     "W": "Winger", 
     "D": "Defenseman"
 }
-
-apply_custom_css()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 st.title("🏥 Injury Report")
 st.markdown("Track injuries and their impact on betting predictions.")

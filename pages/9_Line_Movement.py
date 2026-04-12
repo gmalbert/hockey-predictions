@@ -11,15 +11,7 @@ sys.path.insert(0, str(src_path))
 
 from src.utils.odds_storage import save_odds_snapshot, get_game_odds_history, get_todays_movements, get_all_odds_files
 from src.models.line_movement import analyze_moneyline_movement, analyze_total_movement
-from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
-
-apply_custom_css()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 st.title("📉 Line Movement Tracker")
 

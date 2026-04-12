@@ -25,15 +25,7 @@ from src.models.evaluation import (
 )
 from src.models.ml_predictor import NHLPredictor
 from src.models.training import NHLModelTrainer
-from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
-
-apply_custom_css()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 # Header with refresh button
 header_col1, header_col2 = st.columns([4, 1])

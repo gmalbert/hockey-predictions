@@ -9,23 +9,21 @@ src_path = Path(__file__).parent.parent
 sys.path.insert(0, str(src_path))
 
 from src.api.nhl_client import NHLClient
-from src.models.goalie_adjustment import calculate_goalie_adjustment, adjusted_xg_for_matchup, LEAGUE_AVG_SAVE_PCT
+from src.models.goalie_adjustment import (
+    calculate_goalie_adjustment,
+    calculate_goalie_adjustment_with_analytics,
+    adjusted_xg_for_matchup,
+    adjusted_xg_with_analytics,
+    LEAGUE_AVG_SAVE_PCT,
+)
 from src.models.goalie_matchup import compare_goalie_matchup, goalie_recent_form
-from src.utils.styles import apply_custom_css
 from footer import add_betting_oracle_footer
-
-apply_custom_css()
 
 st.title("🥅 Goalie Analysis")
 st.markdown("Analyze goalie matchups and their impact on betting value.")
 
 # Initialize client for team names
 client = NHLClient()
-
-# Load logo
-logo_path = Path("data_files/logo.png")
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=150)
 
 # Fetch goalie stats first
 try:
@@ -70,6 +68,16 @@ except Exception as e:
     st.error(f"Could not load goalie data: {e}")
     st.stop()
 
+# Fetch goalie analytics (GSAA, HD SV%, danger-zone saves)
+goalie_analytics: dict[str, dict] = {}
+try:
+    advanced_data = client.get_goalie_analytics(season="20252026", limit=100)
+    for row in advanced_data:
+        n = row.get("name", "")
+        goalie_analytics[n] = row
+except Exception:
+    pass  # Analytics gracefully optional
+
 # Quick Goalie Comparison
 st.subheader("Goalie Matchup Comparison")
 
@@ -89,9 +97,16 @@ with col1:
     )
     
     goalie_1 = goalie_stats[goalie_1_select]
-    
-    # Calculate adjustment
-    goalie_1_adj = calculate_goalie_adjustment(goalie_1["sv_pct"], goalie_1["games"])
+    g1_analytics = goalie_analytics.get(goalie_1["name"], {})
+
+    # Calculate adjustment (use analytics when available)
+    goalie_1_adj = calculate_goalie_adjustment_with_analytics(
+        goalie_name=goalie_1["name"],
+        save_pct=goalie_1["sv_pct"],
+        sample_size=goalie_1["games"],
+        gsaa=g1_analytics.get("gsaa"),
+        hd_save_pct=g1_analytics.get("hd_save_pct"),
+    )
     
     # Display stats
     st.markdown(f"**{goalie_1['team']}** - {goalie_1['games']} GP")
@@ -109,14 +124,33 @@ with col1:
         st.metric("vs League Avg", f"{(goalie_1['sv_pct'] - LEAGUE_AVG_SAVE_PCT)*100:+.1f}%")
     with col1e:
         st.metric("Goals Saved/Game", f"{goalie_1_adj.adjustment:+.2f}")
-    
+
+    # GSAA and HD metrics (if available)
+    if g1_analytics.get("gsaa") is not None:
+        col1f, col1g = st.columns(2)
+        with col1f:
+            st.metric(
+                "GSAA (season)",
+                f"{g1_analytics['gsaa']:+.2f}",
+                help="Goals Saved Above Average — NHL's own metric. Positive = better than average.",
+            )
+        with col1g:
+            if g1_analytics.get("hd_save_pct"):
+                st.metric(
+                    "HD SV%",
+                    f"{g1_analytics['hd_save_pct']:.3f}",
+                    delta=f"{(g1_analytics['hd_save_pct'] - 0.830)*100:+.1f}% vs avg",
+                    help="High-danger save %. League avg ≈ .830",
+                )
+
     # Confidence indicator
-    confidence_color = {
-        "high": "🟢",
-        "medium": "🟡",
-        "low": "🔴"
-    }
-    st.caption(f"{confidence_color.get(goalie_1_adj.confidence, '⚪')} Confidence: {goalie_1_adj.confidence.title()}")
+    confidence_color = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+    method_label = {"sv_pct": "SV% only", "blended": "GSAA + SV% blended", "gsaa": "GSAA-primary"}
+    st.caption(
+        f"{confidence_color.get(goalie_1_adj.confidence, '⚪')} "
+        f"Confidence: {goalie_1_adj.confidence.title()} "
+        f"({method_label.get(goalie_1_adj.method, goalie_1_adj.method)})"
+    )
 
 with col2:
     st.markdown("### ✈️ Away Goalie")
@@ -128,11 +162,16 @@ with col2:
     )
     
     goalie_2 = goalie_stats[goalie_2_select]
+    g2_analytics = goalie_analytics.get(goalie_2["name"], {})
+
+    goalie_2_adj = calculate_goalie_adjustment_with_analytics(
+        goalie_name=goalie_2["name"],
+        save_pct=goalie_2["sv_pct"],
+        sample_size=goalie_2["games"],
+        gsaa=g2_analytics.get("gsaa"),
+        hd_save_pct=g2_analytics.get("hd_save_pct"),
+    )
     
-    # Calculate adjustment
-    goalie_2_adj = calculate_goalie_adjustment(goalie_2["sv_pct"], goalie_2["games"])
-    
-    # Display stats
     st.markdown(f"**{goalie_2['team']}** - {goalie_2['games']} GP")
     
     col2a, col2b, col2c = st.columns(3)
@@ -148,9 +187,29 @@ with col2:
         st.metric("vs League Avg", f"{(goalie_2['sv_pct'] - LEAGUE_AVG_SAVE_PCT)*100:+.1f}%")
     with col2e:
         st.metric("Goals Saved/Game", f"{goalie_2_adj.adjustment:+.2f}")
-    
-    # Confidence indicator
-    st.caption(f"{confidence_color.get(goalie_2_adj.confidence, '⚪')} Confidence: {goalie_2_adj.confidence.title()}")
+
+    if g2_analytics.get("gsaa") is not None:
+        col2f, col2g = st.columns(2)
+        with col2f:
+            st.metric(
+                "GSAA (season)",
+                f"{g2_analytics['gsaa']:+.2f}",
+                help="Goals Saved Above Average — positive = better than average.",
+            )
+        with col2g:
+            if g2_analytics.get("hd_save_pct"):
+                st.metric(
+                    "HD SV%",
+                    f"{g2_analytics['hd_save_pct']:.3f}",
+                    delta=f"{(g2_analytics['hd_save_pct'] - 0.830)*100:+.1f}% vs avg",
+                    help="High-danger save %. League avg ≈ .830",
+                )
+
+    st.caption(
+        f"{confidence_color.get(goalie_2_adj.confidence, '⚪')} "
+        f"Confidence: {goalie_2_adj.confidence.title()} "
+        f"({method_label.get(goalie_2_adj.method, goalie_2_adj.method)})"
+    )
 
 # Matchup Analysis
 st.markdown("---")
@@ -178,9 +237,7 @@ with edge_col2:
 st.markdown("---")
 st.subheader("Expected Goals Adjustment")
 
-st.markdown("""
-See how goalie quality affects team expected goals (xG):
-""")
+st.markdown("See how goalie quality affects team expected goals (xG):")
 
 col3, col4 = st.columns(2)
 
@@ -188,50 +245,100 @@ with col3:
     st.markdown(f"#### {goalie_1['team']} Attack (vs {goalie_2['name']})")
     goalie_1_team_xg = st.slider("Base xG (before goalie adj)", 2.0, 4.5, 3.0, 0.1, key="goalie_1_xg")
     
-    # Adjust for opposing goalie
-    adjusted_goalie_1_xg = adjusted_xg_for_matchup(goalie_1_team_xg, goalie_2["sv_pct"], goalie_2["games"])
-    
-    st.metric(
-        "Adjusted xG",
-        f"{adjusted_goalie_1_xg:.2f}",
-        delta=f"{adjusted_goalie_1_xg - goalie_1_team_xg:+.2f} goals",
-        delta_color="normal"
+    # Legacy adjustment
+    adj_legacy = adjusted_xg_for_matchup(goalie_1_team_xg, goalie_2["sv_pct"], goalie_2["games"])
+    # Analytics-enhanced adjustment
+    adj_enhanced = adjusted_xg_with_analytics(
+        goalie_1_team_xg,
+        goalie_2["sv_pct"],
+        goalie_2["games"],
+        opposing_goalie_name=goalie_2["name"],
+        opposing_goalie_gsaa=g2_analytics.get("gsaa"),
+        opposing_goalie_hd_sv_pct=g2_analytics.get("hd_save_pct"),
     )
+    
+    st.metric("Legacy Adjusted xG", f"{adj_legacy:.2f}", delta=f"{adj_legacy - goalie_1_team_xg:+.2f}")
+    if g2_analytics.get("gsaa") is not None:
+        st.metric(
+            "Enhanced Adjusted xG",
+            f"{adj_enhanced:.2f}",
+            delta=f"{adj_enhanced - goalie_1_team_xg:+.2f}",
+            help="Uses GSAA + HD SV% in addition to season SV%.",
+        )
 
 with col4:
     st.markdown(f"#### {goalie_2['team']} Attack (vs {goalie_1['name']})")
     goalie_2_team_xg = st.slider("Base xG (before goalie adj)", 2.0, 4.5, 3.0, 0.1, key="goalie_2_xg")
     
-    # Adjust for opposing goalie
-    adjusted_goalie_2_xg = adjusted_xg_for_matchup(goalie_2_team_xg, goalie_1["sv_pct"], goalie_1["games"])
-    
-    st.metric(
-        "Adjusted xG",
-        f"{adjusted_goalie_2_xg:.2f}",
-        delta=f"{adjusted_goalie_2_xg - goalie_2_team_xg:+.2f} goals",
-        delta_color="normal"
+    adj_legacy_2 = adjusted_xg_for_matchup(goalie_2_team_xg, goalie_1["sv_pct"], goalie_1["games"])
+    adj_enhanced_2 = adjusted_xg_with_analytics(
+        goalie_2_team_xg,
+        goalie_1["sv_pct"],
+        goalie_1["games"],
+        opposing_goalie_name=goalie_1["name"],
+        opposing_goalie_gsaa=g1_analytics.get("gsaa"),
+        opposing_goalie_hd_sv_pct=g1_analytics.get("hd_save_pct"),
     )
+    
+    st.metric("Legacy Adjusted xG", f"{adj_legacy_2:.2f}", delta=f"{adj_legacy_2 - goalie_2_team_xg:+.2f}")
+    if g1_analytics.get("gsaa") is not None:
+        st.metric(
+            "Enhanced Adjusted xG",
+            f"{adj_enhanced_2:.2f}",
+            delta=f"{adj_enhanced_2 - goalie_2_team_xg:+.2f}",
+            help="Uses GSAA + HD SV% in addition to season SV%.",
+        )
 
 # League Goalie Rankings
 st.markdown("---")
 st.subheader("League Goalie Leaders")
 
-# Convert goalie_stats dict to DataFrame for display
+# Build display table — blend summary + analytics
 display_goalies = []
-for name, stats in goalie_stats.items():
+for display_name, stats in goalie_stats.items():
+    g_analytics = goalie_analytics.get(stats["name"], {})
     display_goalies.append({
         "Goalie": stats["name"],
-        "Team": client.TEAM_NAMES.get(stats["team"], stats["team"]),  # Full team name
-        "Games": stats["games"],
-        "Wins": stats["wins"],
-        "Save %": f"{stats['sv_pct']:.3f}",
+        "Team": client.TEAM_NAMES.get(stats["team"], stats["team"]),
+        "GP": stats["games"],
+        "W": stats["wins"],
+        "SV%": f"{stats['sv_pct']:.3f}",
         "GAA": f"{stats['gaa']:.2f}",
-        "Shutouts": stats["shutouts"],
-        "Quality Starts": f"{int((stats['sv_pct'] - 0.880) / 0.040 * 100)}%"  # Rough estimate
+        "SO": stats["shutouts"],
+        "GSAA": f"{g_analytics['gsaa']:+.2f}" if g_analytics.get("gsaa") is not None else "—",
+        "HD SV%": f"{g_analytics['hd_save_pct']:.3f}" if g_analytics.get("hd_save_pct") else "—",
     })
 
-df = pd.DataFrame(display_goalies[:30])  # Top 30
-st.dataframe(df, hide_index=True, width='stretch')
+df = pd.DataFrame(display_goalies)
+
+# Sort by SV% descending for display
+try:
+    df = df.sort_values("SV%", ascending=False)
+except Exception:
+    pass
+
+st.dataframe(
+    df.head(30),
+    hide_index=True,
+    width="stretch",
+    column_config={
+        "Goalie": st.column_config.TextColumn("Goalie", width="medium"),
+        "Team": st.column_config.TextColumn("Team", width="medium"),
+        "GP": st.column_config.NumberColumn("GP", width="small"),
+        "W": st.column_config.NumberColumn("W", width="small"),
+        "SV%": st.column_config.TextColumn("SV%", width="small"),
+        "GAA": st.column_config.TextColumn("GAA", width="small"),
+        "SO": st.column_config.NumberColumn("SO", width="small"),
+        "GSAA": st.column_config.TextColumn(
+            "GSAA", width="small",
+            help="Goals Saved Above Average (NHL). Positive = better than avg.",
+        ),
+        "HD SV%": st.column_config.TextColumn(
+            "HD SV%", width="small",
+            help="High-Danger Save %. League avg ≈ .830.",
+        ),
+    },
+)
 
 # Interpretation Guide
 with st.expander("📚 Goalie Analysis Guide"):
@@ -243,27 +350,32 @@ with st.expander("📚 Goalie Analysis Guide"):
     - **Above Average (0.910-0.920)**: Solid starter, positive impact
     - **League Average (0.900-0.910)**: Typical NHL starter
     - **Below Average (< 0.900)**: Weakness to exploit
-    
-    **Expected Goals Adjustment**
-    - Each 1% in SV% above league average ≈ **0.3 goals saved per game**
-    - Example: 0.920 SV% goalie vs 0.900 SV% goalie = **0.6 goal swing**
-    
-    **When Goalies Matter Most**
-    1. **High-shot games**: Team facing 35+ shots benefits from elite goalie
-    2. **Playoff races**: Hot goalie can carry team through stretch
-    3. **Back-to-backs**: Backup quality crucial in second game
-    4. **Injury returns**: Goalie returning from injury may be rusty
-    
+
+    **GSAA — Goals Saved Above Average**
+    GSAA is the NHL's own metric: the number of goals saved *above* what an
+    average goalie would have saved facing the same shots.
+    - **Positive GSAA**: Goalie is outperforming — but large positive values often
+      regress toward zero (watch for fade candidates).
+    - **Negative GSAA**: Goalie is allowing more goals than expected.
+    - Good rule of thumb: > +5 GSAA = legitimate elite; < -5 GSAA = exploitable.
+
+    **HD SV% — High-Danger Save Percentage**
+    Shots from the slot and crease area.  League average ≈ .830.
+    - Goalies above .860 HD SV% are elite at stopping the most dangerous shots.
+    - Goalies below .800 HD SV% are a significant liability; opposing high-danger
+      lines are a strong bet in these matchups.
+
+    **Enhanced Adjustment vs Legacy**
+    The *Enhanced* model blends GSAA-per-game and HD SV% with the legacy
+    SV%-based model.  It is more responsive to current-season performance
+    and shot quality, not just raw goals allowed.
+
     **Betting Implications**
     - ✅ **Bet on team with goalie edge** if line doesn't reflect it
     - ✅ **Fade team with struggling goalie** even if favored
     - ✅ **Look for total value** when elite vs weak goalie
     - ⚠️ **Small samples unreliable** - need 15+ games for confidence
-    
-    **Quality Start (QS) Definition**
-    - SV% > 0.917 in a game (roughly 2 goals allowed on 25 shots)
-    - Elite goalies have 60%+ QS rate
-    - Backup goalies often below 40% QS rate
+    - ⚠️ **High GSAA regression** — goalies running very hot often cool off
     """)
 
 add_betting_oracle_footer()

@@ -494,9 +494,147 @@ class NHLClient:
         return game
     
     # -------------------------------------------------------------------------
+    # Analytics Endpoints (shot quality, Corsi/Fenwick, GSAX)
+    # -------------------------------------------------------------------------
+
+    def get_team_analytics(self, season: str = "20252026") -> dict[str, dict]:
+        """
+        Fetch team-level analytics from the NHL stats REST API.
+
+        Includes xGoalsFor, xGoalsAgainst, corsiForPct, fenwickForPct,
+        high-danger goals/shots, and scoring-chance data.
+
+        Returns:
+            Dict keyed by team abbreviation with analytics fields.
+        """
+        url = (
+            f"{self.BASE_STATS_API}/team/analytics"
+            f"?cayenneExp=seasonId={season}&limit=40"
+        )
+        data = self._fetch_sync(url)
+
+        result: dict[str, dict] = {}
+        for row in data.get("data", []):
+            team_id = row.get("teamId")
+            abbrev = self.ID_TO_TEAM_MAP.get(team_id)
+            if not abbrev:
+                continue
+            result[abbrev] = {
+                "xgf": row.get("xGoalsFor", None),
+                "xga": row.get("xGoalsAgainst", None),
+                "xgf_pct": row.get("xGoalsForPct", None),         # xGF%
+                "cf_pct": row.get("corsiForPct", None),            # CF%
+                "ff_pct": row.get("fenwickForPct", None),          # FF%
+                "hd_goals_for": row.get("highDangerGoalsFor", None),
+                "hd_goals_against": row.get("highDangerGoalsAgainst", None),
+                "hd_shots_for": row.get("highDangerShotsFor", None),
+                "hd_shots_against": row.get("highDangerShotsAgainst", None),
+                "sc_goals_for": row.get("scoringChancesFor", None),
+                "sc_goals_against": row.get("scoringChancesAgainst", None),
+                "games_played": row.get("gamesPlayed", 0),
+            }
+        return result
+
+    def get_goalie_analytics(
+        self, season: str = "20252026", limit: int = 100
+    ) -> list[dict]:
+        """
+        Fetch goalie advanced stats including quality-start metrics.
+
+        Returns a list of goalie dicts, each with:
+            name, team, games, gsaa (Goals Saved Above Average, NHL's metric),
+            low_danger_saves, medium_danger_saves, high_danger_saves,
+            hd_save_pct, quality_starts, really_bad_starts
+        """
+        url = (
+            f"{self.BASE_STATS_API}/goalie/advanced"
+            f"?cayenneExp=seasonId={season}&limit={limit}"
+            f"&sort=gamesPlayed&direction=DESC"
+        )
+        data = self._fetch_sync(url)
+
+        result = []
+        for g in data.get("data", []):
+            if g.get("gamesPlayed", 0) < 5:
+                continue
+            result.append(
+                {
+                    "name": g.get("goalieFullName", ""),
+                    "team": g.get("teamAbbrevs", ""),
+                    "games": g.get("gamesPlayed", 0),
+                    # NHL GSAA = goals saved above average vs league avg SV%
+                    "gsaa": g.get("goalsSavedAboveAverage", None),
+                    "low_danger_save_pct": g.get("lowDangerSavePercentage", None),
+                    "med_danger_save_pct": g.get("mediumDangerSavePercentage", None),
+                    "hd_save_pct": g.get("highDangerSavePercentage", None),
+                    "low_danger_shots": g.get("lowDangerShots", 0),
+                    "med_danger_shots": g.get("mediumDangerShots", 0),
+                    "hd_shots": g.get("highDangerShots", 0),
+                    "quality_starts": g.get("qualityStarts", None),
+                    "really_bad_starts": g.get("reallyBadStarts", None),
+                }
+            )
+        return result
+
+    def get_skater_analytics(
+        self, season: str = "20252026", limit: int = 100
+    ) -> list[dict]:
+        """
+        Fetch skater per-60 analytics from NHL stats API.
+
+        Returns per-60 rates, high-danger shot rates, scoring-chance data.
+        """
+        url = (
+            f"{self.BASE_STATS_API}/skater/summary"
+            f"?cayenneExp=seasonId={season}&limit={limit}"
+            f"&sort=points&direction=DESC"
+        )
+        data = self._fetch_sync(url)
+
+        result = []
+        for p in data.get("data", []):
+            gp = max(p.get("gamesPlayed", 1), 1)
+            toi_total = p.get("timeOnIce", 0) or 0
+            if not toi_total:
+                # Fallback: derive from per-game value (both in seconds)
+                toi_total = (p.get("timeOnIcePerGame", 0) or 0) * gp
+            toi_60 = toi_total / 60 if toi_total else 0  # seconds → minutes
+
+            goals = p.get("goals", 0)
+            assists = p.get("assists", 0)
+            points = p.get("points", 0)
+            shots = p.get("shots", 0)
+
+            # Per-60 rates (requires time on ice data)
+            g_per_60 = round(goals / toi_60 * 60, 3) if toi_60 > 0 else None
+            a_per_60 = round(assists / toi_60 * 60, 3) if toi_60 > 0 else None
+            p_per_60 = round(points / toi_60 * 60, 3) if toi_60 > 0 else None
+
+            result.append(
+                {
+                    "player_id": p.get("playerId"),
+                    "name": p.get("skaterFullName", ""),
+                    "team": p.get("teamAbbrevs", ""),
+                    "position": p.get("positionCode", ""),
+                    "games": gp,
+                    "goals": goals,
+                    "assists": assists,
+                    "points": points,
+                    "shots": shots,
+                    "shooting_pct": p.get("shootingPct", 0),
+                    "toi_pg": p.get("timeOnIcePerGame", 0),
+                    "g_per_60": g_per_60,
+                    "a_per_60": a_per_60,
+                    "p_per_60": p_per_60,
+                    "plus_minus": p.get("plusMinus", 0),
+                }
+            )
+        return result
+
+    # -------------------------------------------------------------------------
     # Cache Management
     # -------------------------------------------------------------------------
-    
+
     def clear_cache(self, max_age_hours: int = 24) -> int:
         """
         Remove cache files older than specified hours.

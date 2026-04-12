@@ -17,8 +17,11 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Apply custom styling
+# Apply custom styling and sidebar logo (runs on every page navigation)
 apply_custom_css()
+logo_path = Path("data_files/logo.png")
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
 
 # Initialize client
 @st.cache_resource
@@ -29,11 +32,6 @@ def get_client():
 def home_page():
     """Landing page content."""
     client = get_client()
-
-    # Load logo
-    logo_path = Path("data_files/logo.png")
-    if logo_path.exists():
-        st.sidebar.image(str(logo_path), width=150)
 
     st.sidebar.title("Oracle on Ice - Hockey Predictions")
     st.sidebar.markdown("NHL Betting Analytics")
