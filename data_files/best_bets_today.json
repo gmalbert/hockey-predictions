@@ -1,40 +1,10 @@
 {
   "meta": {
     "sport": "NHL",
-    "generated_at": "2026-04-30T02:04:38.640012+00:00",
+    "generated_at": "2026-05-02T07:37:00.159832+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "Source file not found: data_files/recommendations.json"
   },
-  "bets": [
-    {
-      "game_date": "2026-04-29",
-      "game_time": null,
-      "game": "TBL @ FLA",
-      "home_team": "FLA",
-      "away_team": "TBL",
-      "bet_type": "Moneyline",
-      "pick": "FLA",
-      "confidence": 0.72,
-      "edge": 0.085,
-      "tier": "Elite",
-      "odds": -120,
-      "line": null,
-      "notes": null
-    },
-    {
-      "game_date": "2026-04-29",
-      "game_time": null,
-      "game": "VAN @ EDM",
-      "home_team": "EDM",
-      "away_team": "VAN",
-      "bet_type": "Spread",
-      "pick": "EDM -1.5",
-      "confidence": 0.64,
-      "edge": 0.042,
-      "tier": "Strong",
-      "odds": 135,
-      "line": null,
-      "notes": null
-    }
-  ]
+  "bets": []
 }
