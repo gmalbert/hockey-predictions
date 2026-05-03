@@ -1,0 +1,1045 @@
+{
+  "previousStartDate": "2026-05-05",
+  "gameWeek": [
+    {
+      "date": "2026-05-12",
+      "dayAbbrev": "TUE",
+      "numberOfGames": 2,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030214,
+          "season": 20252026,
+          "gameType": 3,
+          "neutralSite": false,
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [],
+          "awayTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "I",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "BUF",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "TBD",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 4
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-i/tbd-vs-sabres"
+        },
+        {
+          "id": 2025030245,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "T-Mobile Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-12T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 309,
+              "market": "N",
+              "countryCode": "US",
+              "network": "ESPN",
+              "sequenceNumber": 10
+            }
+          ],
+          "awayTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20252026/ANA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20252026/VGK-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "L",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "VGK",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "ANA",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 5
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-l/goldenknights-vs-ducks",
+          "ticketsLink": "https://www.nhl.com/goldenknights/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/goldenknights/tickets/",
+          "gameCenterLink": "/gamecenter/ana-vs-vgk/2026/05/12/2025030245"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "dayAbbrev": "WED",
+      "numberOfGames": 2,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030226,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Xfinity Mobile Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-13T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-04:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 12,
+            "commonName": {
+              "default": "Hurricanes"
+            },
+            "placeName": {
+              "default": "Carolina",
+              "fr": "Caroline"
+            },
+            "placeNameWithPreposition": {
+              "default": "Carolina",
+              "fr": "de la Caroline"
+            },
+            "abbrev": "CAR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20252026/CAR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 4,
+            "commonName": {
+              "default": "Flyers"
+            },
+            "placeName": {
+              "default": "Philadelphia",
+              "fr": "Philadelphie"
+            },
+            "placeNameWithPreposition": {
+              "default": "Philadelphia",
+              "fr": "de Philadelphie"
+            },
+            "abbrev": "PHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20252026/PHI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "J",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "CAR",
+            "topSeedWins": 1,
+            "bottomSeedTeamAbbrev": "PHI",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 6
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-j/flyers-vs-hurricanes",
+          "ticketsLink": "https://www.nhl.com/flyers/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/flyers/tickets/",
+          "gameCenterLink": "/gamecenter/car-vs-phi/2026/05/13/2025030226"
+        },
+        {
+          "id": 2025030235,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Ball Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-13T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Denver",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20252026/MIN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 21,
+            "commonName": {
+              "default": "Avalanche"
+            },
+            "placeName": {
+              "default": "Colorado"
+            },
+            "placeNameWithPreposition": {
+              "default": "Colorado",
+              "fr": "du Colorado"
+            },
+            "abbrev": "COL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20252026/COL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "K",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "COL",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "MIN",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 5
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-k/avalanche-vs-wild",
+          "ticketsLink": "https://www.nhl.com/avalanche/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/avalanche/tickets/",
+          "gameCenterLink": "/gamecenter/min-vs-col/2026/05/13/2025030235"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "dayAbbrev": "THU",
+      "numberOfGames": 2,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030215,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "KeyBank Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-14T04:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-04:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "I",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "BUF",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "TBD",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 5
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-i/sabres-vs-tbd"
+        },
+        {
+          "id": 2025030246,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Honda Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-14T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "America/Los_Angeles",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20252026/VGK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20252026/ANA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "L",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "VGK",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "ANA",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 6
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-l/ducks-vs-goldenknights",
+          "ticketsLink": "https://www.nhl.com/ducks/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/ducks/tickets/",
+          "gameCenterLink": "/gamecenter/vgk-vs-ana/2026/05/14/2025030246"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "dayAbbrev": "FRI",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030236,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Grand Casino Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-15T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 309,
+              "market": "N",
+              "countryCode": "US",
+              "network": "ESPN",
+              "sequenceNumber": 10
+            }
+          ],
+          "awayTeam": {
+            "id": 21,
+            "commonName": {
+              "default": "Avalanche"
+            },
+            "placeName": {
+              "default": "Colorado"
+            },
+            "placeNameWithPreposition": {
+              "default": "Colorado",
+              "fr": "du Colorado"
+            },
+            "abbrev": "COL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20252026/COL-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20252026/MIN-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "K",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "COL",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "MIN",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 6
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-k/wild-vs-avalanche",
+          "ticketsLink": "https://www.nhl.com/wild/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/wild/tickets/",
+          "gameCenterLink": "/gamecenter/col-vs-min/2026/05/15/2025030236"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "dayAbbrev": "SAT",
+      "numberOfGames": 3,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030216,
+          "season": 20252026,
+          "gameType": 3,
+          "neutralSite": false,
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [],
+          "awayTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-dark.svg",
+            "homeSplitSquad": false
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "I",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "BUF",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "TBD",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 6
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-i/tbd-vs-sabres"
+        },
+        {
+          "id": 2025030227,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Lenovo Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-16T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-04:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 4,
+            "commonName": {
+              "default": "Flyers"
+            },
+            "placeName": {
+              "default": "Philadelphia",
+              "fr": "Philadelphie"
+            },
+            "placeNameWithPreposition": {
+              "default": "Philadelphia",
+              "fr": "de Philadelphie"
+            },
+            "abbrev": "PHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20252026/PHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 12,
+            "commonName": {
+              "default": "Hurricanes"
+            },
+            "placeName": {
+              "default": "Carolina",
+              "fr": "Caroline"
+            },
+            "placeNameWithPreposition": {
+              "default": "Carolina",
+              "fr": "de la Caroline"
+            },
+            "abbrev": "CAR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20252026/CAR-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "J",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "CAR",
+            "topSeedWins": 1,
+            "bottomSeedTeamAbbrev": "PHI",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 7
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-j/hurricanes-vs-flyers",
+          "ticketsLink": "https://www.nhl.com/hurricanes/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/hurricanes/tickets/",
+          "gameCenterLink": "/gamecenter/phi-vs-car/2026/05/16/2025030227"
+        },
+        {
+          "id": 2025030247,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "T-Mobile Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-16T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 384,
+              "market": "N",
+              "countryCode": "US",
+              "network": "ABC",
+              "sequenceNumber": 1
+            },
+            {
+              "id": 309,
+              "market": "N",
+              "countryCode": "US",
+              "network": "ESPN",
+              "sequenceNumber": 10
+            }
+          ],
+          "awayTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20252026/ANA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20252026/VGK-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "L",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "VGK",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "ANA",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 7
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-l/goldenknights-vs-ducks",
+          "ticketsLink": "https://www.nhl.com/goldenknights/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/goldenknights/tickets/",
+          "gameCenterLink": "/gamecenter/ana-vs-vgk/2026/05/16/2025030247"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "dayAbbrev": "SUN",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030237,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "Ball Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-17T16:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Denver",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20252026/MIN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 21,
+            "commonName": {
+              "default": "Avalanche"
+            },
+            "placeName": {
+              "default": "Colorado"
+            },
+            "placeNameWithPreposition": {
+              "default": "Colorado",
+              "fr": "du Colorado"
+            },
+            "abbrev": "COL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20252026/COL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "K",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "COL",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "MIN",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 7
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-k/avalanche-vs-wild",
+          "ticketsLink": "https://www.nhl.com/avalanche/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/avalanche/tickets/",
+          "gameCenterLink": "/gamecenter/min-vs-col/2026/05/17/2025030237"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "dayAbbrev": "MON",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2025030217,
+          "season": 20252026,
+          "gameType": 3,
+          "venue": {
+            "default": "KeyBank Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-05-18T04:00:00Z",
+          "easternUTCOffset": "-04:00",
+          "venueUTCOffset": "-04:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "TBD",
+          "tvBroadcasts": [],
+          "awayTeam": {
+            "id": -1,
+            "commonName": {
+              "default": "TBD"
+            },
+            "placeName": {
+              "default": "TBD"
+            },
+            "placeNameWithPreposition": {
+              "default": "TBD"
+            },
+            "abbrev": "TBD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/team-tbd-dark.svg",
+            "awaySplitSquad": false
+          },
+          "homeTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20252026/BUF-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "maxRegulationPeriods": 3
+          },
+          "seriesStatus": {
+            "round": 2,
+            "seriesAbbrev": "R2",
+            "seriesTitle": "2nd Round",
+            "seriesLetter": "I",
+            "neededToWin": 4,
+            "topSeedTeamAbbrev": "BUF",
+            "topSeedWins": 0,
+            "bottomSeedTeamAbbrev": "TBD",
+            "bottomSeedWins": 0,
+            "gameNumberOfSeries": 7
+          },
+          "seriesUrl": "/schedule/playoff-series/2026/series-i/sabres-vs-tbd"
+        }
+      ]
+    }
+  ],
+  "preSeasonStartDate": "2025-09-20",
+  "regularSeasonStartDate": "2025-10-07",
+  "regularSeasonEndDate": "2026-04-17",
+  "playoffEndDate": "2026-06-15",
+  "numberOfGames": 12
+}
