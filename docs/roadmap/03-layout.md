@@ -90,7 +90,7 @@ if games_data:
     # Styled dataframe
     st.dataframe(
         df,
-        use_container_width=True,
+        width='stretch',
         hide_index=True,
         column_config={
             "Value": st.column_config.TextColumn(
@@ -167,7 +167,7 @@ with tab3:
         "GF/G": [3.6, 3.1, 3.5, 2.9, 2.8],
         "GA/G": [2.5, 3.1, 2.7, 3.0, 3.4]
     })
-    st.dataframe(situational, use_container_width=True, hide_index=True)
+    st.dataframe(situational, width='stretch', hide_index=True)
 ```
 
 ### Task 1.3: Standings Page ✅
@@ -200,7 +200,7 @@ with tab1:
         "DIFF": [30, 20, 10, -5, -20, -30, -45, -65],
         "L10": ["7-2-1", "6-3-1", "5-4-1", "6-3-1", "4-5-1", "3-6-1", "3-6-1", "2-7-1"]
     })
-    st.dataframe(atlantic, use_container_width=True, hide_index=True)
+    st.dataframe(atlantic, width='stretch', hide_index=True)
 ```
 
 ---
@@ -248,7 +248,7 @@ value_bets = pd.DataFrame({
 # Highlight positive edges
 st.dataframe(
     value_bets,
-    use_container_width=True,
+    width='stretch',
     hide_index=True,
     column_config={
         "Edge": st.column_config.TextColumn("Edge", help="Model probability minus implied probability")
@@ -286,7 +286,7 @@ props_data = pd.DataFrame({
     "Edge": ["+5%", "+3%", "-2%"]
 })
 
-st.dataframe(props_data, use_container_width=True, hide_index=True)
+st.dataframe(props_data, width='stretch', hide_index=True)
 ```
 
 ---
@@ -330,7 +330,7 @@ history = pd.DataFrame({
     "Result": ["✅ Won", "❌ Lost", "✅ Won"],
     "Profit": ["+0.67u", "-1.0u", "+0.73u"]
 })
-st.dataframe(history, use_container_width=True, hide_index=True)
+st.dataframe(history, width='stretch', hide_index=True)
 ```
 
 ---

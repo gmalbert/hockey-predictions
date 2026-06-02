@@ -353,7 +353,7 @@ movements_df = pd.DataFrame({
     "Signal": ["🔥 Steam Home", "Sharp Away", "⬇️ Sharp Under"]
 })
 
-st.dataframe(movements_df, use_container_width=True, hide_index=True)
+st.dataframe(movements_df, width='stretch', hide_index=True)
 
 # Movement visualization
 st.subheader("Movement Chart")

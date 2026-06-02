@@ -315,7 +315,7 @@ injuries_df = pd.DataFrame({
     "Est. Return": ["2 weeks", "Unknown"]
 })
 
-st.dataframe(injuries_df, use_container_width=True, hide_index=True)
+st.dataframe(injuries_df, width='stretch', hide_index=True)
 
 # Impact summary
 col1, col2, col3 = st.columns(3)

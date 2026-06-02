@@ -408,7 +408,7 @@ def render_standings_trend(client, team_abbrev: str) -> None:
         )
         .properties(width=600, height=300, title=f"{team_abbrev} Points Trajectory")
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width='stretch')
 
 
 def render_division_race(client, teams: list[str]) -> None:
@@ -428,7 +428,7 @@ def render_division_race(client, teams: list[str]) -> None:
         )
         .properties(width=600, height=300, title="Division Race")
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width='stretch')
 ```
 
 ### Phase 5: Replace Hardcoded Season References

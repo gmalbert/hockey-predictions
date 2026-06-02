@@ -375,7 +375,7 @@ with tab3:
         "ROI": ["+4.2%", "-2.1%", "+8.5%"],
         "Units": ["+3.6", "-0.9", "+5.8"]
     })
-    st.dataframe(betting_df, use_container_width=True, hide_index=True)
+    st.dataframe(betting_df, width='stretch', hide_index=True)
 
 # Calibration chart
 st.subheader("Probability Calibration")

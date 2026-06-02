@@ -395,7 +395,7 @@ def render_shot_map(shots: list[dict], home_team: str, away_team: str) -> None:
         .interactive()
     )
 
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width='stretch')
 ```
 
 ### Phase 4: Batch xG Collection for Historical Analysis

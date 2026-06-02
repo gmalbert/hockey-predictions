@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install httpx
+          pip install -r requirements.txt
 
       - name: Fetch game schedules
         run: |
@@ -48,6 +48,12 @@ jobs:
             git push
             echo "Committed ${GAME_COUNT} schedule updates"
           fi
+
+      - name: Generate NHL recommendations
+        run: python scripts/generate_recommendations.py
+        continue-on-error: true
+        env:
+          PYTHONPATH: ${{ github.workspace }}
 
       - name: Export best bets for Sports Picks Grid
         run: python scripts/export_best_bets.py

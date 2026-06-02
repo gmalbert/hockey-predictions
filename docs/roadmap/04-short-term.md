@@ -261,7 +261,7 @@ try:
             st.dataframe(
                 div_standings[["team", "games_played", "wins", "losses", 
                               "ot_losses", "points", "goal_diff", "streak"]],
-                use_container_width=True,
+                width='stretch',
                 hide_index=True
             )
 

@@ -104,7 +104,7 @@ def format_odds(odds):
             return f"+{int(odds)}"
         else:
             return str(int(odds))
-    except:
+    except Exception:
         return "N/A"
 
 
@@ -127,7 +127,7 @@ def calculate_implied_probability(american_odds):
             return 100 / (odds + 100)
         else:
             return abs(odds) / (abs(odds) + 100)
-    except:
+    except Exception:
         return None
 
 
@@ -153,7 +153,7 @@ def kelly_criterion(win_prob, decimal_odds):
         kelly = (b * win_prob - q) / b
         
         return max(0, kelly)  # Don't bet if negative
-    except:
+    except Exception:
         return None
 
 
@@ -176,5 +176,5 @@ def american_to_decimal(american_odds):
             return (odds / 100) + 1
         else:
             return (100 / abs(odds)) + 1
-    except:
+    except Exception:
         return None

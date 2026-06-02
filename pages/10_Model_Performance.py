@@ -1,4 +1,4 @@
-﻿"""Model performance dashboard."""
+"""Model performance dashboard."""
 import streamlit as st
 import pandas as pd
 import sys
@@ -150,7 +150,7 @@ if ml_model_info and ml_metrics.get("model_available", True):  # Default to True
                 from datetime import datetime
                 dt = datetime.fromisoformat(training_date)
                 training_date_display = dt.strftime('%Y-%m-%d')
-            except:
+            except Exception:
                 training_date_display = training_date[:10] if len(str(training_date)) >= 10 else training_date
             st.metric("Last Trained", training_date_display, 
                       help="Date when ML model was last trained")
@@ -267,7 +267,7 @@ with tab3:
                     from datetime import datetime
                     dt = datetime.fromisoformat(training_date)
                     training_date = dt.strftime('%Y-%m-%d %H:%M')
-                except:
+                except Exception:
                     pass
             st.markdown(f"**Training Date:** {training_date}")
             st.markdown(f"**Features Used:** {ml_model_info.get('n_features', 0)}")

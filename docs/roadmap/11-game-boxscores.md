@@ -497,7 +497,7 @@ if form["starts"] > 0:
     st.metric("Record", f"{form['wins']}W - {form['losses']}L")
 
     df = pd.DataFrame(form["games"])
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(df, width='stretch')
 ```
 
 ---

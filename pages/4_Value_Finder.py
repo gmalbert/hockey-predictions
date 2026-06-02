@@ -1,4 +1,4 @@
-﻿"""Identify bets with positive expected value."""
+"""Identify bets with positive expected value."""
 import streamlit as st
 import pandas as pd
 from pathlib import Path
@@ -154,7 +154,7 @@ try:
                             return 100 / (odds + 100)
                         else:
                             return abs(odds) / (abs(odds) + 100)
-                    except:
+                    except Exception:
                         return None
                 
                 home_impl = implied_prob(home_ml)
