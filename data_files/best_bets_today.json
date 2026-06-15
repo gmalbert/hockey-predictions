@@ -1,10 +1,10 @@
 {
   "meta": {
     "sport": "NHL",
-    "generated_at": "2026-06-14T08:26:21.026311+00:00",
+    "generated_at": "2026-06-15T09:13:52.829255+00:00",
     "model_version": "1.0.0",
     "season": "2026",
-    "notes": "Source file not found: data_files/recommendations.json"
+    "notes": "No NHL picks for 2026-06-15"
   },
   "bets": []
 }
