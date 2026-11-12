@@ -1,0 +1,4714 @@
+{
+  "nextStartDate": "2026-11-28",
+  "previousStartDate": "2026-11-14",
+  "gameWeek": [
+    {
+      "date": "2026-11-21",
+      "dayAbbrev": "SAT",
+      "numberOfGames": 14,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020359,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Lenovo Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-21T18:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 21
+            },
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 754,
+              "market": "H",
+              "countryCode": "US",
+              "network": "HHN",
+              "sequenceNumber": 207
+            },
+            {
+              "id": 646,
+              "market": "H",
+              "countryCode": "US",
+              "network": "CARNHL",
+              "sequenceNumber": 434
+            }
+          ],
+          "awayTeam": {
+            "id": 22,
+            "commonName": {
+              "default": "Oilers"
+            },
+            "placeName": {
+              "default": "Edmonton"
+            },
+            "placeNameWithPreposition": {
+              "default": "Edmonton",
+              "fr": "d'Edmonton"
+            },
+            "abbrev": "EDM",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20262027/EDM-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 12,
+            "commonName": {
+              "default": "Hurricanes"
+            },
+            "placeName": {
+              "default": "Carolina",
+              "fr": "Caroline"
+            },
+            "placeNameWithPreposition": {
+              "default": "Carolina",
+              "fr": "de la Caroline"
+            },
+            "abbrev": "CAR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20262027/CAR-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/2D0064F4BD73D1EE?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_SCHED_PG_GM10&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=SCHED_PG_GM10",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/2D0064F4BD73D1EE?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_SCHED_PG_GM10&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=SCHED_PG_GM10",
+          "gameCenterLink": "/gamecenter/edm-vs-car/2026/11/21/2026020359"
+        },
+        {
+          "id": 2026020360,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Scotiabank Saddledome"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-21T20:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Edmonton",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 284,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN1",
+              "sequenceNumber": 113
+            },
+            {
+              "id": 551,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CHSN",
+              "sequenceNumber": 267
+            }
+          ],
+          "awayTeam": {
+            "id": 16,
+            "commonName": {
+              "default": "Blackhawks"
+            },
+            "placeName": {
+              "default": "Chicago"
+            },
+            "placeNameWithPreposition": {
+              "default": "Chicago",
+              "fr": "de Chicago"
+            },
+            "abbrev": "CHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20262027/CHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 20,
+            "commonName": {
+              "default": "Flames"
+            },
+            "placeName": {
+              "default": "Calgary"
+            },
+            "placeNameWithPreposition": {
+              "default": "Calgary",
+              "fr": "de Calgary"
+            },
+            "abbrev": "CGY",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20262027/CGY-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/110064FC82C63265?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/110064FC82C63265?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/chi-vs-cgy/2026/11/21/2026020360"
+        },
+        {
+          "id": 2026020361,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Amerant Bank Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-21T23:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 28,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSG-B",
+              "sequenceNumber": 405
+            },
+            {
+              "id": 521,
+              "market": "H",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20262027/BUF-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 13,
+            "commonName": {
+              "default": "Panthers"
+            },
+            "placeName": {
+              "default": "Florida",
+              "fr": "Floride"
+            },
+            "placeNameWithPreposition": {
+              "default": "Florida",
+              "fr": "de la Floride"
+            },
+            "abbrev": "FLA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/FLA/20262027/FLA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://seatgeek.com/florida-panthers-tickets/11-21-2026-sunrise-florida-amerant-bank-arena/nhl/18362735?aid=15999&pid=web&rid=80426&utm_medium=partnership&utm_source=panthers_ticketing&utm_campaign=web",
+          "ticketsLinkFr": "https://seatgeek.com/florida-panthers-tickets/11-21-2026-sunrise-florida-amerant-bank-arena/nhl/18362735?aid=15999&pid=web&rid=80426&utm_medium=partnership&utm_source=panthers_ticketing&utm_campaign=web",
+          "gameCenterLink": "/gamecenter/buf-vs-fla/2026/11/21/2026020361"
+        },
+        {
+          "id": 2026020362,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Bridgestone Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-21T23:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 528,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SN-PIT",
+              "sequenceNumber": 397
+            },
+            {
+              "id": 521,
+              "market": "H",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 5,
+            "commonName": {
+              "default": "Penguins"
+            },
+            "placeName": {
+              "default": "Pittsburgh"
+            },
+            "placeNameWithPreposition": {
+              "default": "Pittsburgh",
+              "fr": "de Pittsburgh"
+            },
+            "abbrev": "PIT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20262027/PIT-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 18,
+            "commonName": {
+              "default": "Predators"
+            },
+            "placeName": {
+              "default": "Nashville"
+            },
+            "placeNameWithPreposition": {
+              "default": "Nashville",
+              "fr": "de Nashville"
+            },
+            "abbrev": "NSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NSH/20262027/NSH-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1B006507F01DE4A7?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_NSH&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1B006507F01DE4A7?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_NSH&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/pit-vs-nsh/2026/11/21/2026020362"
+        },
+        {
+          "id": 2026020363,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "TD Garden"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 517,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MNMT",
+              "sequenceNumber": 409
+            },
+            {
+              "id": 31,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NESN",
+              "sequenceNumber": 418
+            }
+          ],
+          "awayTeam": {
+            "id": 15,
+            "commonName": {
+              "default": "Capitals"
+            },
+            "placeName": {
+              "default": "Washington"
+            },
+            "placeNameWithPreposition": {
+              "default": "Washington",
+              "fr": "de Washington"
+            },
+            "abbrev": "WSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WSH/20262027/WSH-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 6,
+            "commonName": {
+              "default": "Bruins"
+            },
+            "placeName": {
+              "default": "Boston"
+            },
+            "placeNameWithPreposition": {
+              "default": "Boston",
+              "fr": "de Boston"
+            },
+            "abbrev": "BOS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BOS/20262027/BOS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/010064EDC5227A8B?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/010064EDC5227A8B?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/wsh-vs-bos/2026/11/21/2026020363"
+        },
+        {
+          "id": 2026020364,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Scotiabank Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Toronto",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 21
+            },
+            {
+              "id": 755,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CBJHN",
+              "sequenceNumber": 229
+            },
+            {
+              "id": 647,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CBJNHL",
+              "sequenceNumber": 435
+            }
+          ],
+          "awayTeam": {
+            "id": 29,
+            "commonName": {
+              "default": "Blue Jackets"
+            },
+            "placeName": {
+              "default": "Columbus"
+            },
+            "placeNameWithPreposition": {
+              "default": "Columbus",
+              "fr": "de Columbus"
+            },
+            "abbrev": "CBJ",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20262027/CBJ-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 10,
+            "commonName": {
+              "default": "Maple Leafs"
+            },
+            "placeName": {
+              "default": "Toronto"
+            },
+            "placeNameWithPreposition": {
+              "default": "Toronto",
+              "fr": "de Toronto"
+            },
+            "abbrev": "TOR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TOR/20262027/TOR-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/100064FECD12F887?brand=nhl&wt.mc_id=NHL_LEAGUE_TOR_SCHED_PG_GM16&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_TOR&utm_content=SCHED_PG_GM16",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/100064FECD12F887?brand=nhl&wt.mc_id=NHL_LEAGUE_TOR_SCHED_PG_GM16&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_TOR&utm_content=SCHED_PG_GM16",
+          "gameCenterLink": "/gamecenter/cbj-vs-tor/2026/11/21/2026020364"
+        },
+        {
+          "id": 2026020365,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Centre Bell"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Montreal",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 287,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SNE",
+              "sequenceNumber": 30
+            },
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 322,
+              "market": "A",
+              "countryCode": "US",
+              "network": "NBCSP",
+              "sequenceNumber": 402
+            }
+          ],
+          "awayTeam": {
+            "id": 4,
+            "commonName": {
+              "default": "Flyers"
+            },
+            "placeName": {
+              "default": "Philadelphia",
+              "fr": "Philadelphie"
+            },
+            "placeNameWithPreposition": {
+              "default": "Philadelphia",
+              "fr": "de Philadelphie"
+            },
+            "abbrev": "PHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20262027/PHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 8,
+            "commonName": {
+              "default": "Canadiens"
+            },
+            "placeName": {
+              "default": "Montr\u00e9al"
+            },
+            "placeNameWithPreposition": {
+              "default": "Montr\u00e9al",
+              "fr": "de Montr\u00e9al"
+            },
+            "abbrev": "MTL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MTL/20262027/MTL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/310064FACAD5876E?lang=en-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/310064FACAD5876E?lang=fr-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/phi-vs-mtl/2026/11/21/2026020365"
+        },
+        {
+          "id": 2026020366,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Canadian Tire Centre",
+            "fr": "Centre Canadian Tire"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 284,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN1",
+              "sequenceNumber": 113
+            },
+            {
+              "id": 291,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS2",
+              "sequenceNumber": 121
+            },
+            {
+              "id": 651,
+              "market": "A",
+              "countryCode": "US",
+              "network": "ABTV ",
+              "sequenceNumber": 202
+            }
+          ],
+          "awayTeam": {
+            "id": 26,
+            "commonName": {
+              "default": "Kings"
+            },
+            "placeName": {
+              "default": "Los Angeles"
+            },
+            "placeNameWithPreposition": {
+              "default": "Los Angeles",
+              "fr": "de Los Angeles"
+            },
+            "abbrev": "LAK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20262027/LAK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 9,
+            "commonName": {
+              "default": "Senators",
+              "fr": "S\u00e9nateurs"
+            },
+            "placeName": {
+              "default": "Ottawa"
+            },
+            "placeNameWithPreposition": {
+              "default": "Ottawa",
+              "fr": "d'Ottawa"
+            },
+            "abbrev": "OTT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20262027/OTT-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/31006507E69B2887?brand=ottawasenators&artistid=805997&landing=s&wt.mc_id=NHL_TEAM_OTT_SGT_PG_GM12&",
+          "ticketsLinkFr": "https://www.nhl.com/fr/senators/tickets/",
+          "gameCenterLink": "/gamecenter/lak-vs-ott/2026/11/21/2026020366"
+        },
+        {
+          "id": 2026020367,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Little Caesars Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Detroit",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 645,
+              "market": "H",
+              "countryCode": "US",
+              "network": "DSN",
+              "sequenceNumber": 204
+            },
+            {
+              "id": 410,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSGSN2",
+              "sequenceNumber": 419
+            }
+          ],
+          "awayTeam": {
+            "id": 2,
+            "commonName": {
+              "default": "Islanders"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20262027/NYI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 17,
+            "commonName": {
+              "default": "Red Wings"
+            },
+            "placeName": {
+              "default": "Detroit"
+            },
+            "placeNameWithPreposition": {
+              "default": "Detroit",
+              "fr": "de Detroit"
+            },
+            "abbrev": "DET",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DET/20262027/DET-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/080064EED7DD7FDD?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/080064EED7DD7FDD?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/nyi-vs-det/2026/11/21/2026020367"
+        },
+        {
+          "id": 2026020368,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Enterprise Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 650,
+              "market": "H",
+              "countryCode": "US",
+              "network": "BN+",
+              "sequenceNumber": 203
+            },
+            {
+              "id": 409,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSGSN",
+              "sequenceNumber": 424
+            },
+            {
+              "id": 649,
+              "market": "H",
+              "countryCode": "US",
+              "network": "STLNHL",
+              "sequenceNumber": 437
+            }
+          ],
+          "awayTeam": {
+            "id": 1,
+            "commonName": {
+              "default": "Devils"
+            },
+            "placeName": {
+              "default": "New Jersey"
+            },
+            "placeNameWithPreposition": {
+              "default": "New Jersey",
+              "fr": "du New Jersey"
+            },
+            "abbrev": "NJD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NJD/20262027/NJD-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 19,
+            "commonName": {
+              "default": "Blues"
+            },
+            "placeName": {
+              "default": "St. Louis"
+            },
+            "placeNameWithPreposition": {
+              "default": "St. Louis",
+              "fr": "de St. Louis"
+            },
+            "abbrev": "STL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20262027/STL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/060064EECE1E1B74?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM11",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/060064EECE1E1B74?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM11",
+          "gameCenterLink": "/gamecenter/njd-vs-stl/2026/11/21/2026020368"
+        },
+        {
+          "id": 2026020369,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Canada Life Centre"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Winnipeg",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 289,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SNW",
+              "sequenceNumber": 34
+            },
+            {
+              "id": 521,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20262027/VGK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 52,
+            "commonName": {
+              "default": "Jets"
+            },
+            "placeName": {
+              "default": "Winnipeg"
+            },
+            "placeNameWithPreposition": {
+              "default": "Winnipeg",
+              "fr": "de Winnipeg"
+            },
+            "abbrev": "WPG",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20262027/WPG-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006505C9CEA72C?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006505C9CEA72C?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/vgk-vs-wpg/2026/11/21/2026020369"
+        },
+        {
+          "id": 2026020370,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Delta Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T02:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "America/Denver",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 786,
+              "market": "A",
+              "countryCode": "US",
+              "network": "FOXLA+",
+              "sequenceNumber": 206
+            },
+            {
+              "id": 783,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Mammoth+",
+              "sequenceNumber": 210
+            },
+            {
+              "id": 652,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 558,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Utah16",
+              "sequenceNumber": 394
+            }
+          ],
+          "awayTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20262027/ANA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 68,
+            "commonName": {
+              "default": "Mammoth"
+            },
+            "placeName": {
+              "default": "Utah"
+            },
+            "placeNameWithPreposition": {
+              "default": "Utah",
+              "fr": "de l'Utah"
+            },
+            "abbrev": "UTA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20262027/UTA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.nhl.com/utah/tickets/",
+          "ticketsLinkFr": "https://www.nhl.com/utah/tickets/",
+          "gameCenterLink": "/gamecenter/ana-vs-uta/2026/11/21/2026020370"
+        },
+        {
+          "id": 2026020371,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Rogers Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T03:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "America/Vancouver",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 758,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Wild+",
+              "sequenceNumber": 211
+            },
+            {
+              "id": 648,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MINNHL",
+              "sequenceNumber": 436
+            }
+          ],
+          "awayTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20262027/MIN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 23,
+            "commonName": {
+              "default": "Canucks"
+            },
+            "placeName": {
+              "default": "Vancouver"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vancouver",
+              "fr": "de Vancouver"
+            },
+            "abbrev": "VAN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20262027/VAN-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006503F0B3BB9C?brand=nhl&wt.mc_id=NHL_LEAGUE_VAN_SCHED_PG_GM11&utm_medium=Web&utm_source=Web&utm_campaign=26.27-VAN-LEAGUE-WEB",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006503F0B3BB9C?brand=nhl&wt.mc_id=NHL_LEAGUE_VAN_SCHED_PG_GM11&utm_medium=Web&utm_source=Web&utm_campaign=26.27-VAN-LEAGUE-WEB",
+          "gameCenterLink": "/gamecenter/min-vs-van/2026/11/21/2026020371"
+        },
+        {
+          "id": 2026020372,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "SAP Center at San Jose",
+            "es": "SAP Center en San Jose",
+            "fr": "SAP Center de San Jose"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T03:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 652,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 314,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NBCSCA",
+              "sequenceNumber": 406
+            },
+            {
+              "id": 388,
+              "market": "A",
+              "countryCode": "US",
+              "network": "KONG",
+              "sequenceNumber": 654
+            }
+          ],
+          "awayTeam": {
+            "id": 55,
+            "commonName": {
+              "default": "Kraken"
+            },
+            "placeName": {
+              "default": "Seattle"
+            },
+            "placeNameWithPreposition": {
+              "default": "Seattle",
+              "fr": "de Seattle"
+            },
+            "abbrev": "SEA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20262027/SEA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 28,
+            "commonName": {
+              "default": "Sharks"
+            },
+            "placeName": {
+              "default": "San Jose"
+            },
+            "placeNameWithPreposition": {
+              "default": "San Jose",
+              "fr": "de San Jose"
+            },
+            "abbrev": "SJS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20262027/SJS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1C0064E79AF79BD9?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1C0064E79AF79BD9?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/sea-vs-sjs/2026/11/21/2026020372"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dayAbbrev": "SUN",
+      "numberOfGames": 5,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020373,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Madison Square Garden"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T17:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 754,
+              "market": "A",
+              "countryCode": "US",
+              "network": "HHN",
+              "sequenceNumber": 207
+            },
+            {
+              "id": 27,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSG",
+              "sequenceNumber": 430
+            },
+            {
+              "id": 646,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CARNHL",
+              "sequenceNumber": 434
+            }
+          ],
+          "awayTeam": {
+            "id": 12,
+            "commonName": {
+              "default": "Hurricanes"
+            },
+            "placeName": {
+              "default": "Carolina",
+              "fr": "Caroline"
+            },
+            "placeNameWithPreposition": {
+              "default": "Carolina",
+              "fr": "de la Caroline"
+            },
+            "abbrev": "CAR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20262027/CAR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 3,
+            "commonName": {
+              "default": "Rangers"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20262027/NYR-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/3B0064F1B1DC4458?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=SCHED_PG_GM12&CAMEFROM=CFC_RANGERS_WEB_NHL_SCHED_260803",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/3B0064F1B1DC4458?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=SCHED_PG_GM12&CAMEFROM=CFC_RANGERS_WEB_NHL_SCHED_260803",
+          "gameCenterLink": "/gamecenter/car-vs-nyr/2026/11/22/2026020373"
+        },
+        {
+          "id": 2026020374,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Benchmark International Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-22T22:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 21
+            },
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 581,
+              "market": "H",
+              "countryCode": "US",
+              "network": "The Spot",
+              "sequenceNumber": 223
+            },
+            {
+              "id": 28,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSG-B",
+              "sequenceNumber": 405
+            }
+          ],
+          "awayTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20262027/BUF-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 14,
+            "commonName": {
+              "default": "Lightning"
+            },
+            "placeName": {
+              "default": "Tampa Bay"
+            },
+            "placeNameWithPreposition": {
+              "default": "Tampa Bay",
+              "fr": "de Tampa Bay"
+            },
+            "abbrev": "TBL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TBL/20262027/TBL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0D0064F8CF749DE0?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0D0064F8CF749DE0?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/buf-vs-tbl/2026/11/22/2026020374"
+        },
+        {
+          "id": 2026020375,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Enterprise Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-23T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 289,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SNW",
+              "sequenceNumber": 34
+            },
+            {
+              "id": 284,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN1",
+              "sequenceNumber": 113
+            },
+            {
+              "id": 650,
+              "market": "H",
+              "countryCode": "US",
+              "network": "BN+",
+              "sequenceNumber": 203
+            },
+            {
+              "id": 649,
+              "market": "H",
+              "countryCode": "US",
+              "network": "STLNHL",
+              "sequenceNumber": 437
+            }
+          ],
+          "awayTeam": {
+            "id": 22,
+            "commonName": {
+              "default": "Oilers"
+            },
+            "placeName": {
+              "default": "Edmonton"
+            },
+            "placeNameWithPreposition": {
+              "default": "Edmonton",
+              "fr": "d'Edmonton"
+            },
+            "abbrev": "EDM",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20262027/EDM-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 19,
+            "commonName": {
+              "default": "Blues"
+            },
+            "placeName": {
+              "default": "St. Louis"
+            },
+            "placeNameWithPreposition": {
+              "default": "St. Louis",
+              "fr": "de St. Louis"
+            },
+            "abbrev": "STL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20262027/STL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/060064EECE241B7A?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/060064EECE241B7A?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/edm-vs-stl/2026/11/22/2026020375"
+        },
+        {
+          "id": 2026020376,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "American Airlines Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-23T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 528,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SN-PIT",
+              "sequenceNumber": 397
+            }
+          ],
+          "awayTeam": {
+            "id": 5,
+            "commonName": {
+              "default": "Penguins"
+            },
+            "placeName": {
+              "default": "Pittsburgh"
+            },
+            "placeNameWithPreposition": {
+              "default": "Pittsburgh",
+              "fr": "de Pittsburgh"
+            },
+            "abbrev": "PIT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20262027/PIT-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 25,
+            "commonName": {
+              "default": "Stars"
+            },
+            "placeName": {
+              "default": "Dallas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Dallas",
+              "fr": "de Dallas"
+            },
+            "abbrev": "DAL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DAL/20262027/DAL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0C0064EDD906A0CA?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0064EDD906A0CA?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/pit-vs-dal/2026/11/22/2026020376"
+        },
+        {
+          "id": 2026020377,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Rogers Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-23T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "America/Vancouver",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 290,
+              "market": "H",
+              "countryCode": "CA",
+              "network": "SNP",
+              "sequenceNumber": 33
+            },
+            {
+              "id": 551,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CHSN",
+              "sequenceNumber": 267
+            }
+          ],
+          "awayTeam": {
+            "id": 16,
+            "commonName": {
+              "default": "Blackhawks"
+            },
+            "placeName": {
+              "default": "Chicago"
+            },
+            "placeNameWithPreposition": {
+              "default": "Chicago",
+              "fr": "de Chicago"
+            },
+            "abbrev": "CHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20262027/CHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 23,
+            "commonName": {
+              "default": "Canucks"
+            },
+            "placeName": {
+              "default": "Vancouver"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vancouver",
+              "fr": "de Vancouver"
+            },
+            "abbrev": "VAN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20262027/VAN-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006503F0B8BBAC?brand=nhl&wt.mc_id=NHL_LEAGUE_VAN_SCHED_PG_GM12&utm_medium=Web&utm_source=Web&utm_campaign=26.27-VAN-LEAGUE-WEB",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006503F0B8BBAC?brand=nhl&wt.mc_id=NHL_LEAGUE_VAN_SCHED_PG_GM12&utm_medium=Web&utm_source=Web&utm_campaign=26.27-VAN-LEAGUE-WEB",
+          "gameCenterLink": "/gamecenter/chi-vs-van/2026/11/22/2026020377"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "dayAbbrev": "MON",
+      "numberOfGames": 7,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020378,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Prudential Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 755,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CBJHN",
+              "sequenceNumber": 229
+            },
+            {
+              "id": 27,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSG",
+              "sequenceNumber": 430
+            },
+            {
+              "id": 647,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CBJNHL",
+              "sequenceNumber": 435
+            }
+          ],
+          "awayTeam": {
+            "id": 29,
+            "commonName": {
+              "default": "Blue Jackets"
+            },
+            "placeName": {
+              "default": "Columbus"
+            },
+            "placeNameWithPreposition": {
+              "default": "Columbus",
+              "fr": "de Columbus"
+            },
+            "abbrev": "CBJ",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20262027/CBJ-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 1,
+            "commonName": {
+              "default": "Devils"
+            },
+            "placeName": {
+              "default": "New Jersey"
+            },
+            "placeNameWithPreposition": {
+              "default": "New Jersey",
+              "fr": "du New Jersey"
+            },
+            "abbrev": "NJD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NJD/20262027/NJD-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/020064F091CA9CDC?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/020064F091CA9CDC?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/cbj-vs-njd/2026/11/23/2026020378"
+        },
+        {
+          "id": 2026020379,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Centre Bell"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Montreal",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 651,
+              "market": "A",
+              "countryCode": "US",
+              "network": "ABTV ",
+              "sequenceNumber": 202
+            }
+          ],
+          "awayTeam": {
+            "id": 26,
+            "commonName": {
+              "default": "Kings"
+            },
+            "placeName": {
+              "default": "Los Angeles"
+            },
+            "placeNameWithPreposition": {
+              "default": "Los Angeles",
+              "fr": "de Los Angeles"
+            },
+            "abbrev": "LAK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20262027/LAK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 8,
+            "commonName": {
+              "default": "Canadiens"
+            },
+            "placeName": {
+              "default": "Montr\u00e9al"
+            },
+            "placeNameWithPreposition": {
+              "default": "Montr\u00e9al",
+              "fr": "de Montr\u00e9al"
+            },
+            "abbrev": "MTL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MTL/20262027/MTL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/310064FACADA877B?lang=en-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/310064FACADA877B?lang=fr-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/lak-vs-mtl/2026/11/23/2026020379"
+        },
+        {
+          "id": 2026020380,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Canadian Tire Centre",
+            "fr": "Centre Canadian Tire"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            }
+          ],
+          "awayTeam": {
+            "id": 20,
+            "commonName": {
+              "default": "Flames"
+            },
+            "placeName": {
+              "default": "Calgary"
+            },
+            "placeNameWithPreposition": {
+              "default": "Calgary",
+              "fr": "de Calgary"
+            },
+            "abbrev": "CGY",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20262027/CGY-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 9,
+            "commonName": {
+              "default": "Senators",
+              "fr": "S\u00e9nateurs"
+            },
+            "placeName": {
+              "default": "Ottawa"
+            },
+            "placeNameWithPreposition": {
+              "default": "Ottawa",
+              "fr": "d'Ottawa"
+            },
+            "abbrev": "OTT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20262027/OTT-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/31006507E9D73862?brand=ottawasenators&artistid=805997&landing=s&wt.mc_id=NHL_TEAM_OTT_SGT_PG_GM13&",
+          "ticketsLinkFr": "https://www.nhl.com/fr/senators/tickets/",
+          "gameCenterLink": "/gamecenter/cgy-vs-ott/2026/11/23/2026020380"
+        },
+        {
+          "id": 2026020381,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "UBS Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 409,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSGSN",
+              "sequenceNumber": 424
+            }
+          ],
+          "awayTeam": {
+            "id": 10,
+            "commonName": {
+              "default": "Maple Leafs"
+            },
+            "placeName": {
+              "default": "Toronto"
+            },
+            "placeNameWithPreposition": {
+              "default": "Toronto",
+              "fr": "de Toronto"
+            },
+            "abbrev": "TOR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TOR/20262027/TOR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 2,
+            "commonName": {
+              "default": "Islanders"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20262027/NYI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/300064E2D27E61D8?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM11&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM11",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/300064E2D27E61D8?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM11&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM11",
+          "gameCenterLink": "/gamecenter/tor-vs-nyi/2026/11/23/2026020381"
+        },
+        {
+          "id": 2026020382,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Canada Life Centre"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Winnipeg",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            },
+            {
+              "id": 783,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Mammoth+",
+              "sequenceNumber": 210
+            },
+            {
+              "id": 558,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Utah16",
+              "sequenceNumber": 394
+            }
+          ],
+          "awayTeam": {
+            "id": 68,
+            "commonName": {
+              "default": "Mammoth"
+            },
+            "placeName": {
+              "default": "Utah"
+            },
+            "placeNameWithPreposition": {
+              "default": "Utah",
+              "fr": "de l'Utah"
+            },
+            "abbrev": "UTA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20262027/UTA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 52,
+            "commonName": {
+              "default": "Jets"
+            },
+            "placeName": {
+              "default": "Winnipeg"
+            },
+            "placeNameWithPreposition": {
+              "default": "Winnipeg",
+              "fr": "de Winnipeg"
+            },
+            "abbrev": "WPG",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20262027/WPG-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006505D17DB120?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006505D17DB120?brand=nhl&wt.mc_id=NHL_LEAGUE_WPG_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_WPG&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/uta-vs-wpg/2026/11/23/2026020382"
+        },
+        {
+          "id": 2026020383,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Climate Pledge Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T02:40:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 786,
+              "market": "A",
+              "countryCode": "US",
+              "network": "FOXLA+",
+              "sequenceNumber": 206
+            },
+            {
+              "id": 652,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 388,
+              "market": "H",
+              "countryCode": "US",
+              "network": "KONG",
+              "sequenceNumber": 654
+            }
+          ],
+          "awayTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20262027/ANA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 55,
+            "commonName": {
+              "default": "Kraken"
+            },
+            "placeName": {
+              "default": "Seattle"
+            },
+            "placeNameWithPreposition": {
+              "default": "Seattle",
+              "fr": "de Seattle"
+            },
+            "abbrev": "SEA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20262027/SEA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0F0064C4A06BA2A4?brand=nhl&wt.mc_id=NHL_LEAGUE_SEA_SCHED_PG_GM10&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SEA&utm_content=SCHED_PG_GM10",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0F0064C4A06BA2A4?brand=nhl&wt.mc_id=NHL_LEAGUE_SEA_SCHED_PG_GM10&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SEA&utm_content=SCHED_PG_GM10",
+          "gameCenterLink": "/gamecenter/ana-vs-sea/2026/11/23/2026020383"
+        },
+        {
+          "id": 2026020384,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "SAP Center at San Jose",
+            "es": "SAP Center en San Jose",
+            "fr": "SAP Center de San Jose"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-24T03:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 283,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN360",
+              "sequenceNumber": 114
+            },
+            {
+              "id": 758,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Wild+",
+              "sequenceNumber": 211
+            },
+            {
+              "id": 314,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NBCSCA",
+              "sequenceNumber": 406
+            },
+            {
+              "id": 648,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MINNHL",
+              "sequenceNumber": 436
+            }
+          ],
+          "awayTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20262027/MIN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 28,
+            "commonName": {
+              "default": "Sharks"
+            },
+            "placeName": {
+              "default": "San Jose"
+            },
+            "placeNameWithPreposition": {
+              "default": "San Jose",
+              "fr": "de San Jose"
+            },
+            "abbrev": "SJS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20262027/SJS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1C0064E79AFD9BDE?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1C0064E79AFD9BDE?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/min-vs-sjs/2026/11/23/2026020384"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "dayAbbrev": "TUE",
+      "numberOfGames": 1,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020385,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Rogers Place"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-25T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Edmonton",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            },
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            }
+          ],
+          "awayTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20262027/VGK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 22,
+            "commonName": {
+              "default": "Oilers"
+            },
+            "placeName": {
+              "default": "Edmonton"
+            },
+            "placeNameWithPreposition": {
+              "default": "Edmonton",
+              "fr": "d'Edmonton"
+            },
+            "abbrev": "EDM",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20262027/EDM-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006513A625A4EE?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_EDM&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006513A625A4EE?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_EDM&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/vgk-vs-edm/2026/11/24/2026020385"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "dayAbbrev": "WED",
+      "numberOfGames": 14,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020386,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "TD Garden"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 292,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN3",
+              "sequenceNumber": 134
+            },
+            {
+              "id": 31,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NESN",
+              "sequenceNumber": 418
+            }
+          ],
+          "awayTeam": {
+            "id": 52,
+            "commonName": {
+              "default": "Jets"
+            },
+            "placeName": {
+              "default": "Winnipeg"
+            },
+            "placeNameWithPreposition": {
+              "default": "Winnipeg",
+              "fr": "de Winnipeg"
+            },
+            "abbrev": "WPG",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20262027/WPG-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 6,
+            "commonName": {
+              "default": "Bruins"
+            },
+            "placeName": {
+              "default": "Boston"
+            },
+            "placeNameWithPreposition": {
+              "default": "Boston",
+              "fr": "de Boston"
+            },
+            "abbrev": "BOS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BOS/20262027/BOS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/010064EDC5277AB0?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/010064EDC5277AB0?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/wpg-vs-bos/2026/11/25/2026020386"
+        },
+        {
+          "id": 2026020387,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "KeyBank Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 28,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSG-B",
+              "sequenceNumber": 405
+            },
+            {
+              "id": 55,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSG 2",
+              "sequenceNumber": 429
+            }
+          ],
+          "awayTeam": {
+            "id": 3,
+            "commonName": {
+              "default": "Rangers"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20262027/NYR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20262027/BUF-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/000064EFCB3B806F?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM11",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/000064EFCB3B806F?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM11",
+          "gameCenterLink": "/gamecenter/nyr-vs-buf/2026/11/25/2026020387"
+        },
+        {
+          "id": 2026020388,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Benchmark International Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            }
+          ],
+          "awayTeam": {
+            "id": 12,
+            "commonName": {
+              "default": "Hurricanes"
+            },
+            "placeName": {
+              "default": "Carolina",
+              "fr": "Caroline"
+            },
+            "placeNameWithPreposition": {
+              "default": "Carolina",
+              "fr": "de la Caroline"
+            },
+            "abbrev": "CAR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CAR/20262027/CAR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 14,
+            "commonName": {
+              "default": "Lightning"
+            },
+            "placeName": {
+              "default": "Tampa Bay"
+            },
+            "placeNameWithPreposition": {
+              "default": "Tampa Bay",
+              "fr": "de Tampa Bay"
+            },
+            "abbrev": "TBL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TBL/20262027/TBL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0D0064F8CF789DF6?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0D0064F8CF789DF6?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/car-vs-tbl/2026/11/25/2026020388"
+        },
+        {
+          "id": 2026020389,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Amerant Bank Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 294,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN5",
+              "sequenceNumber": 135
+            },
+            {
+              "id": 242,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "RDSI",
+              "sequenceNumber": 147
+            },
+            {
+              "id": 521,
+              "market": "H",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 9,
+            "commonName": {
+              "default": "Senators",
+              "fr": "S\u00e9nateurs"
+            },
+            "placeName": {
+              "default": "Ottawa"
+            },
+            "placeNameWithPreposition": {
+              "default": "Ottawa",
+              "fr": "d'Ottawa"
+            },
+            "abbrev": "OTT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20262027/OTT-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 13,
+            "commonName": {
+              "default": "Panthers"
+            },
+            "placeName": {
+              "default": "Florida",
+              "fr": "Floride"
+            },
+            "placeNameWithPreposition": {
+              "default": "Florida",
+              "fr": "de la Floride"
+            },
+            "abbrev": "FLA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/FLA/20262027/FLA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://seatgeek.com/florida-panthers-tickets/11-25-2026-sunrise-florida-amerant-bank-arena/nhl/18362736?aid=15999&pid=web&rid=80426&utm_medium=partnership&utm_source=panthers_ticketing&utm_campaign=web",
+          "ticketsLinkFr": "https://seatgeek.com/florida-panthers-tickets/11-25-2026-sunrise-florida-amerant-bank-arena/nhl/18362736?aid=15999&pid=web&rid=80426&utm_medium=partnership&utm_source=panthers_ticketing&utm_campaign=web",
+          "gameCenterLink": "/gamecenter/ott-vs-fla/2026/11/25/2026020389"
+        },
+        {
+          "id": 2026020390,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "UBS Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 650,
+              "market": "A",
+              "countryCode": "US",
+              "network": "BN+",
+              "sequenceNumber": 203
+            },
+            {
+              "id": 409,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSGSN",
+              "sequenceNumber": 424
+            },
+            {
+              "id": 649,
+              "market": "A",
+              "countryCode": "US",
+              "network": "STLNHL",
+              "sequenceNumber": 437
+            }
+          ],
+          "awayTeam": {
+            "id": 19,
+            "commonName": {
+              "default": "Blues"
+            },
+            "placeName": {
+              "default": "St. Louis"
+            },
+            "placeNameWithPreposition": {
+              "default": "St. Louis",
+              "fr": "de St. Louis"
+            },
+            "abbrev": "STL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20262027/STL-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 2,
+            "commonName": {
+              "default": "Islanders"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20262027/NYI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/300064E2D28361E0?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM12&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/300064E2D28361E0?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM12&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/stl-vs-nyi/2026/11/25/2026020390"
+        },
+        {
+          "id": 2026020391,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "PPG Paints Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 289,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "SNW",
+              "sequenceNumber": 34
+            },
+            {
+              "id": 528,
+              "market": "H",
+              "countryCode": "US",
+              "network": "SN-PIT",
+              "sequenceNumber": 397
+            }
+          ],
+          "awayTeam": {
+            "id": 20,
+            "commonName": {
+              "default": "Flames"
+            },
+            "placeName": {
+              "default": "Calgary"
+            },
+            "placeNameWithPreposition": {
+              "default": "Calgary",
+              "fr": "de Calgary"
+            },
+            "abbrev": "CGY",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20262027/CGY-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 5,
+            "commonName": {
+              "default": "Penguins"
+            },
+            "placeName": {
+              "default": "Pittsburgh"
+            },
+            "placeNameWithPreposition": {
+              "default": "Pittsburgh",
+              "fr": "de Pittsburgh"
+            },
+            "abbrev": "PIT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20262027/PIT-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/160064EAF59FB8E0?brand=nhl&wt.mc_id=NHL_LEAGUE_PIT_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PIT&utm_content=SCHED_PG_GM11&camefrom=NHLPENGUINS_WEB_NHL_SCHEDULE_PG",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/160064EAF59FB8E0?brand=nhl&wt.mc_id=NHL_LEAGUE_PIT_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PIT&utm_content=SCHED_PG_GM11&camefrom=NHLPENGUINS_WEB_NHL_SCHEDULE_PG",
+          "gameCenterLink": "/gamecenter/cgy-vs-pit/2026/11/25/2026020391"
+        },
+        {
+          "id": 2026020392,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Capital One Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 517,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MNMT",
+              "sequenceNumber": 409
+            },
+            {
+              "id": 323,
+              "market": "A",
+              "countryCode": "US",
+              "network": "NBCSP+",
+              "sequenceNumber": 414
+            }
+          ],
+          "awayTeam": {
+            "id": 4,
+            "commonName": {
+              "default": "Flyers"
+            },
+            "placeName": {
+              "default": "Philadelphia",
+              "fr": "Philadelphie"
+            },
+            "placeNameWithPreposition": {
+              "default": "Philadelphia",
+              "fr": "de Philadelphie"
+            },
+            "abbrev": "PHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20262027/PHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 15,
+            "commonName": {
+              "default": "Capitals"
+            },
+            "placeName": {
+              "default": "Washington"
+            },
+            "placeNameWithPreposition": {
+              "default": "Washington",
+              "fr": "de Washington"
+            },
+            "abbrev": "WSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WSH/20262027/WSH-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/150064F03485E2E3?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_SCHED_PG_GM14&utm_source=league_schedulepage&utm_medium=web_organic&utm_campaign=2627sgb_ca1125pf",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/150064F03485E2E3?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_SCHED_PG_GM14&utm_source=league_schedulepage&utm_medium=web_organic&utm_campaign=2627sgb_ca1125pf",
+          "gameCenterLink": "/gamecenter/phi-vs-wsh/2026/11/25/2026020392"
+        },
+        {
+          "id": 2026020393,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Nationwide Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 755,
+              "market": "H",
+              "countryCode": "US",
+              "network": "CBJHN",
+              "sequenceNumber": 229
+            },
+            {
+              "id": 410,
+              "market": "A",
+              "countryCode": "US",
+              "network": "MSGSN2",
+              "sequenceNumber": 419
+            },
+            {
+              "id": 647,
+              "market": "H",
+              "countryCode": "US",
+              "network": "CBJNHL",
+              "sequenceNumber": 435
+            }
+          ],
+          "awayTeam": {
+            "id": 1,
+            "commonName": {
+              "default": "Devils"
+            },
+            "placeName": {
+              "default": "New Jersey"
+            },
+            "placeNameWithPreposition": {
+              "default": "New Jersey",
+              "fr": "du New Jersey"
+            },
+            "abbrev": "NJD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NJD/20262027/NJD-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 29,
+            "commonName": {
+              "default": "Blue Jackets"
+            },
+            "placeName": {
+              "default": "Columbus"
+            },
+            "placeNameWithPreposition": {
+              "default": "Columbus",
+              "fr": "de Columbus"
+            },
+            "abbrev": "CBJ",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20262027/CBJ-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/050064EDD788D03E?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM13&utm_source=web_schedule&utm_medium=NHL.com&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/050064EDD788D03E?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM13&utm_source=web_schedule&utm_medium=NHL.com&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/njd-vs-cbj/2026/11/25/2026020393"
+        },
+        {
+          "id": 2026020394,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Little Caesars Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/Detroit",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 548,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "Prime",
+              "sequenceNumber": 116
+            },
+            {
+              "id": 645,
+              "market": "H",
+              "countryCode": "US",
+              "network": "DSN",
+              "sequenceNumber": 204
+            }
+          ],
+          "awayTeam": {
+            "id": 23,
+            "commonName": {
+              "default": "Canucks"
+            },
+            "placeName": {
+              "default": "Vancouver"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vancouver",
+              "fr": "de Vancouver"
+            },
+            "abbrev": "VAN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20262027/VAN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 17,
+            "commonName": {
+              "default": "Red Wings"
+            },
+            "placeName": {
+              "default": "Detroit"
+            },
+            "placeNameWithPreposition": {
+              "default": "Detroit",
+              "fr": "de Detroit"
+            },
+            "abbrev": "DET",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DET/20262027/DET-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/080064EED7E27FE0?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/080064EED7E27FE0?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/van-vs-det/2026/11/25/2026020394"
+        },
+        {
+          "id": 2026020395,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "American Airlines Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 23,
+              "market": "H",
+              "countryCode": "US",
+              "network": "KDFI",
+              "sequenceNumber": 610
+            },
+            {
+              "id": 521,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 18,
+            "commonName": {
+              "default": "Predators"
+            },
+            "placeName": {
+              "default": "Nashville"
+            },
+            "placeNameWithPreposition": {
+              "default": "Nashville",
+              "fr": "de Nashville"
+            },
+            "abbrev": "NSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NSH/20262027/NSH-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 25,
+            "commonName": {
+              "default": "Stars"
+            },
+            "placeName": {
+              "default": "Dallas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Dallas",
+              "fr": "de Dallas"
+            },
+            "abbrev": "DAL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DAL/20262027/DAL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0C0064EDD90AA0D1?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM15",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0064EDD90AA0D1?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=SCHED_PG_GM15",
+          "gameCenterLink": "/gamecenter/nsh-vs-dal/2026/11/25/2026020395"
+        },
+        {
+          "id": 2026020396,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Grand Casino Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 783,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Mammoth+",
+              "sequenceNumber": 210
+            },
+            {
+              "id": 758,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Wild+",
+              "sequenceNumber": 211
+            },
+            {
+              "id": 558,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Utah16",
+              "sequenceNumber": 394
+            },
+            {
+              "id": 648,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MINNHL",
+              "sequenceNumber": 436
+            }
+          ],
+          "awayTeam": {
+            "id": 68,
+            "commonName": {
+              "default": "Mammoth"
+            },
+            "placeName": {
+              "default": "Utah"
+            },
+            "placeNameWithPreposition": {
+              "default": "Utah",
+              "fr": "de l'Utah"
+            },
+            "abbrev": "UTA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20262027/UTA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20262027/MIN-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://mnwild.co/ejb9v3ll",
+          "ticketsLinkFr": "https://mnwild.co/ejb9v3ll",
+          "gameCenterLink": "/gamecenter/uta-vs-min/2026/11/25/2026020396"
+        },
+        {
+          "id": 2026020397,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Ball Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T02:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-07:00",
+          "venueTimezone": "America/Denver",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 131,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN2",
+              "sequenceNumber": 112
+            },
+            {
+              "id": 33,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "RDS",
+              "sequenceNumber": 145
+            },
+            {
+              "id": 2,
+              "market": "H",
+              "countryCode": "US",
+              "network": "ALT",
+              "sequenceNumber": 398
+            },
+            {
+              "id": 336,
+              "market": "H",
+              "countryCode": "US",
+              "network": "KTVD",
+              "sequenceNumber": 623
+            }
+          ],
+          "awayTeam": {
+            "id": 8,
+            "commonName": {
+              "default": "Canadiens"
+            },
+            "placeName": {
+              "default": "Montr\u00e9al"
+            },
+            "placeNameWithPreposition": {
+              "default": "Montr\u00e9al",
+              "fr": "de Montr\u00e9al"
+            },
+            "abbrev": "MTL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MTL/20262027/MTL-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 21,
+            "commonName": {
+              "default": "Avalanche"
+            },
+            "placeName": {
+              "default": "Colorado"
+            },
+            "placeNameWithPreposition": {
+              "default": "Colorado",
+              "fr": "du Colorado"
+            },
+            "abbrev": "COL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20262027/COL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1E0064EEB2D29F14?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1E0064EEB2D29F14?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/mtl-vs-col/2026/11/25/2026020397"
+        },
+        {
+          "id": 2026020399,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Climate Pledge Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T02:40:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 551,
+              "market": "A",
+              "countryCode": "US",
+              "network": "CHSN",
+              "sequenceNumber": 267
+            },
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 387,
+              "market": "H",
+              "countryCode": "US",
+              "network": "KING",
+              "sequenceNumber": 615
+            },
+            {
+              "id": 388,
+              "market": "H",
+              "countryCode": "US",
+              "network": "KONG",
+              "sequenceNumber": 654
+            }
+          ],
+          "awayTeam": {
+            "id": 16,
+            "commonName": {
+              "default": "Blackhawks"
+            },
+            "placeName": {
+              "default": "Chicago"
+            },
+            "placeNameWithPreposition": {
+              "default": "Chicago",
+              "fr": "de Chicago"
+            },
+            "abbrev": "CHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20262027/CHI-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 55,
+            "commonName": {
+              "default": "Kraken"
+            },
+            "placeName": {
+              "default": "Seattle"
+            },
+            "placeNameWithPreposition": {
+              "default": "Seattle",
+              "fr": "de Seattle"
+            },
+            "abbrev": "SEA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20262027/SEA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0F0064C4A071A2AD?brand=nhl&wt.mc_id=NHL_LEAGUE_SEA_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SEA&utm_content=SCHED_PG_GM11",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0F0064C4A071A2AD?brand=nhl&wt.mc_id=NHL_LEAGUE_SEA_SCHED_PG_GM11&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SEA&utm_content=SCHED_PG_GM11",
+          "gameCenterLink": "/gamecenter/chi-vs-sea/2026/11/25/2026020399"
+        },
+        {
+          "id": 2026020398,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Honda Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-26T03:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "America/Los_Angeles",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 786,
+              "market": "H",
+              "countryCode": "US",
+              "network": "FOXLA+",
+              "sequenceNumber": 206
+            },
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 314,
+              "market": "A",
+              "countryCode": "US",
+              "network": "NBCSCA",
+              "sequenceNumber": 406
+            }
+          ],
+          "awayTeam": {
+            "id": 28,
+            "commonName": {
+              "default": "Sharks"
+            },
+            "placeName": {
+              "default": "San Jose"
+            },
+            "placeNameWithPreposition": {
+              "default": "San Jose",
+              "fr": "de San Jose"
+            },
+            "abbrev": "SJS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20262027/SJS-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20262027/ANA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/090064EA301289B6?brand=nhl&wt.mc_id=NHL_LEAGUE_ANA_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/090064EA301289B6?brand=nhl&wt.mc_id=NHL_LEAGUE_ANA_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/sjs-vs-ana/2026/11/25/2026020398"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "dayAbbrev": "THU",
+      "numberOfGames": 0,
+      "datePromo": [],
+      "games": []
+    },
+    {
+      "date": "2026-11-27",
+      "dayAbbrev": "FRI",
+      "numberOfGames": 15,
+      "datePromo": [],
+      "games": [
+        {
+          "id": 2026020400,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "TD Garden"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T18:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 293,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN4",
+              "sequenceNumber": 137
+            },
+            {
+              "id": 31,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NESN",
+              "sequenceNumber": 418
+            }
+          ],
+          "awayTeam": {
+            "id": 10,
+            "commonName": {
+              "default": "Maple Leafs"
+            },
+            "placeName": {
+              "default": "Toronto"
+            },
+            "placeNameWithPreposition": {
+              "default": "Toronto",
+              "fr": "de Toronto"
+            },
+            "abbrev": "TOR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TOR/20262027/TOR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 6,
+            "commonName": {
+              "default": "Bruins"
+            },
+            "placeName": {
+              "default": "Boston"
+            },
+            "placeNameWithPreposition": {
+              "default": "Boston",
+              "fr": "de Boston"
+            },
+            "abbrev": "BOS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BOS/20262027/BOS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/010064EDC52C7AD3?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM15",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/010064EDC52C7AD3?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=SCHED_PG_GM15",
+          "gameCenterLink": "/gamecenter/tor-vs-bos/2026/11/27/2026020400"
+        },
+        {
+          "id": 2026020401,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Prudential Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T18:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 21
+            },
+            {
+              "id": 409,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSGSN",
+              "sequenceNumber": 424
+            }
+          ],
+          "awayTeam": {
+            "id": 20,
+            "commonName": {
+              "default": "Flames"
+            },
+            "placeName": {
+              "default": "Calgary"
+            },
+            "placeNameWithPreposition": {
+              "default": "Calgary",
+              "fr": "de Calgary"
+            },
+            "abbrev": "CGY",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20262027/CGY-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 1,
+            "commonName": {
+              "default": "Devils"
+            },
+            "placeName": {
+              "default": "New Jersey"
+            },
+            "placeNameWithPreposition": {
+              "default": "New Jersey",
+              "fr": "du New Jersey"
+            },
+            "abbrev": "NJD",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NJD/20262027/NJD-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/020064F091CF9CE6?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/020064F091CF9CE6?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/cgy-vs-njd/2026/11/27/2026020401"
+        },
+        {
+          "id": 2026020402,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Bridgestone Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T18:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 783,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Mammoth+",
+              "sequenceNumber": 210
+            },
+            {
+              "id": 558,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Utah16",
+              "sequenceNumber": 394
+            },
+            {
+              "id": 521,
+              "market": "H",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 68,
+            "commonName": {
+              "default": "Mammoth"
+            },
+            "placeName": {
+              "default": "Utah"
+            },
+            "placeNameWithPreposition": {
+              "default": "Utah",
+              "fr": "de l'Utah"
+            },
+            "abbrev": "UTA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20262027/UTA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 18,
+            "commonName": {
+              "default": "Predators"
+            },
+            "placeName": {
+              "default": "Nashville"
+            },
+            "placeNameWithPreposition": {
+              "default": "Nashville",
+              "fr": "de Nashville"
+            },
+            "abbrev": "NSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NSH/20262027/NSH-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1B006507F022E4BB?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_NSH&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1B006507F022E4BB?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_NSH&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/uta-vs-nsh/2026/11/27/2026020402"
+        },
+        {
+          "id": 2026020403,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Enterprise Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T19:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 324,
+              "market": "N",
+              "countryCode": "US",
+              "network": "NHLN",
+              "sequenceNumber": 35
+            },
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            },
+            {
+              "id": 650,
+              "market": "H",
+              "countryCode": "US",
+              "network": "BN+",
+              "sequenceNumber": 203
+            },
+            {
+              "id": 652,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 649,
+              "market": "H",
+              "countryCode": "US",
+              "network": "STLNHL",
+              "sequenceNumber": 437
+            }
+          ],
+          "awayTeam": {
+            "id": 25,
+            "commonName": {
+              "default": "Stars"
+            },
+            "placeName": {
+              "default": "Dallas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Dallas",
+              "fr": "de Dallas"
+            },
+            "abbrev": "DAL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DAL/20262027/DAL-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 19,
+            "commonName": {
+              "default": "Blues"
+            },
+            "placeName": {
+              "default": "St. Louis"
+            },
+            "placeNameWithPreposition": {
+              "default": "St. Louis",
+              "fr": "de St. Louis"
+            },
+            "abbrev": "STL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/STL/20262027/STL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/060064EECE291B87?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/060064EECE291B87?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/dal-vs-stl/2026/11/27/2026020403"
+        },
+        {
+          "id": 2026020404,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Benchmark International Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 294,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN5",
+              "sequenceNumber": 135
+            },
+            {
+              "id": 33,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "RDS",
+              "sequenceNumber": 145
+            },
+            {
+              "id": 581,
+              "market": "H",
+              "countryCode": "US",
+              "network": "The Spot",
+              "sequenceNumber": 223
+            }
+          ],
+          "awayTeam": {
+            "id": 9,
+            "commonName": {
+              "default": "Senators",
+              "fr": "S\u00e9nateurs"
+            },
+            "placeName": {
+              "default": "Ottawa"
+            },
+            "placeNameWithPreposition": {
+              "default": "Ottawa",
+              "fr": "d'Ottawa"
+            },
+            "abbrev": "OTT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/OTT/20262027/OTT-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 14,
+            "commonName": {
+              "default": "Lightning"
+            },
+            "placeName": {
+              "default": "Tampa Bay"
+            },
+            "placeNameWithPreposition": {
+              "default": "Tampa Bay",
+              "fr": "de Tampa Bay"
+            },
+            "abbrev": "TBL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/TBL/20262027/TBL-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/0D0064F8CF7E9E0B?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/0D0064F8CF7E9E0B?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/ott-vs-tbl/2026/11/27/2026020404"
+        },
+        {
+          "id": 2026020405,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Xfinity Mobile Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 290,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SNP",
+              "sequenceNumber": 33
+            },
+            {
+              "id": 322,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NBCSP",
+              "sequenceNumber": 402
+            }
+          ],
+          "awayTeam": {
+            "id": 23,
+            "commonName": {
+              "default": "Canucks"
+            },
+            "placeName": {
+              "default": "Vancouver"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vancouver",
+              "fr": "de Vancouver"
+            },
+            "abbrev": "VAN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VAN/20262027/VAN-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 4,
+            "commonName": {
+              "default": "Flyers"
+            },
+            "placeName": {
+              "default": "Philadelphia",
+              "fr": "Philadelphie"
+            },
+            "placeNameWithPreposition": {
+              "default": "Philadelphia",
+              "fr": "de Philadelphie"
+            },
+            "abbrev": "PHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PHI/20262027/PHI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/300064EEEEC5E19E?brand=nhl&wt.mc_id=NHL_LEAGUE_PHI_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PHI&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/300064EEEEC5E19E?brand=nhl&wt.mc_id=NHL_LEAGUE_PHI_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PHI&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/van-vs-phi/2026/11/27/2026020405"
+        },
+        {
+          "id": 2026020406,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Capital One Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 517,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MNMT",
+              "sequenceNumber": 409
+            },
+            {
+              "id": 521,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 13,
+            "commonName": {
+              "default": "Panthers"
+            },
+            "placeName": {
+              "default": "Florida",
+              "fr": "Floride"
+            },
+            "placeNameWithPreposition": {
+              "default": "Florida",
+              "fr": "de la Floride"
+            },
+            "abbrev": "FLA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/FLA/20262027/FLA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 15,
+            "commonName": {
+              "default": "Capitals"
+            },
+            "placeName": {
+              "default": "Washington"
+            },
+            "placeNameWithPreposition": {
+              "default": "Washington",
+              "fr": "de Washington"
+            },
+            "abbrev": "WSH",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WSH/20262027/WSH-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/150064F03608E5EB?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_SCHED_PG_GM15&utm_source=league_schedulepage&utm_medium=web_organic&utm_campaign=2627sgb_ca1127fp",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/150064F03608E5EB?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_SCHED_PG_GM15&utm_source=league_schedulepage&utm_medium=web_organic&utm_campaign=2627sgb_ca1127fp",
+          "gameCenterLink": "/gamecenter/fla-vs-wsh/2026/11/27/2026020406"
+        },
+        {
+          "id": 2026020407,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Nationwide Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T20:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "US/Eastern",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 645,
+              "market": "A",
+              "countryCode": "US",
+              "network": "DSN",
+              "sequenceNumber": 204
+            },
+            {
+              "id": 755,
+              "market": "H",
+              "countryCode": "US",
+              "network": "CBJHN",
+              "sequenceNumber": 229
+            },
+            {
+              "id": 647,
+              "market": "H",
+              "countryCode": "US",
+              "network": "CBJNHL",
+              "sequenceNumber": 435
+            }
+          ],
+          "awayTeam": {
+            "id": 17,
+            "commonName": {
+              "default": "Red Wings"
+            },
+            "placeName": {
+              "default": "Detroit"
+            },
+            "placeNameWithPreposition": {
+              "default": "Detroit",
+              "fr": "de Detroit"
+            },
+            "abbrev": "DET",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/DET/20262027/DET-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 29,
+            "commonName": {
+              "default": "Blue Jackets"
+            },
+            "placeName": {
+              "default": "Columbus"
+            },
+            "placeNameWithPreposition": {
+              "default": "Columbus",
+              "fr": "de Columbus"
+            },
+            "abbrev": "CBJ",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CBJ/20262027/CBJ-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/050064EDDC77D7C9?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM14&utm_source=web_schedule&utm_medium=NHL.com&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/050064EDDC77D7C9?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_SCHED_PG_GM14&utm_source=web_schedule&utm_medium=NHL.com&utm_campaign=NHL_LEAGUE_CBJ&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/det-vs-cbj/2026/11/27/2026020407"
+        },
+        {
+          "id": 2026020408,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Grand Casino Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T21:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "US/Central",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            },
+            {
+              "id": 758,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Wild+",
+              "sequenceNumber": 211
+            },
+            {
+              "id": 2,
+              "market": "A",
+              "countryCode": "US",
+              "network": "ALT",
+              "sequenceNumber": 398
+            },
+            {
+              "id": 648,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MINNHL",
+              "sequenceNumber": 436
+            }
+          ],
+          "awayTeam": {
+            "id": 21,
+            "commonName": {
+              "default": "Avalanche"
+            },
+            "placeName": {
+              "default": "Colorado"
+            },
+            "placeNameWithPreposition": {
+              "default": "Colorado",
+              "fr": "du Colorado"
+            },
+            "abbrev": "COL",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/COL_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/COL/20262027/COL-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 30,
+            "commonName": {
+              "default": "Wild"
+            },
+            "placeName": {
+              "default": "Minnesota"
+            },
+            "placeNameWithPreposition": {
+              "default": "Minnesota",
+              "fr": "du Minnesota"
+            },
+            "abbrev": "MIN",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/MIN/20262027/MIN-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://mnwild.co/di57gh5o",
+          "ticketsLinkFr": "https://mnwild.co/di57gh5o",
+          "gameCenterLink": "/gamecenter/col-vs-min/2026/11/27/2026020408"
+        },
+        {
+          "id": 2026020409,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Honda Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T21:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "America/Los_Angeles",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 651,
+              "market": "A",
+              "countryCode": "US",
+              "network": "ABTV ",
+              "sequenceNumber": 202
+            },
+            {
+              "id": 786,
+              "market": "H",
+              "countryCode": "US",
+              "network": "FOXLA+",
+              "sequenceNumber": 206
+            },
+            {
+              "id": 652,
+              "market": "H",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            }
+          ],
+          "awayTeam": {
+            "id": 26,
+            "commonName": {
+              "default": "Kings"
+            },
+            "placeName": {
+              "default": "Los Angeles"
+            },
+            "placeNameWithPreposition": {
+              "default": "Los Angeles",
+              "fr": "de Los Angeles"
+            },
+            "abbrev": "LAK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/LAK/20262027/LAK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 24,
+            "commonName": {
+              "default": "Ducks"
+            },
+            "placeName": {
+              "default": "Anaheim"
+            },
+            "placeNameWithPreposition": {
+              "default": "Anaheim",
+              "fr": "d'Anaheim"
+            },
+            "abbrev": "ANA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/ANA/20262027/ANA-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/090064EA305D8A29?brand=nhl&wt.mc_id=NHL_LEAGUE_ANA_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/090064EA305D8A29?brand=nhl&wt.mc_id=NHL_LEAGUE_ANA_SCHED_PG_GM13&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/lak-vs-ana/2026/11/27/2026020409"
+        },
+        {
+          "id": 2026020410,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "SAP Center at San Jose",
+            "es": "SAP Center en San Jose",
+            "fr": "SAP Center de San Jose"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T21:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-08:00",
+          "venueTimezone": "US/Pacific",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 21
+            },
+            {
+              "id": 314,
+              "market": "H",
+              "countryCode": "US",
+              "network": "NBCSCA",
+              "sequenceNumber": 406
+            },
+            {
+              "id": 521,
+              "market": "A",
+              "countryCode": "US",
+              "network": "SCRIPPS",
+              "sequenceNumber": 657
+            }
+          ],
+          "awayTeam": {
+            "id": 54,
+            "commonName": {
+              "default": "Golden Knights"
+            },
+            "placeName": {
+              "default": "Vegas"
+            },
+            "placeNameWithPreposition": {
+              "default": "Vegas",
+              "fr": "de Vegas"
+            },
+            "abbrev": "VGK",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/VGK/20262027/VGK-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 28,
+            "commonName": {
+              "default": "Sharks"
+            },
+            "placeName": {
+              "default": "San Jose"
+            },
+            "placeNameWithPreposition": {
+              "default": "San Jose",
+              "fr": "de San Jose"
+            },
+            "abbrev": "SJS",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SJS/20262027/SJS-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/1C0064E79B039BF3?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM15",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/1C0064E79B039BF3?brand=nhl&wt.mc_id=NHL_LEAGUE_SJS_SCHED_PG_GM15&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_SJS&utm_content=SCHED_PG_GM15",
+          "gameCenterLink": "/gamecenter/vgk-vs-sjs/2026/11/27/2026020410"
+        },
+        {
+          "id": 2026020411,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "United Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-27T22:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Chicago",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            },
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            }
+          ],
+          "awayTeam": {
+            "id": 3,
+            "commonName": {
+              "default": "Rangers"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYR",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYR/20262027/NYR-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 16,
+            "commonName": {
+              "default": "Blackhawks"
+            },
+            "placeName": {
+              "default": "Chicago"
+            },
+            "placeNameWithPreposition": {
+              "default": "Chicago",
+              "fr": "de Chicago"
+            },
+            "abbrev": "CHI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/CHI/20262027/CHI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/040064F0906E787F?brand=nhl&wt.mc_id=NHL_LEAGUE_CHI_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CHI&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/040064F0906E787F?brand=nhl&wt.mc_id=NHL_LEAGUE_CHI_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CHI&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/nyr-vs-chi/2026/11/27/2026020411"
+        },
+        {
+          "id": 2026020412,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "UBS Arena"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-28T00:30:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 292,
+              "market": "A",
+              "countryCode": "CA",
+              "network": "TSN3",
+              "sequenceNumber": 134
+            },
+            {
+              "id": 409,
+              "market": "H",
+              "countryCode": "US",
+              "network": "MSGSN",
+              "sequenceNumber": 424
+            }
+          ],
+          "awayTeam": {
+            "id": 52,
+            "commonName": {
+              "default": "Jets"
+            },
+            "placeName": {
+              "default": "Winnipeg"
+            },
+            "placeNameWithPreposition": {
+              "default": "Winnipeg",
+              "fr": "de Winnipeg"
+            },
+            "abbrev": "WPG",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/WPG/20262027/WPG-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 2,
+            "commonName": {
+              "default": "Islanders"
+            },
+            "placeName": {
+              "default": "New York"
+            },
+            "placeNameWithPreposition": {
+              "default": "New York",
+              "fr": "de New York"
+            },
+            "abbrev": "NYI",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/NYI/20262027/NYI-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/300064E2D28861E8?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM13&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM13",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/300064E2D28861E8?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_SCHED_PG_GM13&utm_source=nhl_website&utm_medium=leagueschedule&utm_campaign=NHL_LEAGUE_NYI&utm_content=SCHED_PG_GM13",
+          "gameCenterLink": "/gamecenter/wpg-vs-nyi/2026/11/27/2026020412"
+        },
+        {
+          "id": 2026020413,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "KeyBank Center"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-28T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-05:00",
+          "venueTimezone": "America/New_York",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 385,
+              "market": "N",
+              "countryCode": "US",
+              "network": "TNT",
+              "sequenceNumber": 11
+            },
+            {
+              "id": 501,
+              "market": "N",
+              "countryCode": "US",
+              "network": "truTV",
+              "sequenceNumber": 14
+            },
+            {
+              "id": 578,
+              "market": "N",
+              "countryCode": "US",
+              "network": "HBO MAX",
+              "sequenceNumber": 19
+            },
+            {
+              "id": 549,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN+",
+              "sequenceNumber": 117
+            },
+            {
+              "id": 281,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "TVAS",
+              "sequenceNumber": 120
+            }
+          ],
+          "awayTeam": {
+            "id": 5,
+            "commonName": {
+              "default": "Penguins"
+            },
+            "placeName": {
+              "default": "Pittsburgh"
+            },
+            "placeNameWithPreposition": {
+              "default": "Pittsburgh",
+              "fr": "de Pittsburgh"
+            },
+            "abbrev": "PIT",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/PIT/20262027/PIT-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 7,
+            "commonName": {
+              "default": "Sabres"
+            },
+            "placeName": {
+              "default": "Buffalo"
+            },
+            "placeNameWithPreposition": {
+              "default": "Buffalo",
+              "fr": "de Buffalo"
+            },
+            "abbrev": "BUF",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/BUF/20262027/BUF-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.com/event/000064EFCB40807D?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM12",
+          "ticketsLinkFr": "https://www.ticketmaster.com/event/000064EFCB40807D?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_SCHED_PG_GM12&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=SCHED_PG_GM12",
+          "gameCenterLink": "/gamecenter/pit-vs-buf/2026/11/27/2026020413"
+        },
+        {
+          "id": 2026020414,
+          "season": 20262027,
+          "gameType": 2,
+          "venue": {
+            "default": "Rogers Place"
+          },
+          "neutralSite": false,
+          "startTimeUTC": "2026-11-28T01:00:00Z",
+          "easternUTCOffset": "-05:00",
+          "venueUTCOffset": "-06:00",
+          "venueTimezone": "America/Edmonton",
+          "gameState": "FUT",
+          "gameScheduleState": "OK",
+          "tvBroadcasts": [
+            {
+              "id": 282,
+              "market": "N",
+              "countryCode": "CA",
+              "network": "SN",
+              "sequenceNumber": 107
+            },
+            {
+              "id": 652,
+              "market": "A",
+              "countryCode": "US",
+              "network": "Prime Video",
+              "sequenceNumber": 331
+            },
+            {
+              "id": 388,
+              "market": "A",
+              "countryCode": "US",
+              "network": "KONG",
+              "sequenceNumber": 654
+            }
+          ],
+          "awayTeam": {
+            "id": 55,
+            "commonName": {
+              "default": "Kraken"
+            },
+            "placeName": {
+              "default": "Seattle"
+            },
+            "placeNameWithPreposition": {
+              "default": "Seattle",
+              "fr": "de Seattle"
+            },
+            "abbrev": "SEA",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
+            "awaySplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/SEA/20262027/SEA-radio.m3u8"
+          },
+          "homeTeam": {
+            "id": 22,
+            "commonName": {
+              "default": "Oilers"
+            },
+            "placeName": {
+              "default": "Edmonton"
+            },
+            "placeNameWithPreposition": {
+              "default": "Edmonton",
+              "fr": "d'Edmonton"
+            },
+            "abbrev": "EDM",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+            "darkLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_dark.svg",
+            "homeSplitSquad": false,
+            "radioLink": "https://d2igy0yla8zi0u.cloudfront.net/EDM/20262027/EDM-radio.m3u8"
+          },
+          "periodDescriptor": {
+            "number": 1,
+            "periodType": "REG",
+            "maxRegulationPeriods": 3
+          },
+          "ticketsLink": "https://www.ticketmaster.ca/event/11006513A62BA4FB?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_EDM&utm_content=SCHED_PG_GM14",
+          "ticketsLinkFr": "https://www.ticketmaster.ca/event/11006513A62BA4FB?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_SCHED_PG_GM14&utm_source=NHL.com&utm_medium=client_PM&utm_campaign=NHL_LEAGUE_EDM&utm_content=SCHED_PG_GM14",
+          "gameCenterLink": "/gamecenter/sea-vs-edm/2026/11/27/2026020414"
+        }
+      ]
+    }
+  ],
+  "preSeasonStartDate": "2026-09-19",
+  "regularSeasonStartDate": "2026-09-29",
+  "regularSeasonEndDate": "2027-04-10",
+  "playoffEndDate": "2027-06-10",
+  "numberOfGames": 56
+}
